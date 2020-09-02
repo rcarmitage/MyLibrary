@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const About = () => (
   <div>
-    <h4>About</h4>
+    <h2>About</h2>
     <p>About info goes here</p>
   </div>
 );
