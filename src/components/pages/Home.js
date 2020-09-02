@@ -4,13 +4,16 @@ import Search from "../search/Search";
 
 const Home = () => (
   <div>
-    <h4>Home</h4>
+    <h2>Home</h2>
     <div className="grid-2">
-      <div>
+      <div className="shelves-container">
+        <h3>My Books</h3>
+        <h4>Fiction</h4>
         <Shelf />
+        <h4>Non-fiction</h4>
         <Shelf />
       </div>
-      <div>
+      <div className="search-container">
         <Search />
       </div>
     </div>

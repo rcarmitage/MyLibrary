@@ -1,5 +1,24 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+}
+
+.shelves-container,
+.shelf,
+.search-container {
+  border: #333 1px solid;
+  padding: 1rem;
+}
+
+.shelves-container h4 {
+  margin-bottom: 0.3rem;
 }
