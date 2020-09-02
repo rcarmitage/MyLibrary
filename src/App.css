@@ -3,7 +3,7 @@
   --light-brown: #74452f;
   --dark-color: #31212a;
   --light-color: #ffefd3;
-  --dark-green: #3c6759;
+  --dark-green: #264038;
 }
 
 body {
@@ -12,6 +12,10 @@ body {
   line-height: 1.6;
   background-color: var(--light-brown);
   color: var(--dark-color);
+}
+
+.App {
+  margin: 0 10rem;
 }
 
 .grid-2 {
@@ -29,4 +33,8 @@ body {
 
 .shelves-container h4 {
   margin-bottom: 0.3rem;
+}
+
+.shelf {
+  background-color: var(--dark-green);
 }
