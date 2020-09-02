@@ -11,7 +11,12 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   background-color: var(--light-brown);
-  color: var(--dark-color);
+  color: var(--light-color);
+  height: 100%;
+  background-image: url(./assets/wood_background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App {
@@ -24,10 +29,14 @@ body {
   grid-gap: 2rem;
 }
 
+#nav {
+  list-style: none;
+}
+
 .shelves-container,
 .shelf,
 .search-container {
-  border: var(--dark-brown) 3px solid;
+  border: var(--light-brown) 3px solid;
   padding: 1rem;
 }
 
