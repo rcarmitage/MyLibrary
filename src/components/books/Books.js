@@ -9,7 +9,7 @@ const Books = () => {
   return (
     <Fragment>
       {books.map((book) => (
-        <h4>{book.title}</h4>
+        <p>{book.title}</p>
       ))}
     </Fragment>
   );

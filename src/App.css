@@ -13,7 +13,7 @@ body {
   background-color: var(--light-brown);
   color: var(--light-color);
   height: 100%;
-  background-image: url(./assets/wood_background.jpg);
+  /* background-image: url(./assets/wood_background.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,7 +29,7 @@ body {
   grid-gap: 2rem;
 }
 
-#nav {
+#navbar {
   list-style: none;
 }
 

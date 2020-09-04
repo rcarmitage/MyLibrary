@@ -1,5 +1,5 @@
-import React, { useReducer, useEffect } from "react";
-import axios from "axios";
+import React, { useReducer } from "react";
+// import axios from "axios";
 import LibraryContext from "./libraryContext";
 import libraryReducer from "./libraryReducer";
 import {
@@ -61,7 +61,9 @@ const LibraryState = (props) => {
       value={{
         books: state.books,
       }}
-    ></LibraryContext.Provider>
+    >
+      {props.children}
+    </LibraryContext.Provider>
   );
 };
 
