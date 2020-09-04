@@ -35,8 +35,9 @@ body {
 
 .shelves-container,
 .shelf,
-.search-container {
-  border: var(--light-brown) 3px solid;
+.search-container,
+.book-info {
+  border: var(--dark-brown) 3px solid;
   padding: 1rem;
 }
 
