@@ -11,20 +11,18 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div className="App">
-      <LibraryState>
-        <Router>
-          <Fragment>
-            <NavBar />
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={About} />
-              <Route component={ErrorPage} />
-            </Switch>
-          </Fragment>
-        </Router>
-      </LibraryState>
-    </div>
+    <LibraryState>
+      <Router>
+        <Fragment>
+          <NavBar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route component={ErrorPage} />
+          </Switch>
+        </Fragment>
+      </Router>
+    </LibraryState>
   );
 };
 
