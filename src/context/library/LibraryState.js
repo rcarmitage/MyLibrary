@@ -14,6 +14,5 @@ const LibraryState = (props) => {
 
   return <div></div>;
 };
-import LibraryContext from "./libraryContext";
 
 export default LibraryState;
