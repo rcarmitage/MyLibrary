@@ -1,4 +1,5 @@
 import React, { Fragment, useContext } from "react";
+import BookItem from "./BookItem";
 import LibraryContext from "../../context/library/libraryContext";
 
 const Books = () => {
@@ -9,7 +10,7 @@ const Books = () => {
   return (
     <Fragment>
       {books.map((book) => (
-        <p>{book.title}</p>
+        <BookItem key={book.id} book={book} />
       ))}
     </Fragment>
   );
