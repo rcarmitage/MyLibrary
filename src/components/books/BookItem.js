@@ -5,10 +5,10 @@ const BookItem = ({ book }) => {
 
   return (
     <div className="book-info">
-      <h5>{title}</h5>
-      <p>
+      <h4>{title}</h4>
+      <h5>
         {author} | {year} | {fiction === true ? "Fiction" : "Non-fiction"}
-      </p>
+      </h5>
     </div>
   );
 };

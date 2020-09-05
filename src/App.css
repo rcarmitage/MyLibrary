@@ -35,10 +35,12 @@ body {
 
 .shelves-container,
 .shelf,
+.desk,
 .search-container,
 .book-info {
-  border: var(--dark-brown) 3px solid;
+  border: var(--dark-color) 3px solid;
   padding: 1rem;
+  margin: 1rem;
 }
 
 .shelves-container h4 {
@@ -47,4 +49,8 @@ body {
 
 .shelf {
   background-color: var(--dark-green);
+}
+
+.book-info {
+  background-color: var(--dark-brown);
 }
