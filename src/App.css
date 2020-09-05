@@ -36,8 +36,7 @@ body {
 .shelves-container,
 .shelf,
 .desk,
-.search-container,
-.book-info {
+.search-container {
   border: var(--dark-color) 3px solid;
   padding: 1rem;
   margin: 1rem;
@@ -49,8 +48,19 @@ body {
 
 .shelf {
   background-color: var(--dark-green);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
 }
 
 .book-info {
+  border: var(--dark-color) 3px solid;
+  padding: 1rem;
+  margin: 1rem;
   background-color: var(--dark-brown);
+  width: 13%;
+}
+
+.book-info h4 {
+  font-style: italic;
 }
