@@ -56,9 +56,10 @@ body {
 .book-info {
   border: var(--dark-color) 3px solid;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1.5rem;
   background-color: var(--dark-brown);
-  width: 13%;
+  width: 7rem;
+  height: 11rem;
 }
 
 .book-info h4 {
@@ -68,8 +69,8 @@ body {
 .cover-image-desk {
   border: var(--dark-color) 3px solid;
   background-color: var(--dark-brown);
-  width: 10rem;
-  height: 16rem;
+  width: 14rem;
+  height: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
