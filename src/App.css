@@ -64,3 +64,26 @@ body {
 .book-info h4 {
   font-style: italic;
 }
+
+.cover-image-desk {
+  border: var(--dark-color) 3px solid;
+  background-color: var(--dark-brown);
+  width: 10rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-headers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  text-decoration: underline;
+}
+
+.results-items {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1rem;
+}
