@@ -50,6 +50,7 @@ const LibraryState = (props) => {
         year: 2011,
       },
     ],
+    current: null,
   };
 
   const [state, dispatch] = useReducer(libraryReducer, initialState);
@@ -61,13 +62,21 @@ const LibraryState = (props) => {
   // Delete book from a shelf
 
   // Set current book - to be viewed in viewing area
+  const setCurrent = (book) => {
+    dispatch({ type: SET_CURRENT, payload: book });
+  };
 
   // Clear current book - clear viewing area
+  const clearCurrent = () => {
+    dispatch({ type: CLEAR_CURRENT });
+  };
 
   return (
     <LibraryContext.Provider
       value={{
         books: state.books,
+        setCurrent,
+        clearCurrent,
       }}
     >
       {props.children}
