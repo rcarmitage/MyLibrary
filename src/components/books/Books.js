@@ -7,10 +7,10 @@ const Books = () => {
 
   const { books } = libraryContext;
 
-  useEffect(() => {
-    getBooks();
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   getBooks();
+  //   // eslint-disable-next-line
+  // }, []);
 
   return (
     <Fragment>

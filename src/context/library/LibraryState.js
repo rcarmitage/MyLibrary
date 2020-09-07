@@ -3,11 +3,12 @@ import axios from "axios";
 import LibraryContext from "./libraryContext";
 import libraryReducer from "./libraryReducer";
 import {
-  GET_BOOKS,
+  GET_BOOK,
   ADD_BOOK,
   DELETE_BOOK,
   SET_CURRENT,
   CLEAR_CURRENT,
+  BOOK_ERROR,
 } from "../types";
 
 const LibraryState = (props) => {
@@ -51,13 +52,13 @@ const LibraryState = (props) => {
         year: 2011,
       },
     ],
-    current: null,
+    current: "24a_o-VJvGsC",
   };
 
   const [state, dispatch] = useReducer(libraryReducer, initialState);
 
   // Get a book's info from the API
-  const getBook = async () => {
+  const getBook = async (google_id) => {
     try {
       const res = await axios.get(
         `https://books.google.co.uk/books?id=${google_id}`
@@ -65,7 +66,7 @@ const LibraryState = (props) => {
 
       dispatch({ type: GET_BOOK, payload: res.data });
     } catch (err) {
-      dispatch({ type: BOOK_ERROR, payload: err.response.msg });
+      dispatch({ type: BOOK_ERROR, payload: err.response });
     }
   };
 
