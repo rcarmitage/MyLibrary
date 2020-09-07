@@ -30,6 +30,7 @@ const LibraryState = (props) => {
         title: "Meditations",
         author: "Marcus Aurelius, translated by Gregory Hayes",
         year: 2002,
+        google_id: "24a_o-VJvGsC",
       },
       {
         id: 4,
