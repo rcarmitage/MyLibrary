@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-// import axios from "axios";
+import axios from "axios";
 import LibraryContext from "./libraryContext";
 import libraryReducer from "./libraryReducer";
 import {
@@ -56,7 +56,18 @@ const LibraryState = (props) => {
 
   const [state, dispatch] = useReducer(libraryReducer, initialState);
 
-  // Get all books for a shelf
+  // Get a book's info from the API
+  const getBook = async () => {
+    try {
+      const res = await axios.get(
+        `https://books.google.co.uk/books?id=${google_id}`
+      );
+
+      dispatch({ type: GET_BOOK, payload: res.data });
+    } catch (err) {
+      dispatch({ type: BOOK_ERROR, payload: err.response.msg });
+    }
+  };
 
   // Add book to a shelf
 
@@ -76,6 +87,7 @@ const LibraryState = (props) => {
     <LibraryContext.Provider
       value={{
         books: state.books,
+        getBook,
         setCurrent,
         clearCurrent,
       }}

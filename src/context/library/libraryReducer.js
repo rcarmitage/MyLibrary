@@ -1,5 +1,5 @@
 import {
-  GET_BOOKS,
+  GET_BOOK,
   ADD_BOOK,
   DELETE_BOOK,
   SET_CURRENT,
@@ -8,6 +8,11 @@ import {
 
 export default (state, action) => {
   switch (action.type) {
+    case GET_BOOK:
+      return {
+        ...state,
+        contacts: action.payload,
+      };
     case SET_CURRENT:
       return {
         ...state,
