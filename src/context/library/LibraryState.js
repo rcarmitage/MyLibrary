@@ -45,12 +45,6 @@ const LibraryState = (props) => {
         author: "Ryan Holiday",
         year: 2016,
       },
-      {
-        id: 6,
-        title: "Thinking, Fast and Slow",
-        author: "Daniel Kahneman",
-        year: 2011,
-      },
     ],
     current: "24a_o-VJvGsC",
   };
@@ -61,7 +55,7 @@ const LibraryState = (props) => {
   const getBook = async (google_id) => {
     try {
       const res = await axios.get(
-        `https://books.google.co.uk/books?id=${google_id}`
+        `https://www.googleapis.com/books/v1/volumes/${google_id}`
       );
 
       dispatch({ type: GET_BOOK, payload: res.data });
@@ -75,8 +69,8 @@ const LibraryState = (props) => {
   // Delete book from a shelf
 
   // Set current book - to be viewed in viewing area
-  const setCurrent = (book) => {
-    dispatch({ type: SET_CURRENT, payload: book });
+  const setCurrent = (google_id) => {
+    dispatch({ type: SET_CURRENT, payload: google_id });
   };
 
   // Clear current book - clear viewing area

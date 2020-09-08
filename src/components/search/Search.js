@@ -5,7 +5,7 @@ const Search = () => {
     <div>
       <h3>Search</h3>
       <form>
-        <input type="text" placeholder="Search for title, author..." />
+        <input type="text" placeholder="Search for title or author..." />
       </form>
       <div>
         <div className="results-headers">
