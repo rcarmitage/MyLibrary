@@ -8,45 +8,16 @@ import {
   DELETE_BOOK,
   SET_CURRENT,
   CLEAR_CURRENT,
+  SEARCH_BOOKS,
   BOOK_ERROR,
 } from "../types";
 
 const LibraryState = (props) => {
   const initialState = {
-    books: [
-      {
-        id: 1,
-        title: "The Grapes of Wrath",
-        author: "John Steinbeck",
-        year: 1939,
-      },
-      {
-        id: 2,
-        title: "To Kill a Mockingbird",
-        author: "Harper Lee",
-        year: 1960,
-      },
-      {
-        id: 3,
-        title: "Meditations",
-        author: "Marcus Aurelius, translated by Gregory Hayes",
-        year: 2002,
-        google_id: "24a_o-VJvGsC",
-      },
-      {
-        id: 4,
-        title: "Natives: Race & Class in the Ruins of Empire",
-        author: "Akala",
-        year: 2018,
-      },
-      {
-        id: 5,
-        title: "The Daily Stoic",
-        author: "Ryan Holiday",
-        year: 2016,
-      },
-    ],
-    current: "24a_o-VJvGsC",
+    shelfBooks: [],
+    deskBook: {},
+    searchResults: [],
+    current: null,
   };
 
   const [state, dispatch] = useReducer(libraryReducer, initialState);
@@ -78,13 +49,32 @@ const LibraryState = (props) => {
     dispatch({ type: CLEAR_CURRENT });
   };
 
+  // Search Google Books API
+  const searchBooks = async (text) => {
+    const res = await axios.get(
+      `https://www.googleapis.com/books/v1/volumes?q=${text}&maxResults=10`
+    );
+
+    console.log(res);
+
+    dispatch({
+      type: SEARCH_BOOKS,
+      payload: res.data.items,
+    });
+
+    console.log(initialState.searchResults);
+  };
+
   return (
     <LibraryContext.Provider
       value={{
-        books: state.books,
+        shelfBooks: state.shelfBooks,
+        deskBook: state.deskBook,
+        searchResults: state.searchResults,
         getBook,
         setCurrent,
         clearCurrent,
+        searchBooks,
       }}
     >
       {props.children}

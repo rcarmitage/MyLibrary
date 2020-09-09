@@ -5,7 +5,7 @@ import LibraryContext from "../../context/library/libraryContext";
 const Books = () => {
   const libraryContext = useContext(LibraryContext);
 
-  const { books } = libraryContext;
+  const { shelfBooks } = libraryContext;
 
   // useEffect(() => {
   //   getBooks();
@@ -14,7 +14,7 @@ const Books = () => {
 
   return (
     <Fragment>
-      {books.map((book) => (
+      {shelfBooks.map((book) => (
         <BookItem key={book.id} book={book} />
       ))}
     </Fragment>

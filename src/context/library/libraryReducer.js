@@ -4,6 +4,7 @@ import {
   DELETE_BOOK,
   SET_CURRENT,
   CLEAR_CURRENT,
+  SEARCH_BOOKS,
 } from "../types";
 
 export default (state, action) => {
@@ -11,7 +12,7 @@ export default (state, action) => {
     case GET_BOOK:
       return {
         ...state,
-        contacts: action.payload,
+        shelfBooks: action.payload,
       };
     case SET_CURRENT:
       return {
@@ -22,6 +23,11 @@ export default (state, action) => {
       return {
         ...state,
         current: null,
+      };
+    case SEARCH_BOOKS:
+      return {
+        ...state,
+        searchResults: action.payload,
       };
     default:
       return state;
