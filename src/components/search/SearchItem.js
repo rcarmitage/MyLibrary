@@ -1,17 +1,18 @@
-import React, { Fragment } from "react";
+import React from "react";
 
-const SearchItem = ({ searchResult: { id } }) => {
+const SearchItem = ({
+  searchResult: {
+    id,
+    volumeInfo: { title, authors, publishedDate },
+  },
+}) => {
   return (
-    <Fragment>
-      <div>
-        {/* <p>{title}</p> */}
-        <p>{id}</p>
-        {/* <p>{title}</p>
-      <p>{authors}</p>
-      <p>{publishedDate}</p> */}
-        <button>View Details</button>
-      </div>
-    </Fragment>
+    <div>
+      <p>
+        {title} | {authors} | {publishedDate}
+      </p>
+      <button>View Details</button>
+    </div>
   );
 };
 

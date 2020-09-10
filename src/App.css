@@ -83,8 +83,8 @@ body {
   text-decoration: underline;
 }
 
-.results-items {
+/* .results-items {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 1rem;
-}
+} */
