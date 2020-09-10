@@ -22,10 +22,10 @@ const LibraryState = (props) => {
   const [state, dispatch] = useReducer(libraryReducer, initialState);
 
   // Get a book's info from the API
-  const getBook = async (google_id) => {
+  const getBook = async (id) => {
     try {
       const res = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes/${google_id}`
+        `https://www.googleapis.com/books/v1/volumes/${id}`
       );
 
       dispatch({ type: GET_BOOK, payload: res.data });

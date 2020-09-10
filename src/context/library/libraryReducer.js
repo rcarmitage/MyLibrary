@@ -5,6 +5,7 @@ import {
   SET_DESKBOOK,
   CLEAR_DESKBOOK,
   SEARCH_BOOKS,
+  BOOK_ERROR,
 } from "../types";
 
 export default (state, action) => {
@@ -12,7 +13,7 @@ export default (state, action) => {
     case GET_BOOK:
       return {
         ...state,
-        shelfBooks: action.payload,
+        bookInfo: action.payload,
       };
     case SET_DESKBOOK:
       return {
@@ -28,6 +29,11 @@ export default (state, action) => {
       return {
         ...state,
         searchResults: action.payload,
+      };
+    case BOOK_ERROR:
+      return {
+        ...state,
+        error: action.payload,
       };
     default:
       return state;
