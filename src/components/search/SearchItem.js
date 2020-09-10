@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import LibraryContext from "../../context/library/libraryContext";
 
 const SearchItem = ({
   searchResult: {
@@ -6,12 +7,15 @@ const SearchItem = ({
     volumeInfo: { title, authors, publishedDate },
   },
 }) => {
+  const libraryContext = useContext(LibraryContext);
+  const { setCurrent } = libraryContext;
+
   return (
     <div>
       <p>
         {title} | {authors} | {publishedDate}
       </p>
-      <button>View Details</button>
+      <button onClick={() => setCurrent(searchResult)}>View Details</button>
     </div>
   );
 };
