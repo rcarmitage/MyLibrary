@@ -6,8 +6,8 @@ import {
   GET_BOOK,
   ADD_BOOK,
   DELETE_BOOK,
-  SET_CURRENT,
-  CLEAR_CURRENT,
+  SET_DESKBOOK,
+  CLEAR_DESKBOOK,
   SEARCH_BOOKS,
   BOOK_ERROR,
 } from "../types";
@@ -15,9 +15,8 @@ import {
 const LibraryState = (props) => {
   const initialState = {
     shelfBooks: [],
-    deskBook: {},
+    deskBook: null,
     searchResults: [],
-    current: null,
   };
 
   const [state, dispatch] = useReducer(libraryReducer, initialState);
@@ -40,13 +39,13 @@ const LibraryState = (props) => {
   // Delete book from a shelf
 
   // Set current book - to be viewed in viewing area
-  const setCurrent = (google_id) => {
-    dispatch({ type: SET_CURRENT, payload: google_id });
+  const setDeskBook = (google_id) => {
+    dispatch({ type: SET_DESKBOOK, payload: google_id });
   };
 
   // Clear current book - clear viewing area
-  const clearCurrent = () => {
-    dispatch({ type: CLEAR_CURRENT });
+  const clearDeskBook = () => {
+    dispatch({ type: CLEAR_DESKBOOK });
   };
 
   // Search Google Books API
@@ -67,9 +66,10 @@ const LibraryState = (props) => {
         shelfBooks: state.shelfBooks,
         deskBook: state.deskBook,
         searchResults: state.searchResults,
+        current: state.current,
         getBook,
-        setCurrent,
-        clearCurrent,
+        setDeskBook,
+        clearDeskBook,
         searchBooks,
       }}
     >

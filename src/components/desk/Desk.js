@@ -3,14 +3,14 @@ import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
   const libraryContext = useContext(LibraryContext);
-  const { getBook, current, setCurrent, clearCurrent } = libraryContext;
+  const { getBook, deskBook, setDeskBook, clearDeskBook } = libraryContext;
 
   // const { id, title, author, year, google_id } = book;
 
   // TODO: Use google_id in current to make a request for the Google Books API entry, display the cover image/title/author/year
   // useEffect(() => {
-  //   if (current !== null) {
-  //     setDeskBook(current);
+  //   if (deskBook !== null) {
+  //     getBook(deskBook);
   //   } else {
   //     setDeskBook({
   //       smallThumbnail: null,
@@ -20,7 +20,7 @@ const Desk = () => {
   //       description: "",
   //     });
   //   }
-  // }, [libraryContext, current]);
+  // }, [libraryContext, deskBook]);
 
   // const [deskBook, setDeskBook] = useState({
   //   smallThumbnail: null,
@@ -52,11 +52,11 @@ const Desk = () => {
     <Fragment>
       <div className="desk">
         <h3>Desk</h3>
+        <p>{deskBook}</p>
         <h4 className="cover-image-desk">[Cover Image]</h4>
         <h4>Title</h4>
         <h5>Author | Year</h5>
         <h5>About: [About paragraph]</h5>
-        <button onClick={() => getBook(current)}>Get book</button>
         <div>
           <button>Link to Google Books entry</button>
           <button>Add to/remove from shelf</button>
