@@ -55,14 +55,10 @@ const LibraryState = (props) => {
       `https://www.googleapis.com/books/v1/volumes?q=${text}&maxResults=10`
     );
 
-    console.log(res);
-
     dispatch({
       type: SEARCH_BOOKS,
       payload: res.data.items,
     });
-
-    console.log(initialState.searchResults);
   };
 
   return (

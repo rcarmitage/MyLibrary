@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
-import axios from "axios";
+import SearchItem from "./SearchItem";
 import LibraryContext from "../../context/library/libraryContext";
 
 const Search = () => {
   const libraryContext = useContext(LibraryContext);
+
+  const { searchResults } = libraryContext;
 
   const [text, setText] = useState("");
 
@@ -35,10 +37,9 @@ const Search = () => {
           <p>Published</p>
         </div>
         <div className="results-items">
-          <p>[Results listed here]</p>
-          <button>
-            View book details (sets book as current, displays it on desk)
-          </button>
+          {searchResults.map((searchResult) => (
+            <SearchItem key={searchResult.id} searchResult={searchResult} />
+          ))}
         </div>
       </div>
     </div>
