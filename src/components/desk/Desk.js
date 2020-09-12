@@ -23,13 +23,17 @@ const Desk = () => {
   // }, [libraryContext, deskBook]);
 
   useEffect(() => {
-    getBook(deskBook);
+    if (current !== null) {
+      getBook(current);
+    } else {
+      return <h4>Please select a book from the shelf or search results</h4>;
+    }
     // eslint-disable-next-line
   }, []);
 
-  if (current === null) {
-    return <h4>Please select a book from the shelf or search results</h4>;
-  }
+  // if (current === null) {
+  //   return <h4>Please select a book from the shelf or search results</h4>;
+  // }
 
   // const [deskBook, setDeskBook] = useState({
   //   smallThumbnail: null,

@@ -15,7 +15,7 @@ export default (state, action) => {
     case GET_BOOK:
       return {
         ...state,
-        bookInfo: action.payload,
+        deskBook: action.payload,
       };
     // case SET_DESKBOOK:
     //   return {
