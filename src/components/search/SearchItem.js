@@ -8,14 +8,14 @@ const SearchItem = ({
   },
 }) => {
   const libraryContext = useContext(LibraryContext);
-  const { setDeskBook } = libraryContext;
+  const { setCurrent } = libraryContext;
 
   return (
     <div>
       <p>
         {title} | {authors} | {publishedDate}
       </p>
-      <button onClick={() => setDeskBook(id)}>View Details</button>
+      <button onClick={() => setCurrent(id)}>View Details</button>
     </div>
   );
 };

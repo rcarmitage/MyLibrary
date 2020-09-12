@@ -3,7 +3,7 @@ import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
   const libraryContext = useContext(LibraryContext);
-  const { getBook, deskBook } = libraryContext;
+  const { getBook, deskBook, current } = libraryContext;
 
   // const { id, title, author, year, google_id } = book;
 
@@ -27,7 +27,7 @@ const Desk = () => {
     // eslint-disable-next-line
   }, []);
 
-  if (deskBook === null) {
+  if (current === null) {
     return <h4>Please select a book from the shelf or search results</h4>;
   }
 
@@ -55,7 +55,7 @@ const Desk = () => {
     <Fragment>
       <div className="desk">
         <h3>Desk</h3>
-        <p>{deskBook}</p>
+        <p>{current}</p>
         {/* <h4 className="cover-image-desk">[Cover Image]</h4>
         <h4>Title</h4>
         <h5>Author | Year</h5>

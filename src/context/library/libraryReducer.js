@@ -2,8 +2,10 @@ import {
   GET_BOOK,
   ADD_BOOK,
   DELETE_BOOK,
-  SET_DESKBOOK,
-  CLEAR_DESKBOOK,
+  // SET_DESKBOOK,
+  // CLEAR_DESKBOOK,
+  SET_CURRENT,
+  CLEAR_CURRENT,
   SEARCH_BOOKS,
   BOOK_ERROR,
 } from "../types";
@@ -15,15 +17,25 @@ export default (state, action) => {
         ...state,
         bookInfo: action.payload,
       };
-    case SET_DESKBOOK:
+    // case SET_DESKBOOK:
+    //   return {
+    //     ...state,
+    //     deskBook: action.payload,
+    //   };
+    // case CLEAR_DESKBOOK:
+    //   return {
+    //     ...state,
+    //     deskBook: null,
+    //   };
+    case SET_CURRENT:
       return {
         ...state,
-        deskBook: action.payload,
+        current: action.payload,
       };
-    case CLEAR_DESKBOOK:
+    case CLEAR_CURRENT:
       return {
         ...state,
-        deskBook: null,
+        current: null,
       };
     case SEARCH_BOOKS:
       return {
