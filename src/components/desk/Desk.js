@@ -1,9 +1,44 @@
 import React, { Fragment, useState, useContext, useEffect } from "react";
+import { Link, Route } from "react-router-dom";
 import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
   const libraryContext = useContext(LibraryContext);
   const { getBook, deskBook, current } = libraryContext;
+
+  if (deskBook !== null) {
+    const {
+      id,
+      volumeInfo: {
+        title,
+        authors,
+        publishedDate,
+        description,
+        imageLinks: { smallThumbnail },
+      },
+    } = deskBook;
+
+    return (
+      <div className="desk">
+        <img src={smallThumbnail}></img>
+        <p>Title: {title}</p>
+        <p>Authors: {authors}</p>
+        <p>Published: {publishedDate}</p>
+        <p>{description}</p>
+        <div>
+          <Link
+            to="https://www.googleapis.com/books/v1/volumes/${id}"
+            target="_blank"
+          >
+            {" "}
+            <button>View this title on Google Books</button>
+          </Link>
+          <button>Add to/remove from shelf</button>
+        </div>
+        <button>Clear desk</button>
+      </div>
+    );
+  }
 
   // const { id, title, author, year, google_id } = book;
 
@@ -22,18 +57,20 @@ const Desk = () => {
   //   }
   // }, [libraryContext, deskBook]);
 
-  useEffect(() => {
-    if (current !== null) {
-      getBook(current);
-    } else {
-      return <h4>Please select a book from the shelf or search results</h4>;
-    }
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   if (current !== null) {
+  //     getBook(current);
+  //   }
+  //   // eslint-disable-next-line
+  // }, []);
 
-  // if (current === null) {
-  //   return <h4>Please select a book from the shelf or search results</h4>;
-  // }
+  if (current === null) {
+    return (
+      <div className="desk">
+        <h4>Please select a book from the shelf or search results</h4>
+      </div>
+    );
+  }
 
   // const [deskBook, setDeskBook] = useState({
   //   smallThumbnail: null,
@@ -60,15 +97,17 @@ const Desk = () => {
       <div className="desk">
         <h3>Desk</h3>
         <p>{current}</p>
+        <button onClick={getBook(current)}>Book Details</button>
+        {/* <p>{title}</p> */}
         {/* <h4 className="cover-image-desk">[Cover Image]</h4>
         <h4>Title</h4>
         <h5>Author | Year</h5>
         <h5>About: [About paragraph]</h5> */}
-        <div>
+        {/* <div>
           <button>Link to Google Books entry</button>
           <button>Add to/remove from shelf</button>
         </div>
-        <button>Clear desk</button>
+        <button>Clear desk</button> */}
       </div>
     </Fragment>
   );

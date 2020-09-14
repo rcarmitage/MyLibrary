@@ -26,15 +26,11 @@ const LibraryState = (props) => {
 
   // Get a book's info from the API
   const getBook = async (id) => {
-    try {
-      const res = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes/${id}`
-      );
+    const res = await axios.get(
+      `https://www.googleapis.com/books/v1/volumes/${id}`
+    );
 
-      dispatch({ type: GET_BOOK, payload: res.data });
-    } catch (err) {
-      dispatch({ type: BOOK_ERROR, payload: err.response });
-    }
+    dispatch({ type: GET_BOOK, payload: res.data });
   };
 
   // Add book to a shelf
