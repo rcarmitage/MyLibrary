@@ -1,10 +1,15 @@
 import React, { Fragment, useState, useContext, useEffect } from "react";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
   const libraryContext = useContext(LibraryContext);
   const { getBook, deskBook, current } = libraryContext;
+
+  useEffect(() => {
+    getBook(current);
+    // eslint-disable-next-line
+  }, []);
 
   if (deskBook !== null) {
     const {
@@ -26,13 +31,9 @@ const Desk = () => {
         <p>Published: {publishedDate}</p>
         <p>{description}</p>
         <div>
-          <Link
-            to="https://www.googleapis.com/books/v1/volumes/${id}"
-            target="_blank"
-          >
-            {" "}
+          <a href={`https://books.google.co.uk/books?id=${id}`} target="_blank">
             <button>View this title on Google Books</button>
-          </Link>
+          </a>
           <button>Add to/remove from shelf</button>
         </div>
         <button>Clear desk</button>
@@ -40,29 +41,7 @@ const Desk = () => {
     );
   }
 
-  // const { id, title, author, year, google_id } = book;
-
   // TODO: Use google_id in current to make a request for the Google Books API entry, display the cover image/title/author/year
-  // useEffect(() => {
-  //   if (deskBook !== null) {
-  //     getBook(deskBook);
-  //   } else {
-  //     setDeskBook({
-  //       smallThumbnail: null,
-  //       title: "",
-  //       authors: "",
-  //       publishedDate: "",
-  //       description: "",
-  //     });
-  //   }
-  // }, [libraryContext, deskBook]);
-
-  // useEffect(() => {
-  //   if (current !== null) {
-  //     getBook(current);
-  //   }
-  //   // eslint-disable-next-line
-  // }, []);
 
   if (current === null) {
     return (
@@ -71,22 +50,6 @@ const Desk = () => {
       </div>
     );
   }
-
-  // const [deskBook, setDeskBook] = useState({
-  //   smallThumbnail: null,
-  //   title: "",
-  //   authors: "",
-  //   publishedDate: "",
-  //   description: "",
-  // });
-
-  // const {
-  //   smallThumbnail,
-  //   title,
-  //   authors,
-  //   publishedDate,
-  //   description,
-  // } = deskBook;
 
   // TODO: Button to open Google Books entry in another window
   // TODO: Button with ternary operator - "Add to shelf" if the book is not already on the shelf (the google_id is not in local storage), "Remove from shelf" if it is
@@ -98,16 +61,6 @@ const Desk = () => {
         <h3>Desk</h3>
         <p>{current}</p>
         <button onClick={getBook(current)}>Book Details</button>
-        {/* <p>{title}</p> */}
-        {/* <h4 className="cover-image-desk">[Cover Image]</h4>
-        <h4>Title</h4>
-        <h5>Author | Year</h5>
-        <h5>About: [About paragraph]</h5> */}
-        {/* <div>
-          <button>Link to Google Books entry</button>
-          <button>Add to/remove from shelf</button>
-        </div>
-        <button>Clear desk</button> */}
       </div>
     </Fragment>
   );
