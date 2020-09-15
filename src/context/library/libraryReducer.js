@@ -3,7 +3,7 @@ import {
   ADD_BOOK,
   DELETE_BOOK,
   // SET_DESKBOOK,
-  // CLEAR_DESKBOOK,
+  CLEAR_DESKBOOK,
   SET_CURRENT,
   CLEAR_CURRENT,
   SEARCH_BOOKS,
@@ -22,11 +22,12 @@ export default (state, action) => {
     //     ...state,
     //     deskBook: action.payload,
     //   };
-    // case CLEAR_DESKBOOK:
-    //   return {
-    //     ...state,
-    //     deskBook: null,
-    //   };
+    case CLEAR_DESKBOOK:
+      return {
+        ...state,
+        current: null,
+        deskBook: null,
+      };
     case SET_CURRENT:
       return {
         ...state,

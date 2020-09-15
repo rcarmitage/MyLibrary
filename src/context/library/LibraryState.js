@@ -7,7 +7,7 @@ import {
   ADD_BOOK,
   DELETE_BOOK,
   // SET_DESKBOOK,
-  // CLEAR_DESKBOOK,
+  CLEAR_DESKBOOK,
   SET_CURRENT,
   CLEAR_CURRENT,
   SEARCH_BOOKS,
@@ -43,9 +43,9 @@ const LibraryState = (props) => {
   // };
 
   // // Clear book to be viewed in viewing area
-  // const clearDeskBook = () => {
-  //   dispatch({ type: CLEAR_DESKBOOK });
-  // };
+  const clearDeskBook = () => {
+    dispatch({ type: CLEAR_DESKBOOK });
+  };
 
   // Set current book - data to be used for viewing area
   const setCurrent = (google_id) => {
@@ -78,7 +78,7 @@ const LibraryState = (props) => {
         current: state.current,
         getBook,
         // setDeskBook,
-        // clearDeskBook,
+        clearDeskBook,
         setCurrent,
         clearCurrent,
         searchBooks,

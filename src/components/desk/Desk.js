@@ -4,12 +4,12 @@ import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
   const libraryContext = useContext(LibraryContext);
-  const { getBook, deskBook, current } = libraryContext;
+  const { getBook, deskBook, current, clearDeskBook } = libraryContext;
 
   useEffect(() => {
     getBook(current);
     // eslint-disable-next-line
-  }, []);
+  }, [libraryContext, current]);
 
   if (deskBook !== null) {
     const {
@@ -36,7 +36,7 @@ const Desk = () => {
           </a>
           <button>Add to/remove from shelf</button>
         </div>
-        <button>Clear desk</button>
+        <button onClick={clearDeskBook}>Clear desk</button>
       </div>
     );
   }
@@ -60,7 +60,7 @@ const Desk = () => {
       <div className="desk">
         <h3>Desk</h3>
         <p>{current}</p>
-        <button onClick={getBook(current)}>Book Details</button>
+        {/* <button onClick={getBook(current)}>Book Details</button> */}
       </div>
     </Fragment>
   );
