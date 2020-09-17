@@ -5,7 +5,7 @@ import LibraryContext from "../../context/library/libraryContext";
 const Books = () => {
   const libraryContext = useContext(LibraryContext);
 
-  const { shelfBooks } = libraryContext;
+  const { shelfBooks, getShelfBooks } = libraryContext;
 
   // useEffect(() => {
   //   getBooks();

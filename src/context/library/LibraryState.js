@@ -33,6 +33,9 @@ const LibraryState = (props) => {
     dispatch({ type: GET_BOOK, payload: res.data });
   };
 
+  // Get all books in the shelfBooks array
+  const getShelfBooks = async () => {};
+
   // Add book to a shelf
 
   // Delete book from a shelf
