@@ -1,8 +1,8 @@
 import React, { Fragment, useContext, useEffect } from "react";
-import BookItem from "./BookItem";
+import ShelfBookItem from "./ShelfBookItem";
 import LibraryContext from "../../context/library/libraryContext";
 
-const Books = () => {
+const ShelfBooks = () => {
   const libraryContext = useContext(LibraryContext);
 
   const { shelfBooks, getShelfBooks } = libraryContext;
@@ -15,10 +15,10 @@ const Books = () => {
   return (
     <Fragment>
       {shelfBooks.map((book) => (
-        <BookItem key={book.id} book={book} />
+        <ShelfBookItem key={book.id} book={book} />
       ))}
     </Fragment>
   );
 };
 
-export default Books;
+export default ShelfBooks;

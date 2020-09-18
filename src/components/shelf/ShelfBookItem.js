@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import LibraryContext from "../../context/library/libraryContext";
 
-const BookItem = ({ book }) => {
+const ShelfBookItem = ({ book }) => {
   const libraryContext = useContext(LibraryContext);
   const { setCurrent, clearCurrent } = libraryContext;
 
@@ -21,4 +21,4 @@ const BookItem = ({ book }) => {
   );
 };
 
-export default BookItem;
+export default ShelfBookItem;

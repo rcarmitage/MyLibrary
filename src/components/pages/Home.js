@@ -1,5 +1,5 @@
 import React from "react";
-import Books from "../books/Books";
+import ShelfBooks from "../shelf/ShelfBooks";
 import Desk from "../desk/Desk";
 import Search from "../search/Search";
 
@@ -8,7 +8,7 @@ const Home = () => (
     <h2>Home</h2>
     <div>
       <div className="shelf">
-        <Books />
+        <ShelfBooks />
       </div>
       <div className="grid-2">
         <div>
