@@ -4,6 +4,7 @@ import LibraryContext from "./libraryContext";
 import libraryReducer from "./libraryReducer";
 import {
   GET_BOOK,
+  GET_SHELFBOOKS,
   ADD_BOOK,
   DELETE_BOOK,
   // SET_DESKBOOK,
@@ -27,14 +28,18 @@ const LibraryState = (props) => {
   // Get a book's info from the API
   const getBook = async (id) => {
     const res = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes/${id}`
+      `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
     );
 
     dispatch({ type: GET_BOOK, payload: res.data });
   };
 
   // Get all books in the shelfBooks array
-  const getShelfBooks = async () => {};
+  const getShelfBooks = async () => {
+    const res = await axios.get("http://localhost:5000/shelfBooks");
+
+    dispatch({ type: GET_SHELFBOOKS, payload: res.data });
+  };
 
   // Add book to a shelf
 
@@ -47,6 +52,7 @@ const LibraryState = (props) => {
 
   // // Clear book to be viewed in viewing area
   const clearDeskBook = () => {
+    clearCurrent();
     dispatch({ type: CLEAR_DESKBOOK });
   };
 
@@ -63,7 +69,7 @@ const LibraryState = (props) => {
   // Search Google Books API
   const searchBooks = async (text) => {
     const res = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=${text}&maxResults=10`
+      `https://www.googleapis.com/books/v1/volumes?q=${text}&maxResults=10&fields=items(id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail))`
     );
 
     dispatch({
@@ -80,6 +86,7 @@ const LibraryState = (props) => {
         searchResults: state.searchResults,
         current: state.current,
         getBook,
+        getShelfBooks,
         // setDeskBook,
         clearDeskBook,
         setCurrent,

@@ -1,5 +1,6 @@
 import {
   GET_BOOK,
+  GET_SHELFBOOKS,
   ADD_BOOK,
   DELETE_BOOK,
   // SET_DESKBOOK,
@@ -17,6 +18,11 @@ export default (state, action) => {
         ...state,
         deskBook: action.payload,
       };
+    case GET_SHELFBOOKS:
+      return {
+        ...state,
+        shelfBooks: action.payload,
+      };
     // case SET_DESKBOOK:
     //   return {
     //     ...state,
@@ -25,7 +31,6 @@ export default (state, action) => {
     case CLEAR_DESKBOOK:
       return {
         ...state,
-        current: null,
         deskBook: null,
       };
     case SET_CURRENT:

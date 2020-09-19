@@ -7,16 +7,21 @@ const ShelfBooks = () => {
 
   const { shelfBooks, getShelfBooks } = libraryContext;
 
-  // useEffect(() => {
-  //   getBooks();
-  //   // eslint-disable-next-line
-  // }, []);
+  useEffect(() => {
+    getShelfBooks();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <Fragment>
-      {shelfBooks.map((book) => (
+      {shelfBooks.length === 0 ? (
+        <p>Your shelf is empty...</p>
+      ) : (
+        shelfBooks.map((book) => <ShelfBookItem key={book.id} book={book} />)
+      )}
+      {/* {shelfBooks.map((book) => (
         <ShelfBookItem key={book.id} book={book} />
-      ))}
+      ))} */}
     </Fragment>
   );
 };

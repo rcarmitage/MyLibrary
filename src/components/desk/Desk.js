@@ -45,7 +45,10 @@ const Desk = () => {
   if (current === null) {
     return (
       <div className="desk">
-        <h4>Please select a book from the shelf or search results</h4>
+        <h4>
+          To view book details, please select a title from the shelf or search
+          results
+        </h4>
       </div>
     );
   }

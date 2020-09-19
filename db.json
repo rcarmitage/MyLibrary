@@ -1,23 +1,23 @@
 {
-  "deskBooks": [
+  "shelfBookIDs": [
     {
-      "shelf_id": 1,
+      "id": 1,
       "google_id": "-KFFDQNxEYcC"
     },
     {
-      "shelf_id": 2,
+      "id": 2,
       "google_id": "PGR2AwAAQBAJ"
     },
     {
-      "shelf_id": 3,
+      "id": 3,
       "google_id": "hEI2DwAAQBAJ"
     },
     {
-      "shelf_id": 4,
+      "id": 4,
       "google_id": "TdhaZ6xEaBYC"
     },
     {
-      "shelf_id": 5,
+      "id": 5,
       "google_id": "kotPYEqx7kMC"
     }
   ]
