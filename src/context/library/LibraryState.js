@@ -25,20 +25,29 @@ const LibraryState = (props) => {
 
   const [state, dispatch] = useReducer(libraryReducer, initialState);
 
-  // Get a book's info from the API
+  // Get all books in the shelfBooks array
+  const getShelfBooks = async () => {
+    const res = await axios.get("/shelfBookIDs");
+
+    dispatch({ type: GET_SHELFBOOKS, payload: res.data });
+  };
+
+  // Get a book's info from the API and store it
+  const getShelfBook = async (id) => {
+    const res = await axios.get(
+      `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
+    );
+
+    dispatch({ type: GET_SHELFBOOK, payload: res.data });
+  };
+
+  // Get a book's info from the API and store it in deskBook
   const getDeskBook = async (id) => {
     const res = await axios.get(
       `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
     );
 
     dispatch({ type: GET_DESKBOOK, payload: res.data });
-  };
-
-  // Get all books in the shelfBooks array
-  const getShelfBooks = async () => {
-    const res = await axios.get("/shelfBookIDs");
-
-    dispatch({ type: GET_SHELFBOOKS, payload: res.data });
   };
 
   // Add book to a shelf

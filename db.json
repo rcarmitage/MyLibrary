@@ -2,23 +2,63 @@
   "shelfBookIDs": [
     {
       "id": 1,
-      "google_id": "-KFFDQNxEYcC"
+      "book": {
+        "id": "24a_o-VJvGsC",
+        "volumeInfo": {
+          "title": "Meditations",
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=24a_o-VJvGsC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71dOa3U3AD44lloabbnBisYapJMVRdJetOu9o2akXHcCze__ORMTlGuX7jLwon8hlsYXoR6yZ54kd5Q72RaR0OjHQZJDP-im256ZGjnBDIZ_raiSkURYSy2PHH9REuK3obX-gsc&source=gbs_api"
+          }
+        }
+      }
     },
     {
       "id": 2,
-      "google_id": "PGR2AwAAQBAJ"
+      "book": {
+        "id": "PGR2AwAAQBAJ",
+        "volumeInfo": {
+          "title": "To Kill a Mockingbird",
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=PGR2AwAAQBAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE72iF1ySiejyIRe609KYsLxXty_OFL1r1KDYgbiAkOZIyTQctCBohunhIsoFIDPkbvDo379r_8AzX1lS74niXq8zFyRcctixwlXi3J6UZZ34cZClJD3kEp3OiudN0G_gYf1F4MpR&source=gbs_api"
+          }
+        }
+      }
     },
     {
       "id": 3,
-      "google_id": "hEI2DwAAQBAJ"
+      "book": {
+        "id": "hEI2DwAAQBAJ",
+        "volumeInfo": {
+          "title": "Natives",
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=hEI2DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73MM5rlD1IED-NINi-J7YzQU2pQoPcdF14__IqVvoI1Rs_ITlyJ3pClGW1aZ3KyR3eSYfRQje0TwWxo8hpMtRQHzvadfefAf6WFPw-i1_CG_XuYkKBARLRJh-oy7QZyY46-Gpau&source=gbs_api"
+          }
+        }
+      }
     },
     {
       "id": 4,
-      "google_id": "TdhaZ6xEaBYC"
+      "book": {
+        "id": "TdhaZ6xEaBYC",
+        "volumeInfo": {
+          "title": "The Grapes of Wrath",
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=TdhaZ6xEaBYC&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE70f4HaN4c8kGdXqZ6AHRA27V3qVK-rXGnD2UREP8uat05OL5ca2ck-Yb9hlgTbtiMmBHpyXmOkm01uGCY0AKYvLlurrZYKXexvTLKuXAp_rXp5FuAQ7s_hdZjbSUwX7spW53lQe&source=gbs_api"
+          }
+        }
+      }
     },
     {
       "id": 5,
-      "google_id": "kotPYEqx7kMC"
+      "book": {
+        "id": "kotPYEqx7kMC",
+        "volumeInfo": {
+          "title": "1984",
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=kotPYEqx7kMC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73yMvCe3j-LXtUF_IJjCp8F6FP_TbHJLj3oY3J1ASyhdzzmBsar8KJVPEYBMl2D5hQLOpENIOrkc_DfKLdYhFt0kchgFJrOcUuC5KAL7SQx1vAoXkd1kCo3hafySaC0R1fv5sPI&source=gbs_api"
+          }
+        }
+      }
     }
   ]
 }
