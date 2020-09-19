@@ -3,8 +3,8 @@ import axios from "axios";
 import LibraryContext from "./libraryContext";
 import libraryReducer from "./libraryReducer";
 import {
-  GET_BOOK,
   GET_SHELFBOOKS,
+  GET_DESKBOOK,
   ADD_BOOK,
   DELETE_BOOK,
   // SET_DESKBOOK,
@@ -26,17 +26,17 @@ const LibraryState = (props) => {
   const [state, dispatch] = useReducer(libraryReducer, initialState);
 
   // Get a book's info from the API
-  const getBook = async (id) => {
+  const getDeskBook = async (id) => {
     const res = await axios.get(
       `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
     );
 
-    dispatch({ type: GET_BOOK, payload: res.data });
+    dispatch({ type: GET_DESKBOOK, payload: res.data });
   };
 
   // Get all books in the shelfBooks array
   const getShelfBooks = async () => {
-    const res = await axios.get("http://localhost:5000/shelfBooks");
+    const res = await axios.get("/shelfBookIDs");
 
     dispatch({ type: GET_SHELFBOOKS, payload: res.data });
   };
@@ -85,8 +85,8 @@ const LibraryState = (props) => {
         deskBook: state.deskBook,
         searchResults: state.searchResults,
         current: state.current,
-        getBook,
         getShelfBooks,
+        getDeskBook,
         // setDeskBook,
         clearDeskBook,
         setCurrent,

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import LibraryContext from "../../context/library/libraryContext";
+// import { GET_BOOK } from "../../context/types";
 
 const ShelfBookItem = ({ book }) => {
   const libraryContext = useContext(LibraryContext);
@@ -17,7 +18,7 @@ const ShelfBookItem = ({ book }) => {
       <h5>
         {author} | {year}
       </h5> */}
-      <p>{google_id}</p>
+      {google_id === null ? <p>Placeholder</p> : <p>getShelfBook()</p>}
     </div>
   );
 };

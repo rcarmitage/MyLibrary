@@ -3,10 +3,10 @@ import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
   const libraryContext = useContext(LibraryContext);
-  const { getBook, deskBook, current, clearDeskBook } = libraryContext;
+  const { getDeskBook, deskBook, current, clearDeskBook } = libraryContext;
 
   useEffect(() => {
-    getBook(current);
+    getDeskBook(current);
     // eslint-disable-next-line
   }, [libraryContext, current]);
 
