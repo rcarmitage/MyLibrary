@@ -7,7 +7,6 @@ import {
   GET_DESKBOOK,
   ADD_BOOK,
   DELETE_BOOK,
-  // SET_DESKBOOK,
   CLEAR_DESKBOOK,
   SET_CURRENT,
   CLEAR_CURRENT,
@@ -32,15 +31,6 @@ const LibraryState = (props) => {
     dispatch({ type: GET_SHELFBOOKS, payload: res.data });
   };
 
-  // Get a book's info from the API and store it
-  // const getShelfBook = async (id) => {
-  //   const res = await axios.get(
-  //     `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
-  //   );
-
-  //   dispatch({ type: GET_SHELFBOOK, payload: res.data });
-  // };
-
   // Get a book's info from the API and store it in deskBook
   const getDeskBook = async (id) => {
     const res = await axios.get(
@@ -50,14 +40,24 @@ const LibraryState = (props) => {
     dispatch({ type: GET_DESKBOOK, payload: res.data });
   };
 
-  // Add book to a shelf
+  // Add book to shelf
+  const addBook = async (book) => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const res = await axios.post(
+      "http://localhost:5000/shelfBooks",
+      book,
+      config
+    );
+
+    dispatch({ type: ADD_BOOK, payload: res.data });
+  };
 
   // Delete book from a shelf
-
-  // // Set book to be viewed in viewing area
-  // const setDeskBook = (google_id) => {
-  //   dispatch({ type: SET_DESKBOOK, payload: google_id });
-  // };
 
   // // Clear book to be viewed in viewing area
   const clearDeskBook = () => {
@@ -96,7 +96,7 @@ const LibraryState = (props) => {
         current: state.current,
         getShelfBooks,
         getDeskBook,
-        // setDeskBook,
+        addBook,
         clearDeskBook,
         setCurrent,
         clearCurrent,

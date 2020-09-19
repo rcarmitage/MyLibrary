@@ -23,11 +23,11 @@ export default (state, action) => {
         ...state,
         deskBook: action.payload,
       };
-    // case SET_DESKBOOK:
-    //   return {
-    //     ...state,
-    //     deskBook: action.payload,
-    //   };
+    case ADD_BOOK:
+      return {
+        ...state,
+        shelfBooks: [action.payload, ...state.shelfBooks],
+      };
     case CLEAR_DESKBOOK:
       return {
         ...state,
