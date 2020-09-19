@@ -27,19 +27,19 @@ const LibraryState = (props) => {
 
   // Get all books in the shelfBooks array
   const getShelfBooks = async () => {
-    const res = await axios.get("/shelfBookIDs");
+    const res = await axios.get("/shelfBooks");
 
     dispatch({ type: GET_SHELFBOOKS, payload: res.data });
   };
 
   // Get a book's info from the API and store it
-  const getShelfBook = async (id) => {
-    const res = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
-    );
+  // const getShelfBook = async (id) => {
+  //   const res = await axios.get(
+  //     `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
+  //   );
 
-    dispatch({ type: GET_SHELFBOOK, payload: res.data });
-  };
+  //   dispatch({ type: GET_SHELFBOOK, payload: res.data });
+  // };
 
   // Get a book's info from the API and store it in deskBook
   const getDeskBook = async (id) => {
