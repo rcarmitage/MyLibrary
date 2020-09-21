@@ -41,7 +41,7 @@ const LibraryState = (props) => {
   };
 
   // Add book to shelf
-  const addBook = async (book) => {
+  const addBook = async (deskBook) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -50,11 +50,13 @@ const LibraryState = (props) => {
 
     const res = await axios.post(
       "http://localhost:5000/shelfBooks",
-      book,
+      deskBook,
       config
     );
 
-    dispatch({ type: ADD_BOOK, payload: res.data });
+    console.log(deskBook);
+    console.log(res);
+    // dispatch({ type: ADD_BOOK, payload: res.data });
   };
 
   // Delete book from a shelf
