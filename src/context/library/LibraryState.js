@@ -48,13 +48,17 @@ const LibraryState = (props) => {
       },
     };
 
+    const book = {};
+    const bookJson = Object.assign(book, deskBook);
+
     const res = await axios.post(
       "http://localhost:5000/shelfBooks",
-      deskBook,
+      bookJson,
       config
     );
 
     console.log(deskBook);
+    console.log(book);
     console.log(res);
     // dispatch({ type: ADD_BOOK, payload: res.data });
   };

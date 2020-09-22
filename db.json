@@ -1,7 +1,7 @@
 {
   "shelfBooks": [
     {
-      "id": 1,
+      "shelfId": 1,
       "book": {
         "id": "24a_o-VJvGsC",
         "volumeInfo": {
@@ -13,7 +13,7 @@
       }
     },
     {
-      "id": 2,
+      "shelfId": 2,
       "book": {
         "id": "PGR2AwAAQBAJ",
         "volumeInfo": {
@@ -25,7 +25,7 @@
       }
     },
     {
-      "id": 3,
+      "shelfId": 3,
       "book": {
         "id": "hEI2DwAAQBAJ",
         "volumeInfo": {
@@ -37,7 +37,7 @@
       }
     },
     {
-      "id": 4,
+      "shelfId": 4,
       "book": {
         "id": "TdhaZ6xEaBYC",
         "volumeInfo": {
@@ -49,7 +49,7 @@
       }
     },
     {
-      "id": 5,
+      "shelfId": 5,
       "book": {
         "id": "kotPYEqx7kMC",
         "volumeInfo": {
@@ -59,6 +59,21 @@
           }
         }
       }
+    },
+    {
+      "book": {
+        "id": "-KFFDQNxEYcC",
+        "volumeInfo": {
+          "title": "Meditations",
+          "authors": ["Marcus Aurelius"],
+          "publishedDate": "2009-09-16",
+          "description": "<p>The Roman emperor Marcus Aurelius Antoninus (a.d. 121—180) embodied in his person that deeply cherished, ideal figure of antiquity, the philosopher-king. His <i>Meditations </i>are not only one of the most important expressions of the Stoic philosophy of his time but also an enduringly inspiring guide to living a good and just life. Written in moments snatched from military campaigns and the rigors of politics, these ethical and spiritual reflections reveal a mind of exceptional clarity and originality, and a spirit attuned to both the particulars of human destiny and the vast patterns that underlie it.</p>",
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=-KFFDQNxEYcC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72M4f36gBUsu6FvdfPGgoLGlLmspUvI3MkEl1zTb0oUDFQxqVoDhbhZFZ6LCv_NgH-xQP17DZc27egQhOtqdPr7fe2XPOL6LOPEPTu0U1gqm68gCOm3LDKmpTwuXr3e65x1p-hT&source=gbs_api"
+          }
+        }
+      },
+      "shelfId": 6
     }
   ]
 }

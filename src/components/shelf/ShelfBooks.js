@@ -18,7 +18,9 @@ const ShelfBooks = () => {
       {shelfBooks.length === 0 ? (
         <p>Your shelf is empty...</p>
       ) : (
-        shelfBooks.map((book) => <ShelfBookItem key={book._id} book={book} />)
+        shelfBooks.map((book) => (
+          <ShelfBookItem key={book.shelfId} book={book} />
+        ))
       )}
       {/* </div> */}
       {/* <button>Clear shelf</button> */}
