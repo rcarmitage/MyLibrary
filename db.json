@@ -59,20 +59,6 @@
           }
         }
       }
-    },
-    {
-      "id": "VVsmU-4YwFsC",
-      "volumeInfo": {
-        "title": "Meditations",
-        "authors": [
-          "Aurelius Marcus"
-        ],
-        "publishedDate": "1997",
-        "description": "The \"Meditations\" of Roman Emperor Marcus Aurelius are a readable exposition of the system of metaphysics known as stoicism. Stoics maintained that by putting aside great passions, unjust thoughts and indulgence, man could acquire virtue and live at one with nature.",
-        "imageLinks": {
-          "smallThumbnail": "http://books.google.com/books/content?id=VVsmU-4YwFsC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70E2jqZO2xa99OGfF3cNRn_j5khRb6x3kQ-eD0MTqjpKGGEy1x4uGrptVlAfzdzPhM2oh7OyOMV0Avn1MGqBEcC6VNH1eCDqNsDdY_XW2Hxu7tAVAgU4bTuVcamgClZFQdsr4TT&source=gbs_api"
-        }
-      }
     }
   ]
 }
