@@ -2,78 +2,53 @@
   "shelfBooks": [
     {
       "shelfId": 1,
-      "book": {
-        "id": "24a_o-VJvGsC",
-        "volumeInfo": {
-          "title": "Meditations",
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=24a_o-VJvGsC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71dOa3U3AD44lloabbnBisYapJMVRdJetOu9o2akXHcCze__ORMTlGuX7jLwon8hlsYXoR6yZ54kd5Q72RaR0OjHQZJDP-im256ZGjnBDIZ_raiSkURYSy2PHH9REuK3obX-gsc&source=gbs_api"
-          }
+      "id": "24a_o-VJvGsC",
+      "volumeInfo": {
+        "title": "Meditations",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=24a_o-VJvGsC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71dOa3U3AD44lloabbnBisYapJMVRdJetOu9o2akXHcCze__ORMTlGuX7jLwon8hlsYXoR6yZ54kd5Q72RaR0OjHQZJDP-im256ZGjnBDIZ_raiSkURYSy2PHH9REuK3obX-gsc&source=gbs_api"
         }
       }
     },
     {
       "shelfId": 2,
-      "book": {
-        "id": "PGR2AwAAQBAJ",
-        "volumeInfo": {
-          "title": "To Kill a Mockingbird",
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=PGR2AwAAQBAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE72iF1ySiejyIRe609KYsLxXty_OFL1r1KDYgbiAkOZIyTQctCBohunhIsoFIDPkbvDo379r_8AzX1lS74niXq8zFyRcctixwlXi3J6UZZ34cZClJD3kEp3OiudN0G_gYf1F4MpR&source=gbs_api"
-          }
+      "id": "PGR2AwAAQBAJ",
+      "volumeInfo": {
+        "title": "To Kill a Mockingbird",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=PGR2AwAAQBAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE72iF1ySiejyIRe609KYsLxXty_OFL1r1KDYgbiAkOZIyTQctCBohunhIsoFIDPkbvDo379r_8AzX1lS74niXq8zFyRcctixwlXi3J6UZZ34cZClJD3kEp3OiudN0G_gYf1F4MpR&source=gbs_api"
         }
       }
     },
     {
       "shelfId": 3,
-      "book": {
-        "id": "hEI2DwAAQBAJ",
-        "volumeInfo": {
-          "title": "Natives",
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=hEI2DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73MM5rlD1IED-NINi-J7YzQU2pQoPcdF14__IqVvoI1Rs_ITlyJ3pClGW1aZ3KyR3eSYfRQje0TwWxo8hpMtRQHzvadfefAf6WFPw-i1_CG_XuYkKBARLRJh-oy7QZyY46-Gpau&source=gbs_api"
-          }
+      "id": "hEI2DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Natives",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=hEI2DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73MM5rlD1IED-NINi-J7YzQU2pQoPcdF14__IqVvoI1Rs_ITlyJ3pClGW1aZ3KyR3eSYfRQje0TwWxo8hpMtRQHzvadfefAf6WFPw-i1_CG_XuYkKBARLRJh-oy7QZyY46-Gpau&source=gbs_api"
         }
       }
     },
     {
       "shelfId": 4,
-      "book": {
-        "id": "TdhaZ6xEaBYC",
-        "volumeInfo": {
-          "title": "The Grapes of Wrath",
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=TdhaZ6xEaBYC&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE70f4HaN4c8kGdXqZ6AHRA27V3qVK-rXGnD2UREP8uat05OL5ca2ck-Yb9hlgTbtiMmBHpyXmOkm01uGCY0AKYvLlurrZYKXexvTLKuXAp_rXp5FuAQ7s_hdZjbSUwX7spW53lQe&source=gbs_api"
-          }
+      "id": "TdhaZ6xEaBYC",
+      "volumeInfo": {
+        "title": "The Grapes of Wrath",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=TdhaZ6xEaBYC&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE70f4HaN4c8kGdXqZ6AHRA27V3qVK-rXGnD2UREP8uat05OL5ca2ck-Yb9hlgTbtiMmBHpyXmOkm01uGCY0AKYvLlurrZYKXexvTLKuXAp_rXp5FuAQ7s_hdZjbSUwX7spW53lQe&source=gbs_api"
         }
       }
     },
     {
       "shelfId": 5,
-      "book": {
-        "id": "kotPYEqx7kMC",
-        "volumeInfo": {
-          "title": "1984",
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=kotPYEqx7kMC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73yMvCe3j-LXtUF_IJjCp8F6FP_TbHJLj3oY3J1ASyhdzzmBsar8KJVPEYBMl2D5hQLOpENIOrkc_DfKLdYhFt0kchgFJrOcUuC5KAL7SQx1vAoXkd1kCo3hafySaC0R1fv5sPI&source=gbs_api"
-          }
+      "id": "kotPYEqx7kMC",
+      "volumeInfo": {
+        "title": "1984",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=kotPYEqx7kMC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73yMvCe3j-LXtUF_IJjCp8F6FP_TbHJLj3oY3J1ASyhdzzmBsar8KJVPEYBMl2D5hQLOpENIOrkc_DfKLdYhFt0kchgFJrOcUuC5KAL7SQx1vAoXkd1kCo3hafySaC0R1fv5sPI&source=gbs_api"
         }
       }
-    },
-    {
-      "book": {
-        "id": "-KFFDQNxEYcC",
-        "volumeInfo": {
-          "title": "Meditations",
-          "authors": ["Marcus Aurelius"],
-          "publishedDate": "2009-09-16",
-          "description": "<p>The Roman emperor Marcus Aurelius Antoninus (a.d. 121—180) embodied in his person that deeply cherished, ideal figure of antiquity, the philosopher-king. His <i>Meditations </i>are not only one of the most important expressions of the Stoic philosophy of his time but also an enduringly inspiring guide to living a good and just life. Written in moments snatched from military campaigns and the rigors of politics, these ethical and spiritual reflections reveal a mind of exceptional clarity and originality, and a spirit attuned to both the particulars of human destiny and the vast patterns that underlie it.</p>",
-          "imageLinks": {
-            "smallThumbnail": "http://books.google.com/books/content?id=-KFFDQNxEYcC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72M4f36gBUsu6FvdfPGgoLGlLmspUvI3MkEl1zTb0oUDFQxqVoDhbhZFZ6LCv_NgH-xQP17DZc27egQhOtqdPr7fe2XPOL6LOPEPTu0U1gqm68gCOm3LDKmpTwuXr3e65x1p-hT&source=gbs_api"
-          }
-        }
-      },
-      "shelfId": 6
     }
   ]
 }

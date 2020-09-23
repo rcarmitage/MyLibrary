@@ -6,12 +6,10 @@ const ShelfBookItem = ({ book }) => {
   const { setCurrent, clearCurrent } = libraryContext;
 
   const {
-    book: {
-      id,
-      volumeInfo: {
-        title,
-        imageLinks: { smallThumbnail },
-      },
+    id,
+    volumeInfo: {
+      title,
+      imageLinks: { smallThumbnail },
     },
   } = book;
 
