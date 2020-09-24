@@ -24,6 +24,8 @@ const LibraryState = (props) => {
 
   const [state, dispatch] = useReducer(libraryReducer, initialState);
 
+  const apiKey = process.env.API_KEY;
+
   // Get all books in the shelfBooks array
   const getShelfBooks = async () => {
     const res = await axios.get("/shelfBooks");
@@ -34,7 +36,7 @@ const LibraryState = (props) => {
   // Get a book's info from the API and store it in deskBook
   const getDeskBook = async (id) => {
     const res = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
+      `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)&key=${apiKey}`
     );
 
     dispatch({ type: GET_DESKBOOK, payload: res.data });
@@ -48,19 +50,14 @@ const LibraryState = (props) => {
       },
     };
 
-    // const book = {};
-    // const bookJson = Object.assign(book, deskBook);
-
     const res = await axios.post(
       "http://localhost:5000/shelfBooks",
       deskBook,
       config
     );
 
-    // console.log(deskBook);
-    // console.log(book);
-    console.log(res);
-    // dispatch({ type: ADD_BOOK, payload: res.data });
+    // console.log(res);
+    dispatch({ type: ADD_BOOK, payload: res.data });
   };
 
   // Delete book from a shelf
@@ -84,7 +81,7 @@ const LibraryState = (props) => {
   // Search Google Books API
   const searchBooks = async (text) => {
     const res = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=${text}&maxResults=10&fields=items(id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail))`
+      `https://www.googleapis.com/books/v1/volumes?q=${text}&maxResults=10&fields=items(id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail))&key=${apiKey}`
     );
 
     dispatch({

@@ -14,7 +14,7 @@ const Desk = () => {
   useEffect(() => {
     getDeskBook(current);
     // eslint-disable-next-line
-  }, [libraryContext, current]);
+  }, [libraryContext]);
 
   if (deskBook !== null) {
     const {
