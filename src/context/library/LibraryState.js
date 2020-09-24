@@ -19,7 +19,7 @@ const LibraryState = (props) => {
     shelfBooks: [],
     deskBook: null,
     searchResults: [],
-    current: null,
+    current: [],
   };
 
   const [state, dispatch] = useReducer(libraryReducer, initialState);
@@ -36,7 +36,7 @@ const LibraryState = (props) => {
   // Get a book's info from the API and store it in deskBook
   const getDeskBook = async (id) => {
     const res = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)&key=${apiKey}`
+      `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
     );
 
     dispatch({ type: GET_DESKBOOK, payload: res.data });
@@ -69,8 +69,8 @@ const LibraryState = (props) => {
   };
 
   // Set current book - data to be used for viewing area
-  const setCurrent = (google_id) => {
-    dispatch({ type: SET_CURRENT, payload: google_id });
+  const setCurrent = (searchResult) => {
+    dispatch({ type: SET_CURRENT, payload: searchResult });
   };
 
   // Clear current book - data to be used for viewing area
@@ -81,7 +81,7 @@ const LibraryState = (props) => {
   // Search Google Books API
   const searchBooks = async (text) => {
     const res = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=${text}&maxResults=10&fields=items(id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail))&key=${apiKey}`
+      `https://www.googleapis.com/books/v1/volumes?q=${text}&maxResults=10&fields=items(id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail))`
     );
 
     dispatch({
