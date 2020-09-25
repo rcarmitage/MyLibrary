@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://librarian:librarian123@books.jvbjq.mongodb.net/<dbname>?retryWrites=true&w=majority"
+}
