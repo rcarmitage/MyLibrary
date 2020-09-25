@@ -5,6 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "config": "^3.3.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
     "mongoose": "^5.10.7"

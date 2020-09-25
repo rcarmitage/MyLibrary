@@ -22,7 +22,7 @@ const BookSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  cover_img: {
+  smallThumbnail: {
     type: String,
     required: true,
   },

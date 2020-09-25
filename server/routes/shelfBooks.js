@@ -4,7 +4,13 @@ const router = express.Router();
 const Book = require("../models/Book");
 
 router.get("/", async (req, res) => {
-  res.send(req.body);
+  try {
+    const shelfBooks = await Book.find();
+    res.json(shelfBooks);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
 });
 
 router.post("/", async (req, res) => {
