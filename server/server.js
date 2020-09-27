@@ -22,7 +22,7 @@ app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => res.json({ msg: "Server running" }));
 
-// Route - potentially move all into server.js
+// Route
 app.use("/api/shelfBooks", require("./routes/shelfBooks"));
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));

@@ -14,10 +14,6 @@ const BookSchema = mongoose.Schema({
     type: Array,
     required: true,
   },
-  publishedDate: {
-    type: String,
-    required: true,
-  },
   description: {
     type: String,
     required: true,
