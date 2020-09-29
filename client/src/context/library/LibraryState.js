@@ -26,7 +26,7 @@ const LibraryState = (props) => {
 
   // Get all books in the shelfBooks array
   const getShelfBooks = async () => {
-    const res = await axios.get("/shelfBooks");
+    const res = await axios.get("http://localhost:5001/api/shelfBooks");
 
     dispatch({ type: GET_SHELFBOOKS, payload: res.data });
   };
@@ -41,22 +41,22 @@ const LibraryState = (props) => {
   };
 
   // Add book to shelf
-  // const addBook = async (deskBook) => {
-  //   const config = {
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   };
+  const addBook = async (deskBook) => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
 
-  //   const res = await axios.post(
-  //     "http://localhost:5000/shelfBooks",
-  //     deskBook,
-  //     config
-  //   );
+    const res = await axios.post(
+      "http://localhost:5001/api/shelfBooks",
+      deskBook,
+      config
+    );
 
-  //   // console.log(res);
-  //   dispatch({ type: ADD_BOOK, payload: res.data });
-  // };
+    // console.log(res);
+    dispatch({ type: ADD_BOOK, payload: res.data });
+  };
 
   // Delete book from a shelf
 
