@@ -28,8 +28,9 @@ const LibraryState = (props) => {
 
   // Get all books in the shelfBooks array
   const getShelfBooks = async () => {
-    const res = await axios.get("/shelfBooks");
+    const res = await axios.get("http://localhost:5001/api/shelfBooks");
 
+    console.log(res);
     dispatch({ type: GET_SHELFBOOKS, payload: res.data });
   };
 
@@ -51,7 +52,7 @@ const LibraryState = (props) => {
     };
 
     const res = await axios.post(
-      "http://localhost:5000/shelfBooks",
+      "http://localhost:5001/api/shelfBooks",
       deskBook,
       config
     );
