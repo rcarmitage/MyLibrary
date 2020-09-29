@@ -1,7 +1,7 @@
 import {
   GET_SHELFBOOKS,
   GET_DESKBOOK,
-  ADD_BOOK,
+  // ADD_BOOK,
   DELETE_BOOK,
   // SET_DESKBOOK,
   CLEAR_DESKBOOK,
@@ -23,11 +23,11 @@ export default (state, action) => {
         ...state,
         deskBook: action.payload,
       };
-    case ADD_BOOK:
-      return {
-        ...state,
-        shelfBooks: [action.payload, ...state.shelfBooks],
-      };
+    // case ADD_BOOK:
+    //   return {
+    //     ...state,
+    //     shelfBooks: [action.payload, ...state.shelfBooks],
+    //   };
     case CLEAR_DESKBOOK:
       return {
         ...state,
