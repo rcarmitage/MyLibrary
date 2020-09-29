@@ -30,7 +30,6 @@ const LibraryState = (props) => {
   const getShelfBooks = async () => {
     const res = await axios.get("http://localhost:5001/api/shelfBooks");
 
-    console.log(res);
     dispatch({ type: GET_SHELFBOOKS, payload: res.data });
   };
 

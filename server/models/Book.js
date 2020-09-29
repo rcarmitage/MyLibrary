@@ -6,25 +6,29 @@ const BookSchema = mongoose.Schema({
     required: true,
     unique: true,
   },
-  title: {
-    type: String,
-    required: true,
-  },
-  authors: {
-    type: Array,
-    required: true,
-  },
-  publishedDate: {
-    type: Number,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  smallThumbnail: {
-    type: String,
-    required: true,
+  volumeInfo: {
+    title: {
+      type: String,
+      required: true,
+    },
+    authors: {
+      type: Array,
+      required: true,
+    },
+    publishedDate: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    imageLinks: {
+      smallThumbnail: {
+        type: String,
+        required: true,
+      },
+    },
   },
 });
 

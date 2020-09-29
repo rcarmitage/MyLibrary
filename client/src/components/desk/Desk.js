@@ -11,10 +11,10 @@ const Desk = () => {
     clearDeskBook,
   } = libraryContext;
 
-  // useEffect(() => {
-  //   getDeskBook(current);
-  //   // eslint-disable-next-line
-  // }, [current]);
+  useEffect(() => {
+    getDeskBook(current);
+    // eslint-disable-next-line
+  }, [current]);
 
   if (deskBook !== null) {
     const {

@@ -16,21 +16,25 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   const {
     id,
-    title,
-    authors,
-    publishedDate,
-    description,
-    smallThumbnail,
+    volumeInfo: {
+      title,
+      authors,
+      publishedDate,
+      description,
+      imageLinks: { smallThumbnail },
+    },
   } = req.body;
 
   try {
     const newShelfBook = new Book({
       id,
-      title,
-      authors,
-      publishedDate,
-      description,
-      smallThumbnail,
+      volumeInfo: {
+        title,
+        authors,
+        publishedDate,
+        description,
+        imageLinks: { smallThumbnail },
+      },
     });
 
     const shelfBook = await newShelfBook.save();
