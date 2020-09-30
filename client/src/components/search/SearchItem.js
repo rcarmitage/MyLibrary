@@ -3,7 +3,7 @@ import LibraryContext from "../../context/library/libraryContext";
 
 const SearchItem = ({ searchResult }) => {
   const libraryContext = useContext(LibraryContext);
-  const { setCurrent } = libraryContext;
+  const { setDeskBook } = libraryContext;
   const {
     id,
     volumeInfo: {
@@ -20,7 +20,7 @@ const SearchItem = ({ searchResult }) => {
       <p>
         {title} | {authors} | {publishedDate}
       </p>
-      <button onClick={() => setCurrent(searchResult)}>View Details</button>
+      <button onClick={() => setDeskBook(searchResult)}>View Details</button>
     </div>
   );
 };

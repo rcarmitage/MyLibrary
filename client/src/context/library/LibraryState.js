@@ -7,9 +7,8 @@ import {
   GET_DESKBOOK,
   ADD_BOOK,
   DELETE_BOOK,
+  SET_DESKBOOK,
   CLEAR_DESKBOOK,
-  SET_CURRENT,
-  CLEAR_CURRENT,
   SEARCH_BOOKS,
   BOOK_ERROR,
 } from "../types";
@@ -19,7 +18,6 @@ const LibraryState = (props) => {
     shelfBooks: [],
     deskBook: null,
     searchResults: [],
-    current: [],
   };
 
   const [state, dispatch] = useReducer(libraryReducer, initialState);
@@ -32,13 +30,13 @@ const LibraryState = (props) => {
   };
 
   // Get a book's info from the API and store it in deskBook
-  const getDeskBook = async (id) => {
-    const res = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
-    );
+  // const getDeskBook = async (id) => {
+  //   const res = await axios.get(
+  //     `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
+  //   );
 
-    dispatch({ type: GET_DESKBOOK, payload: res.data });
-  };
+  //   dispatch({ type: GET_DESKBOOK, payload: res.data });
+  // };
 
   // Add book to shelf
   const addBook = async (deskBook) => {
@@ -60,20 +58,14 @@ const LibraryState = (props) => {
 
   // Delete book from a shelf
 
-  // // Clear book to be viewed in viewing area
+  // Set book to be displayed in viewing area
+  const setDeskBook = (searchResult) => {
+    dispatch({ type: SET_DESKBOOK, payload: searchResult });
+  };
+
+  // Clear book displayed in viewing area
   const clearDeskBook = () => {
-    clearCurrent();
     dispatch({ type: CLEAR_DESKBOOK });
-  };
-
-  // Set current book - data to be used for viewing area
-  const setCurrent = (searchResult) => {
-    dispatch({ type: SET_CURRENT, payload: searchResult });
-  };
-
-  // Clear current book - data to be used for viewing area
-  const clearCurrent = () => {
-    dispatch({ type: CLEAR_CURRENT });
   };
 
   // Search Google Books API
@@ -94,13 +86,10 @@ const LibraryState = (props) => {
         shelfBooks: state.shelfBooks,
         deskBook: state.deskBook,
         searchResults: state.searchResults,
-        current: state.current,
         getShelfBooks,
-        getDeskBook,
-        // addBook,
+        setDeskBook,
+        addBook,
         clearDeskBook,
-        setCurrent,
-        clearCurrent,
         searchBooks,
       }}
     >
