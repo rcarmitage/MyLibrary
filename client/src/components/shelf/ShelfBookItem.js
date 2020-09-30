@@ -3,10 +3,9 @@ import LibraryContext from "../../context/library/libraryContext";
 
 const ShelfBookItem = ({ book }) => {
   const libraryContext = useContext(LibraryContext);
-  const { setCurrent, clearCurrent } = libraryContext;
+  const { setDeskBook } = libraryContext;
 
   const {
-    id,
     volumeInfo: {
       title,
       imageLinks: { smallThumbnail },
@@ -20,11 +19,10 @@ const ShelfBookItem = ({ book }) => {
       <img
         src={smallThumbnail}
         alt="book cover image"
-        onClick={() => setCurrent(book)}
+        onClick={() => setDeskBook(book)}
       />
       <p>{title}</p>
       <div>
-        <button>View Details</button>
         <button>Remove</button>
       </div>
     </div>

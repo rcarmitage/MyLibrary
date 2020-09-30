@@ -5,14 +5,7 @@ const SearchItem = ({ searchResult }) => {
   const libraryContext = useContext(LibraryContext);
   const { setDeskBook } = libraryContext;
   const {
-    id,
-    volumeInfo: {
-      title,
-      authors,
-      publishedDate,
-      description,
-      imageLinks: { smallThumbnail },
-    },
+    volumeInfo: { title, authors, publishedDate },
   } = searchResult;
 
   return (

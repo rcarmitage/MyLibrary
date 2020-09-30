@@ -3,7 +3,7 @@ import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
   const libraryContext = useContext(LibraryContext);
-  const { deskBook, clearDeskBook } = libraryContext;
+  const { deskBook, clearDeskBook, addBook } = libraryContext;
 
   if (deskBook !== null) {
     const {
@@ -28,7 +28,7 @@ const Desk = () => {
           <a href={`https://books.google.co.uk/books?id=${id}`} target="_blank">
             <button>View this title on Google Books</button>
           </a>
-          <button>Add to/remove from shelf</button>
+          <button onClick={addBook}>Add to/remove from shelf</button>
         </div>
         <button onClick={clearDeskBook}>Clear desk</button>
       </div>

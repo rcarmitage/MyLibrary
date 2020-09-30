@@ -4,8 +4,7 @@ import LibraryContext from "./libraryContext";
 import libraryReducer from "./libraryReducer";
 import {
   GET_SHELFBOOKS,
-  GET_DESKBOOK,
-  ADD_BOOK,
+  // ADD_BOOK,
   DELETE_BOOK,
   SET_DESKBOOK,
   CLEAR_DESKBOOK,
@@ -29,15 +28,6 @@ const LibraryState = (props) => {
     dispatch({ type: GET_SHELFBOOKS, payload: res.data });
   };
 
-  // Get a book's info from the API and store it in deskBook
-  // const getDeskBook = async (id) => {
-  //   const res = await axios.get(
-  //     `https://www.googleapis.com/books/v1/volumes/${id}?fields=id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail)`
-  //   );
-
-  //   dispatch({ type: GET_DESKBOOK, payload: res.data });
-  // };
-
   // Add book to shelf
   const addBook = async (deskBook) => {
     const config = {
@@ -52,8 +42,8 @@ const LibraryState = (props) => {
       config
     );
 
-    // console.log(res);
-    dispatch({ type: ADD_BOOK, payload: res.data });
+    console.log(res);
+    // dispatch({ type: ADD_BOOK, payload: res.data });
   };
 
   // Delete book from a shelf
