@@ -4,7 +4,7 @@ import LibraryContext from "./libraryContext";
 import libraryReducer from "./libraryReducer";
 import {
   GET_SHELFBOOKS,
-  // ADD_BOOK,
+  ADD_BOOK,
   DELETE_BOOK,
   SET_DESKBOOK,
   CLEAR_DESKBOOK,
@@ -36,14 +36,17 @@ const LibraryState = (props) => {
       },
     };
 
-    const res = await axios.post(
-      "http://localhost:5001/api/shelfBooks",
-      deskBook,
-      config
-    );
+    try {
+      const res = await axios.post(
+        "http://localhost:5001/api/shelfBooks",
+        deskBook,
+        config
+      );
 
-    console.log(res);
-    // dispatch({ type: ADD_BOOK, payload: res.data });
+      dispatch({ type: ADD_BOOK, payload: res.data });
+    } catch (err) {
+      dispatch({ type: BOOK_ERROR, payload: err.response.msg });
+    }
   };
 
   // Delete book from a shelf

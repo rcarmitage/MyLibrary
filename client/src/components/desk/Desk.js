@@ -28,7 +28,7 @@ const Desk = () => {
           <a href={`https://books.google.co.uk/books?id=${id}`} target="_blank">
             <button>View this title on Google Books</button>
           </a>
-          <button onClick={addBook}>Add to/remove from shelf</button>
+          <button onClick={addBook(deskBook)}>Add to/remove from shelf</button>
         </div>
         <button onClick={clearDeskBook}>Clear desk</button>
       </div>

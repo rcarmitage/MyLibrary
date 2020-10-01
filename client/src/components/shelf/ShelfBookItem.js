@@ -18,7 +18,7 @@ const ShelfBookItem = ({ book }) => {
     <div className="book-info">
       <img
         src={smallThumbnail}
-        alt="book cover image"
+        alt="book cover"
         onClick={() => setDeskBook(book)}
       />
       <p>{title}</p>
