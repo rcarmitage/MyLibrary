@@ -93,7 +93,7 @@ button,
 .shelf,
 .desk,
 .search-container {
-  border: var(--dark-color) 8px solid;
+  border: var(--dark-color) 7px solid;
   padding: 1rem;
   margin: 1rem;
 }
@@ -111,8 +111,7 @@ button,
 
 .book-info {
   border: var(--dark-color) 3px solid;
-  padding: 1rem;
-  margin: 1.5rem;
+  margin: 2rem 1.5rem 3rem 1.5rem;
   background-color: var(--dark-brown);
   width: 7rem;
   height: 11rem;
@@ -120,6 +119,28 @@ button,
 
 .book-info h4 {
   font-style: italic;
+}
+
+.book-info img {
+  width: 100%;
+  height: 100%;
+}
+
+.book-info .details {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-info .details p {
+  margin: 0;
+}
+
+.book-info .details .book-title {
+  border: var(--dark-color) 3px solid;
+  background-color: var(--dark-brown);
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem;
 }
 
 .cover-image-desk {

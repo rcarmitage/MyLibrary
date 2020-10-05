@@ -21,9 +21,11 @@ const ShelfBookItem = ({ book }) => {
         alt="book cover"
         onClick={() => setDeskBook(book)}
       />
-      <p>{title}</p>
-      <div>
-        <button>Remove</button>
+      <div className="details">
+        <p className="book-title">{title}</p>
+        <div>
+          <button>Remove</button>
+        </div>
       </div>
     </div>
   );
