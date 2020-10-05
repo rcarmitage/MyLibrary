@@ -9,12 +9,12 @@ const NavBar = () => (
     <div className="nav-links">
       <ul>
         <li>
-          <Link className="btn" to="/">
+          <Link className="a" to="/">
             Home
           </Link>
         </li>
         <li>
-          <Link className="btn" to="/about">
+          <Link className="a" to="/about">
             About
           </Link>
         </li>

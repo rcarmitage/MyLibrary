@@ -4,14 +4,15 @@
   --dark-color: #31212a;
   --light-color: #ffefd3;
   --dark-green: #264038;
+  --brass: #b5a642;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Domine", serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: var(--light-brown);
-  color: var(--light-color);
+  color: var(--brass);
   height: 100%;
   /* background-image: url(./assets/wood_background.jpg); */
   background-position: center;
@@ -29,15 +30,70 @@ body {
   grid-gap: 2rem;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Domine", serif;
+  font-weight: 400;
+}
+
 #navbar {
   list-style: none;
+  background-color: var(--dark-brown);
+  display: flex;
+  /* position: static; */
+}
+
+#title {
+  font-size: 2rem;
+  cursor: default;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: static;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.nav-links ul {
+  list-style-type: none;
+  font-family: "Domine", serif;
+  font-size: 1.2rem;
+}
+
+a {
+  color: var(--brass);
+  text-decoration: none;
+  border: var(--brass) 1px solid;
+  padding: 0.1rem 0.5rem;
+  margin: 1rem;
+}
+
+button,
+.btn {
+  background-color: var(--dark-brown);
+  color: var(--brass);
+  text-decoration: none;
+  border: var(--brass) 1px solid;
+  /* padding: 0.1rem 0.5rem; */
+  /* margin: 1rem; */
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
 }
 
 .shelves-container,
 .shelf,
 .desk,
 .search-container {
-  border: var(--dark-color) 3px solid;
+  border: var(--dark-color) 8px solid;
   padding: 1rem;
   margin: 1rem;
 }

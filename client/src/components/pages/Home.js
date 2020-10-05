@@ -5,7 +5,6 @@ import Search from "../search/Search";
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
     <div>
       <div className="shelf">
         <ShelfBooks />
