@@ -5,6 +5,7 @@
   --light-color: #ffefd3;
   --dark-green: #264038;
   --brass: #b5a642;
+  margin: 0 15rem;
 }
 
 body {
@@ -34,42 +35,53 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Domine", serif;
   font-weight: 400;
+  cursor: default;
+}
+
+p {
+  cursor: default;
 }
 
 #navbar {
   list-style: none;
   background-color: var(--dark-brown);
-  display: flex;
-  /* position: static; */
+  /* display: flex; */
+  margin: 0 7rem;
 }
 
 #title {
   font-size: 2rem;
   cursor: default;
   width: 100%;
+  height: 9rem;
   display: flex;
   justify-content: center;
-  position: static;
+  /* position: static; */
+  /* padding-bottom: 0.5rem; */
 }
 
 .nav-links {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  flex-direction: row;
+  /* width: 70%; */
+  /* position: fixed; */
+  /* right: 0; */
+  /* z-index: 100; */
 }
 
-.nav-links ul {
+/* .nav-links ul {
   list-style-type: none;
-  font-family: "Domine", serif;
   font-size: 1.2rem;
-}
+  flex-direction: row;
+} */
 
 a {
   color: var(--brass);
   text-decoration: none;
-  border: var(--brass) 1px solid;
+  /* border: var(--brass) 1px solid; */
   padding: 0.1rem 0.5rem;
   margin: 1rem;
 }
@@ -80,8 +92,12 @@ button,
   color: var(--brass);
   text-decoration: none;
   border: var(--brass) 1px solid;
-  /* padding: 0.1rem 0.5rem; */
-  /* margin: 1rem; */
+  cursor: pointer;
+}
+
+.nav-links .nav-button {
+  font-size: 1rem;
+  margin: 0.2rem 0.3rem;
 }
 
 .intro {
@@ -113,7 +129,7 @@ button,
   border: var(--dark-color) 3px solid;
   margin: 2rem 1.5rem 3rem 1.5rem;
   background-color: var(--dark-brown);
-  width: 7rem;
+  /* width: 7rem; */
   height: 11rem;
 }
 
@@ -141,6 +157,7 @@ button,
   display: flex;
   justify-content: center;
   padding: 0.2rem;
+  font-size: 0.7rem;
 }
 
 .cover-image-desk {

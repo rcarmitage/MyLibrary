@@ -7,18 +7,12 @@ const NavBar = () => (
       <h1>My Library</h1>
     </div>
     <div className="nav-links">
-      <ul>
-        <li>
-          <Link className="a" to="/">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link className="a" to="/about">
-            About
-          </Link>
-        </li>
-      </ul>
+      <button className="nav-button">
+        <Link to="/">Home</Link>
+      </button>
+      <button className="nav-button">
+        <Link to="/about">About</Link>
+      </button>
     </div>
   </div>
 );
