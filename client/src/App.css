@@ -88,6 +88,7 @@ a {
 
 button,
 .btn {
+  font-family: "Domine", serif;
   background-color: var(--dark-brown);
   color: var(--brass);
   text-decoration: none;
@@ -129,7 +130,7 @@ button,
   border: var(--dark-color) 3px solid;
   margin: 2rem 1.5rem 3rem 1.5rem;
   background-color: var(--dark-brown);
-  /* width: 7rem; */
+  max-width: 8rem;
   height: 11rem;
 }
 
