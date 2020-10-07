@@ -12,13 +12,16 @@ body {
   font-family: "Domine", serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: var(--light-brown);
   color: var(--brass);
   height: 100%;
-  /* background-image: url(./assets/wood_background.jpg); */
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: rgb(0, 0, 0, 0.8);
+  background-image: url(./assets/library_background_01.jpg);
+  /* background: center center; */
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-position: center; */
+  background-blend-mode: soft-light;
 }
 
 .App {
@@ -46,7 +49,7 @@ p {
 #navbar {
   list-style: none;
   background-color: var(--dark-brown);
-  background-image: url(./assets/dark_wood_01.jpg);
+  background-image: url(./assets/dark_wood_02.jpg);
   background-repeat: no-repeat;
   background-size: 1000px 1000px;
   background-position: top center;
@@ -121,9 +124,7 @@ button,
 }
 
 .shelves-container,
-.shelf,
-.desk,
-.search-container {
+.shelf {
   border: var(--dark-color) 7px solid;
   border-radius: 3px;
   padding: 1rem;
@@ -181,6 +182,18 @@ button,
   justify-content: center;
   padding: 0.2rem;
   font-size: 0.7rem;
+}
+
+.desk,
+.search-container {
+  background-image: url(./assets/dark_wood_01.jpg);
+  background-repeat: no-repeat;
+  background-size: 1000px 1000px;
+  background-position: top center;
+  border: 4px solid rgb(0, 0, 0, 0.5);
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 .cover-image-desk {
