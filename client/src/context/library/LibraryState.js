@@ -36,16 +36,18 @@ const LibraryState = (props) => {
       },
     };
 
-    try {
-      const res = await axios.post(
-        "http://localhost:5001/api/shelfBooks",
-        deskBook,
-        config
-      );
+    if (!state.shelfBooks.length >= 10) {
+      try {
+        const res = await axios.post(
+          "http://localhost:5001/api/shelfBooks",
+          deskBook,
+          config
+        );
 
-      dispatch({ type: ADD_BOOK, payload: res.data });
-    } catch (err) {
-      dispatch({ type: BOOK_ERROR, payload: err.response.msg });
+        dispatch({ type: ADD_BOOK, payload: res.data });
+      } catch (err) {
+        dispatch({ type: BOOK_ERROR, payload: err.response.msg });
+      }
     }
   };
 
