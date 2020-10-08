@@ -6,6 +6,7 @@
   --dark-green: #264038;
   --brass: #b5a642;
   margin: 0 15rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
   line-height: 1.6;
   color: var(--brass);
   height: 100%;
-  background-color: rgb(0, 0, 0, 0.8);
+  background-color: rgb(0, 0, 0, 0.7);
   background-image: url(./assets/library_background_01.jpg);
   /* background: center center; */
   background-size: cover;
@@ -52,8 +53,9 @@ p {
   background-image: url(./assets/dark_wood_02.jpg);
   background-repeat: no-repeat;
   background-size: 1000px 1000px;
-  background-position: top center;
-  border: 2px solid rgb(0, 0, 0, 0.5);
+  background-position-x: 50%;
+  background-position-y: 10%;
+  border: 1px solid rgba(181, 166, 66, 0.2);
   /* border-image: url(./assets/dark_wood_02.jpg); */
   border-radius: 4px;
   box-shadow: 0 0 5px black;
@@ -101,14 +103,16 @@ button,
 .btn {
   font-family: "Domine", serif;
   background-color: var(--dark-brown);
-  background-image: url(./assets/dark_wood_01.jpg);
+  background-image: url(./assets/dark_wood_02.jpg);
   background-repeat: no-repeat;
   background-size: 1000px 1000px;
-  background-position: top right;
+  background-position-x: 70%;
+  background-position-y: 30%;
   border-radius: 2px;
   color: var(--brass);
   text-decoration: none;
-  border: var(--brass) 1px solid;
+  border: 1px solid rgba(181, 166, 66, 0.4);
+  box-shadow: 0 0 5px black;
   cursor: pointer;
 }
 
@@ -121,6 +125,23 @@ button,
 .intro {
   display: flex;
   justify-content: center;
+  margin: 2rem 10rem 0 10rem;
+  /* margin-bottom: 0; */
+  /* width: 60%; */
+  background-color: var(--dark-brown);
+  background-image: url(./assets/dark_wood_02.jpg);
+  background-repeat: no-repeat;
+  background-size: 1000px 1000px;
+  background-position: top center;
+  background-position-x: 40%;
+  background-position-y: 20%;
+  border-top: 1px solid rgba(181, 166, 66, 0.2);
+  border-left: 1px solid rgba(181, 166, 66, 0.2);
+  border-right: 1px solid rgba(181, 166, 66, 0.2);
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 0 5px black;
+  /* background-color: rgb(0, 0, 0, 0.4); */
+  /* box-shadow: 0 0 15px rgb(0, 0, 0, 0.4); */
 }
 
 .shelves-container,
@@ -128,7 +149,7 @@ button,
   border: var(--dark-color) 7px solid;
   border-radius: 3px;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0 1rem 1rem 1rem;
 }
 
 .shelves-container h4 {
@@ -186,12 +207,16 @@ button,
 
 .desk,
 .search-container {
-  background-image: url(./assets/dark_wood_01.jpg);
+  background-color: var(--dark-brown);
+  background-image: url(./assets/dark_wood_02.jpg);
   background-repeat: no-repeat;
   background-size: 1000px 1000px;
   background-position: top center;
-  border: 4px solid rgb(0, 0, 0, 0.5);
+  background-position-x: 40%;
+  background-position-y: 20%;
+  border: 1px solid rgba(181, 166, 66, 0.2);
   border-radius: 3px;
+  box-shadow: 0 0 5px black;
   padding: 1rem;
   margin: 1rem;
 }

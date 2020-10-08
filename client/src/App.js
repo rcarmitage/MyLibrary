@@ -15,9 +15,6 @@ const App = () => {
       <Router>
         <Fragment>
           <NavBar />
-          <p className="intro">
-            Search the Google Books API to add books to the shelf
-          </p>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />

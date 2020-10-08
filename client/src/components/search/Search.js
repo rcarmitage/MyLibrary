@@ -19,7 +19,7 @@ const Search = () => {
 
   return (
     <div>
-      <h3>Search</h3>
+      <h3>Archive</h3>
       <form onSubmit={onSubmit} className="search-form">
         <input
           type="text"
