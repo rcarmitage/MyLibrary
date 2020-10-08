@@ -9,8 +9,10 @@ const Home = () => (
       <p className="intro">
         Search the Google Books API to add books to the shelf
       </p>
-      <div className="shelf">
-        <ShelfBooks />
+      <div className="shelf-container">
+        <div className="shelf">
+          <ShelfBooks />
+        </div>
       </div>
       <div className="grid-2">
         <div>
