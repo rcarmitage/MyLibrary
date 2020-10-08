@@ -1,9 +1,9 @@
-import React, { Fragment, useState, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
   const libraryContext = useContext(LibraryContext);
-  const { deskBook, clearDeskBook, addBook } = libraryContext;
+  const { deskBook, clearDeskBook } = libraryContext;
 
   if (deskBook !== null) {
     const {
@@ -28,7 +28,7 @@ const Desk = () => {
           <a href={`https://books.google.co.uk/books?id=${id}`} target="_blank">
             <button>View this title on Google Books</button>
           </a>
-          <button onClick={addBook(deskBook)}>Add to/remove from shelf</button>
+          <button>Add to/remove from shelf</button>
         </div>
         <button onClick={clearDeskBook}>Clear desk</button>
       </div>

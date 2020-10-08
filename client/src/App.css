@@ -163,13 +163,17 @@ a {
 }
 
 .book-info {
-  border: 2px solid var(--dark-color);
+  border: 1px solid var(--dark-color);
   margin: 1rem 1.5rem 3rem 1.5rem;
   background-color: var(--dark-brown);
   border-radius: 2px;
   max-width: 8rem;
   height: 11rem;
   position: relative;
+}
+
+.book-info:hover {
+  border: 1px solid rgba(181, 166, 66, 0.7);
 }
 
 .book-info h4 {
@@ -183,10 +187,6 @@ a {
   height: 100%;
   cursor: pointer;
 }
-
-/* .book-info img:hover {
-  border: 1px solid rgba(181, 166, 66, 0.7);
-} */
 
 .book-info .details {
   display: flex;
@@ -207,11 +207,10 @@ a {
   border-radius: 2px;
   box-shadow: 0 0 5px black;
   display: flex;
-  /* justify-content: center; */
-  padding: 0.2rem;
-  font-size: 0.8rem;
+  padding: 0.2rem 0 0.2rem 0.6rem;
+  font-size: 0.7rem;
   white-space: nowrap;
-  width: 7.5rem;
+  width: 7.3rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -221,6 +220,13 @@ a {
   font-size: 0.6rem;
   position: absolute;
   transform: translate(-100%, 0);
+  box-shadow: none;
+  /* border-left: 1px solid rgba(181, 166, 66, 0.4); */
+  /* border-bottom: 1px solid rgba(181, 166, 66, 0.4); */
+}
+
+.book-info button:hover {
+  text-decoration: underline;
 }
 
 /* Desk, Search */
