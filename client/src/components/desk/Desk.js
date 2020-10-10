@@ -19,18 +19,22 @@ const Desk = () => {
 
     return (
       <div className="desk">
-        <img src={smallThumbnail}></img>
-        <p>Title: {title}</p>
-        <p>Authors: {authors}</p>
-        <p>Published: {publishedDate}</p>
-        <p>{description}</p>
+        <button onClick={clearDeskBook} className="clear-desk">
+          Clear
+        </button>
         <div>
           <a href={`https://books.google.co.uk/books?id=${id}`} target="_blank">
             <button>View this title on Google Books</button>
           </a>
           <button onClick={addBook(deskBook)}>Add to/remove from shelf</button>
         </div>
-        <button onClick={clearDeskBook}>Clear desk</button>
+        <div>
+          <img src={smallThumbnail}></img>
+          <p>Title: {title}</p>
+          <p>Authors: {authors}</p>
+          <p>Published: {publishedDate}</p>
+          <p>{description}</p>
+        </div>
       </div>
     );
   } else {

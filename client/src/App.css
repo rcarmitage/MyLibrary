@@ -83,7 +83,7 @@ a {
   list-style: none;
   background-color: var(--dark-brown);
   background-image: url(./assets/dark_wood_02.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 1000px 1000px;
   background-position-x: 50%;
   background-position-y: 10%;
@@ -126,7 +126,7 @@ a {
   padding: 0.4rem 0;
   background-color: var(--dark-brown);
   background-image: url(./assets/dark_wood_02.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 1000px 1000px;
   background-position: top center;
   background-position-x: 40%;
@@ -141,7 +141,7 @@ a {
 .shelf-container {
   background-color: var(--dark-brown);
   background-image: url(./assets/dark_wood_02.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 1300px 1300px;
   background-position: top center;
   background-position-x: 40%;
@@ -235,7 +235,7 @@ a {
 .search-container {
   background-color: var(--dark-brown);
   background-image: url(./assets/dark_wood_02.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 1000px 1000px;
   background-position: top center;
   background-position-x: 40%;
