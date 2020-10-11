@@ -237,8 +237,6 @@ a {
   background-image: url(./assets/dark_wood_03_large.jpg);
   background-repeat: repeat;
   background-size: 2000px 2000px;
-  background-position-x: 5%;
-  background-position-y: 0;
   border: 1px solid rgba(181, 166, 66, 0.2);
   border-radius: 3px;
   box-shadow: 0 0 5px black;
@@ -246,16 +244,25 @@ a {
   margin: 1rem;
 }
 
+.desk {
+  background-position-x: 3%;
+  background-position-y: 0;
+}
+
+.search-container {
+  background-position-x: 17%;
+  background-position-y: 5%;
+}
+
 .cover-image-desk {
   background-color: var(--dark-brown);
   border: 1px solid var(--dark-color);
   border-radius: 2px;
-  width: 14rem;
   margin: 1rem 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 40%;
 }
 
 .deskbook-details {
