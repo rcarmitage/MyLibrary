@@ -9,11 +9,24 @@ const SearchItem = ({ searchResult }) => {
   } = searchResult;
 
   return (
-    <div>
-      <p>
-        {title} | {authors} | {publishedDate}
-      </p>
-      <button onClick={() => setDeskBook(searchResult)}>View Details</button>
+    <div className="results-item grid-search-item">
+      <div>
+        <p>
+          <b>Title | </b>
+          {title}
+        </p>
+        <p>
+          <b>Authors | </b>
+          {authors}
+        </p>
+        <p>
+          <b>Published | </b>
+          {publishedDate}
+        </p>
+      </div>
+      <div>
+        <button onClick={() => setDeskBook(searchResult)}>View Details</button>
+      </div>
     </div>
   );
 };
