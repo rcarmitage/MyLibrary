@@ -6,9 +6,9 @@ import Search from "../search/Search";
 const Home = () => (
   <div>
     <div>
-      <p className="intro">
+      <h4 className="intro">
         Search the Google Books API to add books to the shelf
-      </p>
+      </h4>
       <div className="shelf-container">
         <div className="shelf">
           <ShelfBooks />

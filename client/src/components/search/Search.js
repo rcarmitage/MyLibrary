@@ -20,7 +20,7 @@ const Search = () => {
   return (
     <div className="search">
       <button>Clear</button>
-      <h3 className="search-title">Archive</h3>
+      <h2 className="search-title">Archive</h2>
       <form onSubmit={onSubmit} className="search-form">
         <input
           type="text"

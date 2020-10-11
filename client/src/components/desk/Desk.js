@@ -29,11 +29,26 @@ const Desk = () => {
           <button onClick={addBook(deskBook)}>Add to/remove from shelf</button>
         </div>
         <div>
-          <img src={smallThumbnail}></img>
-          <p>Title: {title}</p>
-          <p>Authors: {authors}</p>
-          <p>Published: {publishedDate}</p>
-          <p>{description}</p>
+          <img
+            src={smallThumbnail}
+            className="cover-image-desk"
+            alt="book cover"
+          ></img>
+          <div className="deskbook-details">
+            <p>
+              <b>Title | </b>
+              {title}
+            </p>
+            <p>
+              <b>Authors | </b>
+              {authors}
+            </p>
+            <p>
+              <b>Published | </b>
+              {publishedDate}
+            </p>
+            <p>{description}</p>
+          </div>
         </div>
       </div>
     );

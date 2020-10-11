@@ -38,13 +38,15 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-weight: 400;
   cursor: default;
 }
 
 p {
   cursor: default;
+  font-size: 0.8rem;
 }
 
 button,
@@ -245,14 +247,23 @@ a {
 }
 
 .cover-image-desk {
-  border: var(--dark-color) 3px solid;
-  border-radius: 3px;
   background-color: var(--dark-brown);
+  border: 1px solid var(--dark-color);
+  border-radius: 2px;
   width: 14rem;
-  height: 20rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 1rem 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.deskbook-details {
+  border: 1px solid rgba(181, 166, 66, 0.2);
+  border-radius: 3px;
+  box-shadow: 0 0 9px black;
+  margin: 0.5rem 0;
+  padding: 0 0.8rem;
 }
 
 .search button {
