@@ -8,7 +8,21 @@ This is a personal project I have used to consolidate my knowledge of **React** 
 
 ### Installation
 
-(Pending)
+To interact with the app on your local machine, clone the repo and run the following commands.
+
+# In server directory:
+
+`npm install`
+`npm run server`
+
+The server will run and connect to the MongoDB Atlas database.
+
+# In client directory:
+
+`npm install`
+`npm start`
+
+The app will run on port 3000.
 
 ### Using the MyLibrary app
 
