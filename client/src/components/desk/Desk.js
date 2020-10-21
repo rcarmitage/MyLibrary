@@ -3,10 +3,19 @@ import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
   const libraryContext = useContext(LibraryContext);
-  const { deskBook, clearDeskBook, addBook } = libraryContext;
+  const { deskBook, clearDeskBook, addBook, deleteBook } = libraryContext;
+
+  const isOnShelf = () => {
+    // Search _id against shelfBooks
+  };
+
+  const onAdd = () => {
+    addBook(deskBook);
+  };
 
   if (deskBook !== null) {
     const {
+      _id,
       id,
       volumeInfo: {
         title,
@@ -17,6 +26,10 @@ const Desk = () => {
       },
     } = deskBook;
 
+    const onDelete = () => {
+      deleteBook(_id);
+    };
+
     return (
       <div className="desk">
         <button onClick={clearDeskBook} className="clear-desk">
@@ -26,7 +39,11 @@ const Desk = () => {
           <a href={`https://books.google.co.uk/books?id=${id}`} target="_blank">
             <button>View this title on Google Books</button>
           </a>
-          <button onClick={addBook(deskBook)}>Add to/remove from shelf</button>
+          {isOnShelf ? (
+            <button onClick={onDelete}>Remove from shelf</button>
+          ) : (
+            <button onClick={onAdd}>Add to shelf</button>
+          )}
         </div>
         <div>
           <img

@@ -52,6 +52,15 @@ const LibraryState = (props) => {
   };
 
   // Delete book from a shelf
+  const deleteBook = async (id) => {
+    try {
+      await axios.delete(`http://localhost:5001/api/shelfBooks/${id}`);
+
+      dispatch({ type: DELETE_BOOK, payload: id });
+    } catch (err) {
+      dispatch({ type: BOOK_ERROR, payload: err.response });
+    }
+  };
 
   // Set book to be displayed in viewing area
   const setDeskBook = (searchResult) => {
@@ -84,6 +93,7 @@ const LibraryState = (props) => {
         getShelfBooks,
         setDeskBook,
         addBook,
+        deleteBook,
         clearDeskBook,
         searchBooks,
       }}

@@ -20,6 +20,13 @@ export default (state, action) => {
         ...state,
         shelfBooks: [action.payload, ...state.shelfBooks],
       };
+    case DELETE_BOOK:
+      return {
+        ...state,
+        shelfBooks: state.shelfBooks.filter(
+          (book) => book._id !== action.payload
+        ),
+      };
     case SET_DESKBOOK:
       return {
         ...state,
