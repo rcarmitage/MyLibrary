@@ -3,15 +3,13 @@ import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
   const libraryContext = useContext(LibraryContext);
-  const { deskBook, clearDeskBook, addBook, deleteBook } = libraryContext;
-
-  const isOnShelf = () => {
-    // Search _id against shelfBooks
-  };
-
-  const onAdd = () => {
-    addBook(deskBook);
-  };
+  const {
+    shelfBooks,
+    deskBook,
+    clearDeskBook,
+    addBook,
+    deleteBook,
+  } = libraryContext;
 
   if (deskBook !== null) {
     const {
@@ -25,6 +23,25 @@ const Desk = () => {
         imageLinks: { smallThumbnail },
       },
     } = deskBook;
+
+    // Search for _id in each item of shelfBooks
+    // let isOnShelf = () => {
+    //   shelfBooks.find(function (shelfBook, index) {
+    //     if (shelfBook._id == deskBook._id) return true;
+    //   });
+
+    //   // var __FOUND = __POSTS.find(function (post, index) {
+    //   //   if (post.title == "Guava") return true;
+    //   // });
+    // };
+
+    let isOnShelf = shelfBooks.find(
+      (shelfBook) => shelfBook._id == deskBook._id
+    );
+
+    const onAdd = () => {
+      addBook(deskBook);
+    };
 
     const onDelete = () => {
       deleteBook(_id);
@@ -73,8 +90,8 @@ const Desk = () => {
     return (
       <div className="desk">
         <h4>
-          To view book details, please select a title from the shelf or search
-          results
+          To view book details, please select a title from the shelf or the
+          search results
         </h4>
       </div>
     );
