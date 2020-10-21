@@ -13,7 +13,6 @@ const Desk = () => {
 
   if (deskBook !== null) {
     const {
-      _id,
       id,
       volumeInfo: {
         title,
@@ -24,26 +23,17 @@ const Desk = () => {
       },
     } = deskBook;
 
-    // Search for _id in each item of shelfBooks
-    // let isOnShelf = () => {
-    //   shelfBooks.find(function (shelfBook, index) {
-    //     if (shelfBook._id == deskBook._id) return true;
-    //   });
+    let isOnShelf = shelfBooks.find((shelfBook) => shelfBook.id == deskBook.id);
 
-    //   // var __FOUND = __POSTS.find(function (post, index) {
-    //   //   if (post.title == "Guava") return true;
-    //   // });
-    // };
-
-    let isOnShelf = shelfBooks.find(
-      (shelfBook) => shelfBook._id == deskBook._id
-    );
+    // Check shelfBooks.length = < 10 to allow Add to shelf button
+    // let shelfSpace = () => {
+    // }
 
     const onAdd = () => {
       addBook(deskBook);
     };
 
-    const onDelete = () => {
+    const onDelete = (_id) => {
       deleteBook(_id);
     };
 

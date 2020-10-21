@@ -36,7 +36,7 @@ const LibraryState = (props) => {
       },
     };
 
-    if (!state.shelfBooks.length >= 10) {
+    if (state.shelfBooks.length < 10) {
       try {
         const res = await axios.post(
           "http://localhost:5001/api/shelfBooks",
