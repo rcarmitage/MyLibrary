@@ -72,11 +72,13 @@ const Desk = () => {
             </p>
             <p>
               <b>Authors | </b>
-              {authors}
+              {authors.map(function (author, index) {
+                return <span key={index}>{(index ? ", " : "") + author}</span>;
+              })}
             </p>
             <p>
               <b>Published | </b>
-              {publishedDate}
+              {publishedDate.slice(0, 4)}
             </p>
             <p>{description}</p>
           </div>
