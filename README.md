@@ -20,23 +20,21 @@ A user should be able to…
 
 To interact with the app on your local machine, clone the repo and run the following commands.
 
-# In server directory:
+### In server directory:
 
 `npm install`
+
 `npm run server`
 
 The server will run and connect to the MongoDB Atlas database.
 
-# In client directory:
+### In client directory:
 
 `npm install`
+
 `npm start`
 
 The app will run on port 3000.
-
-### Using the MyLibrary app
-
-(Pending)
 
 ## App Details
 
