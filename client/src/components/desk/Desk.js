@@ -46,7 +46,11 @@ const Desk = () => {
           Clear
         </button>
         <div>
-          <a href={`https://books.google.co.uk/books?id=${id}`} target="_blank">
+          <a
+            href={`https://books.google.co.uk/books?id=${id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button>View this title on Google Books</button>
           </a>
           {isOnShelf ? (

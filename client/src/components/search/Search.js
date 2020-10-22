@@ -8,10 +8,11 @@ const Search = () => {
   const { searchResults } = libraryContext;
 
   const [text, setText] = useState("");
+  const [searchType, setSearchType] = useState("intitle:");
 
   const onSubmit = (e) => {
     e.preventDefault();
-    libraryContext.searchBooks(text);
+    libraryContext.searchBooks(searchType, text);
     setText("");
   };
 
@@ -21,15 +22,19 @@ const Search = () => {
     <div className="search">
       <button>Clear</button>
       <h2 className="search-title">Archive</h2>
+      <div className="search-type">
+        <button onClick={() => setSearchType("intitle:")}>By title</button>
+        <button onClick={() => setSearchType("inauthor:")}>By author</button>
+      </div>
       <form onSubmit={onSubmit} className="search-form">
         <input
           type="text"
           name="text"
-          placeholder="Search for title or author..."
+          placeholder="Search for a book..."
           value={text}
           onChange={onChange}
         />
-        <input type="submit" value="Search" className="btn" />
+        <input type="submit" value="Submit" className="btn" />
       </form>
       <div className="results-items">
         {searchResults.map((searchResult) => (

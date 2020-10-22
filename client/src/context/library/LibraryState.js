@@ -73,9 +73,9 @@ const LibraryState = (props) => {
   };
 
   // Search Google Books API
-  const searchBooks = async (text) => {
+  const searchBooks = async (searchType, text) => {
     const res = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=${text}&maxResults=10&fields=items(id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail))`
+      `https://www.googleapis.com/books/v1/volumes?q=${searchType}${text}&maxResults=10&fields=items(id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail))`
     );
 
     dispatch({
