@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import ReactMarkdown from "react-markdown";
 import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
@@ -72,15 +73,15 @@ const Desk = () => {
             </p>
             <p>
               <b>Authors | </b>
-              {authors.map(function (author, index) {
+              {/* {authors.map(function (author, index) {
                 return <span key={index}>{(index ? ", " : "") + author}</span>;
-              })}
+              })} */}
             </p>
             <p>
               <b>Published | </b>
               {publishedDate.slice(0, 4)}
             </p>
-            <p>{description}</p>
+            <ReactMarkdown>{description}</ReactMarkdown>
           </div>
         </div>
       </div>
