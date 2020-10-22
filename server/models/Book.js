@@ -21,7 +21,6 @@ const BookSchema = mongoose.Schema({
     },
     description: {
       type: String,
-      required: true,
     },
     imageLinks: {
       smallThumbnail: {

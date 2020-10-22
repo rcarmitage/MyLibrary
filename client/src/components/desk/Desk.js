@@ -13,6 +13,7 @@ const Desk = () => {
 
   if (deskBook !== null) {
     const {
+      _id,
       id,
       volumeInfo: {
         title,
@@ -23,7 +24,9 @@ const Desk = () => {
       },
     } = deskBook;
 
-    let isOnShelf = shelfBooks.find((shelfBook) => shelfBook.id == deskBook.id);
+    let isOnShelf = shelfBooks.find(
+      (shelfBook) => shelfBook.id === deskBook.id
+    );
 
     // Check shelfBooks.length = < 10 to allow Add to shelf button
     // let shelfSpace = () => {
@@ -33,7 +36,7 @@ const Desk = () => {
       addBook(deskBook);
     };
 
-    const onDelete = (_id) => {
+    const onDelete = () => {
       deleteBook(_id);
     };
 
