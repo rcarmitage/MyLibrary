@@ -4,6 +4,16 @@
 
 This is a personal project I have used to consolidate my knowledge of **React** and gain futher understanding of displaying data from a third-party API, implementing UI design choices from scratch, and delpoying an app to a live platform.
 
+## Brief
+
+### MVP:
+
+A user should be able to…
+
+- Search the Google Books API using terms for title or author
+- View a book in more detail and click through to the Google Books entry
+- View a collection of up to 10 saved books on a shelf, able to add and delete
+
 ## Running the App After Pulling from GitHub
 
 ### Installation
@@ -38,7 +48,7 @@ The following functionality is currently in the process of being implemented and
 
 - On the Shelf component the user is able to view the titles stored in the shelfBooks array. The shelfBooks array can contain up to 10 items, which are displayed in two rows of 5 each showing the cover image and title. The user can click on the cover image or title to set as deskBook, which is then rendered on the Desk. The user can click the "Remove" button to delete the title from the shelfBooks array, and will be able to click the "Clear shelf" button (_WIP_) to delete all titles.
 
-Status of the app and plans for further development as of 12th October 2020:
+Status of the app and plans for further development as of 21st October 2020:
 
 - The Search component functionality is complete.
   - I will make minor tweaks to the UI.
