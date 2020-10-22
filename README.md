@@ -20,7 +20,7 @@ A user should be able to…
 
 To interact with the app on your local machine, clone the repo and run the following commands.
 
-### In server directory:
+_In server directory:_
 
 `npm install`
 
@@ -28,7 +28,7 @@ To interact with the app on your local machine, clone the repo and run the follo
 
 The server will run and connect to the MongoDB Atlas database.
 
-### In client directory:
+_In client directory:_
 
 `npm install`
 
