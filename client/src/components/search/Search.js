@@ -8,7 +8,7 @@ const Search = () => {
   const { searchResults } = libraryContext;
 
   const [text, setText] = useState("");
-  const [searchType, setSearchType] = useState("intitle:");
+  const [searchType, setSearchType] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +23,7 @@ const Search = () => {
       <button>Clear</button>
       <h2 className="search-title">Archive</h2>
       <div className="search-type">
+        <button onClick={() => setSearchType("")}>All fields</button>
         <button onClick={() => setSearchType("intitle:")}>By title</button>
         <button onClick={() => setSearchType("inauthor:")}>By author</button>
       </div>

@@ -46,7 +46,7 @@ The following functionality is currently in the process of being implemented and
 
 - On the Shelf component the user is able to view the titles stored in the shelfBooks array. The shelfBooks array can contain up to 10 items, which are displayed in two rows of 5 each showing the cover image and title. The user can click on the cover image or title to set as deskBook, which is then rendered on the Desk. The user can click the "Remove" button to delete the title from the shelfBooks array, and will be able to click the "Clear shelf" button (_WIP_) to delete all titles.
 
-Status of the app and plans for further development as of 21st October 2020:
+Status of the app and plans for further development as of 23rd October 2020:
 
 - The Search component functionality is complete.
   - I will make minor tweaks to the UI.

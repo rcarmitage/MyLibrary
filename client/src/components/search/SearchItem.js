@@ -20,6 +20,9 @@ const SearchItem = ({ searchResult }) => {
     setNoPublishedDate(true);
   }
 
+  // If publishedDate does not exist
+  // searchResult.push({ publishedDate: "No author information available" })
+
   return (
     <div className="results-item grid-search-item">
       <div>

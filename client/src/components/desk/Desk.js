@@ -73,9 +73,9 @@ const Desk = () => {
             </p>
             <p>
               <b>Authors | </b>
-              {/* {authors.map(function (author, index) {
+              {authors.map(function (author, index) {
                 return <span key={index}>{(index ? ", " : "") + author}</span>;
-              })} */}
+              })}
             </p>
             <p>
               <b>Published | </b>
