@@ -9,11 +9,11 @@ const SearchItem = ({ searchResult }) => {
     volumeInfo: { title, authors, publishedDate },
   } = searchResult;
 
-  const [noPublishedDate, setNoPublishedDate] = useState(false);
+  // const [noPublishedDate, setNoPublishedDate] = useState(false);
 
-  if (publishedDate === "No publishing information available") {
-    setNoPublishedDate(true);
-  }
+  // if (publishedDate === "No publishing information available") {
+  //   setNoPublishedDate(true);
+  // }
 
   return (
     <div className="results-item grid-search-item">
@@ -30,7 +30,9 @@ const SearchItem = ({ searchResult }) => {
         </p>
         <p>
           <b>Published | </b>
-          {noPublishedDate ? publishedDate : publishedDate.slice(0, 4)}
+          {publishedDate === "No publishing information available"
+            ? publishedDate
+            : publishedDate.slice(0, 4)}
         </p>
       </div>
       <div>

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import ReactMarkdown from "react-markdown";
+import noCoverImage from "../../assets/no_cover_image.jpg";
 import LibraryContext from "../../context/library/libraryContext";
 
 const Desk = () => {
@@ -61,11 +62,19 @@ const Desk = () => {
           )}
         </div>
         <div>
-          <img
-            src={smallThumbnail}
-            className="cover-image-desk"
-            alt="book cover"
-          ></img>
+          {smallThumbnail === "No cover image available" ? (
+            <img
+              src={noCoverImage}
+              className="cover-image-desk"
+              alt="book cover"
+            ></img>
+          ) : (
+            <img
+              src={smallThumbnail}
+              className="cover-image-desk"
+              alt="book cover"
+            ></img>
+          )}
           <div className="deskbook-details">
             <p>
               <b>Title | </b>

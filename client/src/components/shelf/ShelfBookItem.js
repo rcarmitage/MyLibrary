@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import noCoverImage from "../../assets/no_cover_image.jpg";
 import LibraryContext from "../../context/library/libraryContext";
 
 const ShelfBookItem = ({ book }) => {
@@ -21,11 +22,20 @@ const ShelfBookItem = ({ book }) => {
 
   return (
     <div className="book-info">
-      <img
-        src={smallThumbnail}
-        alt="book cover"
-        onClick={() => setDeskBook(book)}
-      />
+      {/* <img src={smallThumbnail} alt="book cover" /> */}
+      {smallThumbnail === "No cover image available" ? (
+        <img
+          src={noCoverImage}
+          alt="book cover"
+          onClick={() => setDeskBook(book)}
+        ></img>
+      ) : (
+        <img
+          src={smallThumbnail}
+          alt="book cover"
+          onClick={() => setDeskBook(book)}
+        ></img>
+      )}
       <button onClick={onDelete}>Remove</button>
       <div className="details">
         <p className="book-title">{title}</p>
