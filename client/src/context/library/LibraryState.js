@@ -78,6 +78,17 @@ const LibraryState = (props) => {
       `https://www.googleapis.com/books/v1/volumes?q=${searchType}${text}&maxResults=10&fields=items(id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail))`
     );
 
+    console.log(res.data.items);
+    res.data.items.forEach((item) => {
+      if (!item.volumeInfo.publishedDate) {
+        item.volumeInfo.publishedDate = "No publishing information available";
+      }
+      if (!item.volumeInfo.authors) {
+        item.volumeInfo.authors = ["No author information available"];
+      }
+    });
+    console.log(res.data.items);
+
     dispatch({
       type: SEARCH_BOOKS,
       payload: res.data.items,

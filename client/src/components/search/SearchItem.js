@@ -9,19 +9,11 @@ const SearchItem = ({ searchResult }) => {
     volumeInfo: { title, authors, publishedDate },
   } = searchResult;
 
-  const [noAuthors, setNoAuthors] = useState(false);
   const [noPublishedDate, setNoPublishedDate] = useState(false);
 
-  if (authors === "") {
-    setNoAuthors(true);
-  }
-
-  if (publishedDate === "") {
+  if (publishedDate === "No publishing information available") {
     setNoPublishedDate(true);
   }
-
-  // If publishedDate does not exist
-  // searchResult.push({ publishedDate: "No author information available" })
 
   return (
     <div className="results-item grid-search-item">
@@ -32,17 +24,13 @@ const SearchItem = ({ searchResult }) => {
         </p>
         <p>
           <b>Authors | </b>
-          {noAuthors
-            ? "No author information available"
-            : authors.map(function (author, index) {
-                return <span key={index}>{(index ? ", " : "") + author}</span>;
-              })}
+          {authors.map(function (author, index) {
+            return <span key={index}>{(index ? ", " : "") + author}</span>;
+          })}
         </p>
         <p>
           <b>Published | </b>
-          {noPublishedDate
-            ? "No publish date available"
-            : publishedDate.slice(0, 4)}
+          {noPublishedDate ? publishedDate : publishedDate.slice(0, 4)}
         </p>
       </div>
       <div>
