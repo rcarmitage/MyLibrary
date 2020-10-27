@@ -9,6 +9,7 @@ const Search = () => {
 
   const [text, setText] = useState("");
   const [searchFields, setSearchFields] = useState("");
+  const [buttonSelected, setButtonSelected] = useState(className="button-selected");
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -20,12 +21,24 @@ const Search = () => {
 
   return (
     <div className="search">
-      <button>Clear</button>
+      <button className="clear">Clear</button>
       <h2 className="search-title">Archive</h2>
-      <div className="search-type">
-        <button onClick={() => setSearchFields("")}>All fields</button>
-        <button onClick={() => setSearchFields("intitle:")}>By title</button>
-        <button onClick={() => setSearchFields("inauthor:")}>By author</button>
+      <div className="search-fields">
+        <button onClick={() => {setSearchFields(""),}} className="search-field">
+          All Fields
+        </button>
+        <button
+          onClick={() => setSearchFields("intitle:")}
+          className="search-field"
+        >
+          By Title
+        </button>
+        <button
+          onClick={() => setSearchFields("inauthor:")}
+          className="search-field"
+        >
+          By Author
+        </button>
       </div>
       <form onSubmit={onSubmit} className="search-form">
         <input
