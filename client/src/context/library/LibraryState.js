@@ -9,6 +9,7 @@ import {
   SET_DESKBOOK,
   CLEAR_DESKBOOK,
   SEARCH_BOOKS,
+  CLEAR_SEARCH,
   BOOK_ERROR,
 } from "../types";
 
@@ -101,6 +102,11 @@ const LibraryState = (props) => {
     });
   };
 
+  // Clear search results
+  const clearSearch = () => {
+    dispatch({ type: CLEAR_SEARCH });
+  };
+
   return (
     <LibraryContext.Provider
       value={{
@@ -113,6 +119,7 @@ const LibraryState = (props) => {
         deleteBook,
         clearDeskBook,
         searchBooks,
+        clearSearch,
       }}
     >
       {props.children}

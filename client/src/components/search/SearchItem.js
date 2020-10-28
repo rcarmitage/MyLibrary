@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import LibraryContext from "../../context/library/libraryContext";
 
 const SearchItem = ({ searchResult }) => {
@@ -8,12 +8,6 @@ const SearchItem = ({ searchResult }) => {
   const {
     volumeInfo: { title, authors, publishedDate },
   } = searchResult;
-
-  // const [noPublishedDate, setNoPublishedDate] = useState(false);
-
-  // if (publishedDate === "No publishing information available") {
-  //   setNoPublishedDate(true);
-  // }
 
   return (
     <div className="results-item grid-search-item">

@@ -5,7 +5,7 @@ import LibraryContext from "../../context/library/libraryContext";
 const Search = () => {
   const libraryContext = useContext(LibraryContext);
 
-  const { searchResults } = libraryContext;
+  const { searchResults, clearSearch } = libraryContext;
 
   const [text, setText] = useState("");
   const [searchFields, setSearchFields] = useState("");
@@ -21,7 +21,9 @@ const Search = () => {
 
   return (
     <div className="search">
-      <button className="clear">Clear</button>
+      <button onClick={clearSearch} className="clear">
+        Clear
+      </button>
       <h2 className="search-title">Archive</h2>
       <div className="search-fields">
         <button
@@ -75,9 +77,11 @@ const Search = () => {
         <input type="submit" value="Submit" className="btn" />
       </form>
       <div className="results-items">
-        {searchResults.map((searchResult) => (
-          <SearchItem key={searchResult.id} searchResult={searchResult} />
-        ))}
+        {searchResults !== null
+          ? searchResults.map((searchResult) => (
+              <SearchItem key={searchResult.id} searchResult={searchResult} />
+            ))
+          : ""}
       </div>
     </div>
   );
