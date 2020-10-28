@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import SearchItem from "./SearchItem";
 import LibraryContext from "../../context/library/libraryContext";
 
@@ -9,7 +9,13 @@ const Search = () => {
 
   const [text, setText] = useState("");
   const [searchFields, setSearchFields] = useState("");
-  const [buttonSelected, setButtonSelected] = useState(className="button-selected");
+  // const [buttonClass, setButtonClass] = useState(
+  //   "search-field button-selected"
+  // );
+
+  useEffect(() => {
+    checkSelectedButton();
+  }, [libraryContext]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -19,23 +25,47 @@ const Search = () => {
 
   const onChange = (e) => setText(e.target.value);
 
+  const checkSelectedButton = () => {
+    if (searchFields === "") {
+      // button #all || style={{border: 1px solid rgba(181, 166, 66, 0.7)}}
+      // button #title border: 1px solid rgba(181, 166, 66, 0.4);
+      // button #author border: 1px solid rgba(181, 166, 66, 0.4);
+    }
+    if (searchFields === "intitle:") {
+      // button #all inline CSS = border: 1px solid rgba(181, 166, 66, 0.4);
+      // button #title border: 1px solid rgba(181, 166, 66, 0.7);
+      // button #author border: 1px solid rgba(181, 166, 66, 0.4);
+    }
+    if (searchFields === "inauthor:") {
+      // button #all || style={{border: 1px solid rgba(181, 166, 66, 0.4)}}
+      // button #title border: 1px solid rgba(181, 166, 66, 0.4);
+      // button #author border: 1px solid rgba(181, 166, 66, 0.7);
+    }
+  };
+
   return (
     <div className="search">
       <button className="clear">Clear</button>
       <h2 className="search-title">Archive</h2>
       <div className="search-fields">
-        <button onClick={() => {setSearchFields(""),}} className="search-field">
+        <button
+          onClick={() => setSearchFields("")}
+          className="search-field"
+          id={all}
+        >
           All Fields
         </button>
         <button
           onClick={() => setSearchFields("intitle:")}
           className="search-field"
+          id="title"
         >
           By Title
         </button>
         <button
           onClick={() => setSearchFields("inauthor:")}
           className="search-field"
+          id="author"
         >
           By Author
         </button>
