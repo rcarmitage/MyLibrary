@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import SearchItem from "./SearchItem";
 import LibraryContext from "../../context/library/libraryContext";
 
@@ -9,13 +9,11 @@ const Search = () => {
 
   const [text, setText] = useState("");
   const [searchFields, setSearchFields] = useState("");
-  // const [buttonClass, setButtonClass] = useState(
-  //   "search-field button-selected"
-  // );
+  const [buttonSelected, setButtonSelected] = useState("");
 
-  useEffect(() => {
-    checkSelectedButton();
-  }, [libraryContext]);
+  // useEffect(() => {
+  //   checkSelectedButton();
+  // }, [libraryContext]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -25,23 +23,35 @@ const Search = () => {
 
   const onChange = (e) => setText(e.target.value);
 
-  const checkSelectedButton = () => {
-    if (searchFields === "") {
-      // button #all || style={{border: 1px solid rgba(181, 166, 66, 0.7)}}
-      // button #title border: 1px solid rgba(181, 166, 66, 0.4);
-      // button #author border: 1px solid rgba(181, 166, 66, 0.4);
-    }
-    if (searchFields === "intitle:") {
-      // button #all inline CSS = border: 1px solid rgba(181, 166, 66, 0.4);
-      // button #title border: 1px solid rgba(181, 166, 66, 0.7);
-      // button #author border: 1px solid rgba(181, 166, 66, 0.4);
-    }
-    if (searchFields === "inauthor:") {
-      // button #all || style={{border: 1px solid rgba(181, 166, 66, 0.4)}}
-      // button #title border: 1px solid rgba(181, 166, 66, 0.4);
-      // button #author border: 1px solid rgba(181, 166, 66, 0.7);
-    }
-  };
+  // const isButtonSelected = {
+
+  // }
+
+  // const fieldSelected = {
+  //   border: "1px solid rgba(181, 166, 66, 0.7)"
+  // }
+
+  // const checkSelectedButton = () => {
+  //   if (searchFields === "") {
+  //     button #all || style="border: 1px solid rgba(181, 166, 66, 0.7)"
+  //     // button #title border: 1px solid rgba(181, 166, 66, 0.4);
+  //     // button #author border: 1px solid rgba(181, 166, 66, 0.4);
+  //   }
+  //   if (searchFields === "intitle:") {
+  //     // button #all inline CSS = border: 1px solid rgba(181, 166, 66, 0.4);
+  //     // button #title border: 1px solid rgba(181, 166, 66, 0.7);
+  //     // button #author border: 1px solid rgba(181, 166, 66, 0.4);
+  //   }
+  //   if (searchFields === "inauthor:") {
+  //     // button #all || style={{border: 1px solid rgba(181, 166, 66, 0.4)}}
+  //     // button #title border: 1px solid rgba(181, 166, 66, 0.4);
+  //     // button #author border: 1px solid rgba(181, 166, 66, 0.7);
+  //   }
+  // };
+
+  // const fieldSelected = () => {
+
+  // }
 
   return (
     <div className="search">
@@ -49,23 +59,41 @@ const Search = () => {
       <h2 className="search-title">Archive</h2>
       <div className="search-fields">
         <button
-          onClick={() => setSearchFields("")}
-          className="search-field"
-          id={all}
+          onClick={() => {
+            setSearchFields("");
+            setButtonSelected("");
+          }}
+          className={
+            buttonSelected === ""
+              ? "search-field button-selected"
+              : "search-field"
+          }
         >
           All Fields
         </button>
         <button
-          onClick={() => setSearchFields("intitle:")}
-          className="search-field"
-          id="title"
+          onClick={() => {
+            setSearchFields("intitle:");
+            setButtonSelected("title");
+          }}
+          className={
+            buttonSelected === "title"
+              ? "search-field button-selected"
+              : "search-field"
+          }
         >
           By Title
         </button>
         <button
-          onClick={() => setSearchFields("inauthor:")}
-          className="search-field"
-          id="author"
+          onClick={() => {
+            setSearchFields("inauthor:");
+            setButtonSelected("author");
+          }}
+          className={
+            buttonSelected === "author"
+              ? "search-field button-selected"
+              : "search-field"
+          }
         >
           By Author
         </button>
