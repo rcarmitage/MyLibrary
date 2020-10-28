@@ -11,10 +11,6 @@ const Search = () => {
   const [searchFields, setSearchFields] = useState("");
   const [buttonSelected, setButtonSelected] = useState("");
 
-  // useEffect(() => {
-  //   checkSelectedButton();
-  // }, [libraryContext]);
-
   const onSubmit = (e) => {
     e.preventDefault();
     libraryContext.searchBooks(searchFields, text);
@@ -22,36 +18,6 @@ const Search = () => {
   };
 
   const onChange = (e) => setText(e.target.value);
-
-  // const isButtonSelected = {
-
-  // }
-
-  // const fieldSelected = {
-  //   border: "1px solid rgba(181, 166, 66, 0.7)"
-  // }
-
-  // const checkSelectedButton = () => {
-  //   if (searchFields === "") {
-  //     button #all || style="border: 1px solid rgba(181, 166, 66, 0.7)"
-  //     // button #title border: 1px solid rgba(181, 166, 66, 0.4);
-  //     // button #author border: 1px solid rgba(181, 166, 66, 0.4);
-  //   }
-  //   if (searchFields === "intitle:") {
-  //     // button #all inline CSS = border: 1px solid rgba(181, 166, 66, 0.4);
-  //     // button #title border: 1px solid rgba(181, 166, 66, 0.7);
-  //     // button #author border: 1px solid rgba(181, 166, 66, 0.4);
-  //   }
-  //   if (searchFields === "inauthor:") {
-  //     // button #all || style={{border: 1px solid rgba(181, 166, 66, 0.4)}}
-  //     // button #title border: 1px solid rgba(181, 166, 66, 0.4);
-  //     // button #author border: 1px solid rgba(181, 166, 66, 0.7);
-  //   }
-  // };
-
-  // const fieldSelected = () => {
-
-  // }
 
   return (
     <div className="search">

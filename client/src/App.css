@@ -282,12 +282,13 @@ a {
   flex-direction: row;
 }
 
-.search-fields {
+.search-fields,
+.search-form {
   display: flex;
   justify-content: center;
   /* align-items: space-around; */
   flex-direction: row;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .search-field {
