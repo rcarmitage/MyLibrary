@@ -6,6 +6,7 @@ import {
   GET_SHELFBOOKS,
   ADD_BOOK,
   DELETE_BOOK,
+  CLEAR_SHELFBOOKS,
   SET_DESKBOOK,
   CLEAR_DESKBOOK,
   SEARCH_BOOKS,
@@ -63,6 +64,11 @@ const LibraryState = (props) => {
     }
   };
 
+  // Clear shelf
+  const clearShelfBooks = () => {
+    dispatch({ type: CLEAR_SHELFBOOKS });
+  };
+
   // Set book to be displayed in viewing area
   const setDeskBook = (searchResult) => {
     dispatch({ type: SET_DESKBOOK, payload: searchResult });
@@ -114,6 +120,7 @@ const LibraryState = (props) => {
         deskBook: state.deskBook,
         searchResults: state.searchResults,
         getShelfBooks,
+        clearShelfBooks,
         setDeskBook,
         addBook,
         deleteBook,

@@ -26,9 +26,11 @@ const Desk = () => {
       },
     } = deskBook;
 
+    // if (shelfBooks !== null) {
     let isOnShelf = shelfBooks.find(
       (shelfBook) => shelfBook.id === deskBook.id
     );
+    // };
 
     // Check shelfBooks.length = < 10 to allow Add to shelf button
     // let shelfSpace = () => {

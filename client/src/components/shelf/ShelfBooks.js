@@ -10,16 +10,15 @@ const ShelfBooks = () => {
   useEffect(() => {
     getShelfBooks();
     // eslint-disable-next-line
-  }, [libraryContext]);
+  }, []);
 
   return (
     <Fragment>
-      {shelfBooks.length === 0 ? (
+      {shelfBooks === null ? (
         <p>Your shelf is empty...</p>
       ) : (
         shelfBooks.map((book) => <ShelfBookItem key={book._id} book={book} />)
       )}
-      {/* <button>Clear shelf</button> */}
     </Fragment>
   );
 };
