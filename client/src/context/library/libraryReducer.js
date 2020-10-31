@@ -32,7 +32,7 @@ export default (state, action) => {
     case CLEAR_SHELFBOOKS:
       return {
         ...state,
-        shelfBooks: state.shelfBooks.delete(),
+        shelfBooks: [action.payload, ...state.shelfBooks],
       };
     case SET_DESKBOOK:
       return {
