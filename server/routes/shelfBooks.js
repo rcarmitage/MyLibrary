@@ -59,14 +59,4 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-router.delete("/", async (req, res) => {
-  try {
-    const shelfBooks = await Book.find();
-    await Book.deleteMany(shelfBooks);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send("Server Error");
-  }
-});
-
 module.exports = router;

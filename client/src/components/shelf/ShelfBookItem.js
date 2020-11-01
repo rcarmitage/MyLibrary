@@ -18,11 +18,8 @@ const ShelfBookItem = ({ book }) => {
     deleteBook(_id);
   };
 
-  // TODO: Buttons to remove each book and clear shelf
-
   return (
     <div className="book-info">
-      {/* <img src={smallThumbnail} alt="book cover" /> */}
       {smallThumbnail === "No cover image available" ? (
         <img
           src={noCoverImage}

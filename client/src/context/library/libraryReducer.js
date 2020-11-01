@@ -2,7 +2,6 @@ import {
   GET_SHELFBOOKS,
   ADD_BOOK,
   DELETE_BOOK,
-  CLEAR_SHELFBOOKS,
   SET_DESKBOOK,
   CLEAR_DESKBOOK,
   SEARCH_BOOKS,
@@ -28,11 +27,6 @@ export default (state, action) => {
         shelfBooks: state.shelfBooks.filter(
           (book) => book._id !== action.payload
         ),
-      };
-    case CLEAR_SHELFBOOKS:
-      return {
-        ...state,
-        shelfBooks: [action.payload, ...state.shelfBooks],
       };
     case SET_DESKBOOK:
       return {
