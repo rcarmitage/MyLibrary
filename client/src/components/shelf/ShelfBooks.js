@@ -10,7 +10,7 @@ const ShelfBooks = () => {
   useEffect(() => {
     getShelfBooks();
     // eslint-disable-next-line
-  }, [shelfBooks]);
+  }, [libraryContext]);
 
   return (
     <Fragment>
