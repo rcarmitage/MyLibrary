@@ -36,10 +36,14 @@ const Desk = () => {
       addBook(deskBook);
       // Refresh deskBook to bring in _id created during insertion to db
       let bookId = deskBook.id;
+      console.log(bookId);
       clearDeskBook();
-      // setDeskBook(shelfBooks.find((shelfBook) => shelfBook.id === bookId));
-      // setDeskBook(shelfBooks.find((shelfBook) => shelfBook.id === deskBook.id));
-      // console.log(_id);
+      getShelfBooks();
+      let deskBookWithId = shelfBooks.find(
+        (shelfBook) => shelfBook.id === bookId
+      );
+      console.log(deskBookWithId);
+      // setDeskBook();
     };
 
     const onDelete = () => {
