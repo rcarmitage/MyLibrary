@@ -7,9 +7,7 @@ const Desk = () => {
   const libraryContext = useContext(LibraryContext);
   const {
     shelfBooks,
-    getShelfBooks,
     deskBook,
-    setDeskBook,
     clearDeskBook,
     addBook,
     deleteBook,
@@ -34,16 +32,7 @@ const Desk = () => {
 
     const onAdd = () => {
       addBook(deskBook);
-      // Refresh deskBook to bring in _id created during insertion to db
-      let bookId = deskBook.id;
-      console.log(bookId);
       clearDeskBook();
-      getShelfBooks();
-      let deskBookWithId = shelfBooks.find(
-        (shelfBook) => shelfBook.id === bookId
-      );
-      console.log(deskBookWithId);
-      // setDeskBook();
     };
 
     const onDelete = () => {
