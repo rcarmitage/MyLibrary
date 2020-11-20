@@ -32,7 +32,13 @@ const Desk = () => {
 
     const onAdd = () => {
       addBook(deskBook);
-      clearDeskBook();
+      // clearDeskBook();
+
+      // refreshDeskBook(deskBook) {
+      // bookId = deskBook.id;
+      // clearDeskBook();
+      // setDeskBook(search for bookId in shelfBooks and set that)
+      // }
     };
 
     const onDelete = () => {
