@@ -37,7 +37,8 @@ const Desk = () => {
       // refreshDeskBook(deskBook) {
       // bookId = deskBook.id;
       // clearDeskBook();
-      // setDeskBook(search for bookId in shelfBooks and set that)
+      // refreshedBook = search for bookId in shelfBooks, set object
+      // setDeskBook(refreshedBook);
       // }
     };
 
