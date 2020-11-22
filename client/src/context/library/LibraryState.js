@@ -64,8 +64,8 @@ const LibraryState = (props) => {
   };
 
   // Set book to be displayed in viewing area
-  const setDeskBook = (searchResult) => {
-    dispatch({ type: SET_DESKBOOK, payload: searchResult });
+  const setDeskBook = (book) => {
+    dispatch({ type: SET_DESKBOOK, payload: book });
   };
 
   // Clear book displayed in viewing area

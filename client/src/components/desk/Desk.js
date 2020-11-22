@@ -8,6 +8,7 @@ const Desk = () => {
   const {
     shelfBooks,
     deskBook,
+    setDeskBook,
     clearDeskBook,
     addBook,
     deleteBook,
@@ -31,19 +32,34 @@ const Desk = () => {
     );
 
     const onAdd = () => {
+      // console.log(deskBook);
       addBook(deskBook);
-      // clearDeskBook();
-
-      // refreshDeskBook(deskBook) {
-      // bookId = deskBook.id;
-      // clearDeskBook();
-      // refreshedBook = search for bookId in shelfBooks, set object
-      // setDeskBook(refreshedBook);
-      // }
+      refreshDeskBook(deskBook);
+      // console.log(deskBook);
+      // console.log(shelfBooks);
     };
 
     const onDelete = () => {
       deleteBook(_id);
+    };
+
+    const refreshDeskBook = (book) => {
+      // let bookId = book.id;
+      // console.log(bookId);
+      let refreshedBookInfo = shelfBooks.find(
+        (shelfBook) => shelfBook.id === book.id
+      );
+      // console.log(book);
+      // console.log(refreshedBookInfo);
+      // console.log(shelfBooks);
+      clearDeskBook();
+      // setTimeout(console.log(shelfBooks), 5000);
+      // let refreshedBookInfo = bookId;
+      // console.log(refreshedBookInfo);
+      // setTimeout(setDeskBook(book), 5000);
+      setDeskBook(refreshedBookInfo);
+
+      // shelfBooks isn't being updated quickly enough to run the .find(), so refreshedBookInfo is always coming back as undefined and the error comes when it tries to destructure _id
     };
 
     return (
