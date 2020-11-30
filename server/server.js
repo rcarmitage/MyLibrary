@@ -24,7 +24,7 @@ connection.once("open", () => {
 // Init middleware
 app.use(express.json({ extended: false }));
 
-app.get("/", (req, res) => res.json({ msg: "Server running (local)" }));
+app.get("/", (req, res) => res.json({ msg: "Server running (Heroku)" }));
 
 // Route
 app.use("/api/shelfBooks", require("./routes/shelfBooks"));
