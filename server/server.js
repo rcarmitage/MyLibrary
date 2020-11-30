@@ -24,7 +24,7 @@ connection.once("open", () => {
 // Init middleware
 app.use(express.json({ extended: false }));
 
-app.get("/", (req, res) => res.json({ msg: "Server running" }));
+app.get("/", (req, res) => res.json({ msg: "Server running (local)" }));
 
 // Route
 app.use("/api/shelfBooks", require("./routes/shelfBooks"));
