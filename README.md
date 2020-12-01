@@ -2,7 +2,7 @@
 
 ### A full-stack app for searching the Google Books API and adding books to a shelf to be viewed later
 
-Please view the live app on Netlify: [https://mylibrary-google-books-api.netlify.app/]
+Please view the live app on Netlify: https://mylibrary-google-books-api.netlify.app/
 
 This is a personal project I have used to consolidate my knowledge of **React** and gain futher understanding of displaying data from a third-party API, implementing UI design choices from scratch, and delpoying an app to a live platform.
 
