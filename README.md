@@ -2,6 +2,8 @@
 
 ### A full-stack app for searching the Google Books API and adding books to a shelf to be viewed later
 
+Please view the live app on Netlify: [https://mylibrary-google-books-api.netlify.app/]
+
 This is a personal project I have used to consolidate my knowledge of **React** and gain futher understanding of displaying data from a third-party API, implementing UI design choices from scratch, and delpoying an app to a live platform.
 
 ## Brief
@@ -46,8 +48,9 @@ The following functionality is currently in the process of being implemented and
 
 - On the Shelf component the user is able to view the titles stored in the shelfBooks array. The shelfBooks array can contain up to 10 items, which are displayed in two rows of 5 each showing the cover image and title. The user can click on the cover image or title to set as deskBook, which is then rendered on the Desk. The user can click the "Remove" button to delete the title from the shelfBooks array, and will be able to click the "Clear shelf" button (_WIP_) to delete all titles.
 
-Status of the app and plans for further development as of 3rd November 2020:
+Status of the app and plans for further development as of 30th November 2020:
 
+- The app is deployed and can be viewed and interacted with [here](https://mylibrary-google-books-api.netlify.app/) - the front-end is hosted on Netlify, the back-end on Heroku
 - The Search component functionality is complete.
   - I will make minor tweaks to the UI.
 - The Desk component is mostly complete.
@@ -58,7 +61,6 @@ Status of the app and plans for further development as of 3rd November 2020:
   - I will create a clearShelf() function and call it from a button which I will add to the top-right corner of the Shelf.
   - I will make small tweaks to the UI.
 - UI: Having completed most of the positioning and colours of the UI, I will add a loading icon and some CSS transitions to make the user experience more visually pleasing. I will also refactor App.css to reduce the duplicated code.
-- I will deploy the app on Netlify.
 - I will add unit and integration tests.
 - I will work further on responsive design, specifically for smaller screens.
 - Extension task: I plan to add a toggle for information boxes which will display as the user interacts with the various components, explaining the behind-the-scenes functionality.
@@ -80,4 +82,5 @@ This meant I began without a detailed plan of what I would be required to learn 
 - From here, I knew that there was basic functionality to still be completed, but decided to spend a significant amount of time on the UI so the app - when deployed - would at least look and feel like the intended design, allowing me to have a work-in-progress version available for people to see and use. I would be able to continue working on the functionality and push each solution as I completed them.
 - In working through the errors produced for some search terms, I found that some of the returned json objects did not contain the fields I was requesting. The errors would be produced when processing the data to render in the Search results or on the Desk or Shelf, for example, when attempting to map through the authors array and render the items with commas between. I added checks within the searchBooks function in LibraryState (after experimenting with doing this in the searchItem and Desk components) to add a key:value pair for each missing field. The key:value pair contains text noting that the specified information is not available; this is caught in the above checks and prevents errors. This then becomes part of the state for the searchResults array and is saved to the shelfBooks array when adding to the Shelf. For a missing cover image (smallThumbnail, which would normally be a URL), the Shelf and Desk components check for the "No cover image available" string and render a NO COVER AVAILABLE image from src/assets when true.
 - Going through this convoluted process of beginning with a basic app idea and a single initial component on the front-end (Shelf), only to switch to implementing different components first (Search, then Desk), then implementing a robust back-end when considering future usability, has given me a deeper understanding of the clarity of thought needed at the beginning of a project. Additionally, I have become more adept at switching my focus when I've realised where my efforts would be more useful, and will take this into future projects.
-- The core functionality is complete. From here there are some additions to be made to enhance the user experience, and I have yet to write tests (which I will use to further understand that process, something I would like to become very proficient at), however I am very pleased with my progress on this project and will soon have it deployed so others can view and test it. Once deployed and the remaining core functionality and last few tweaks to the UI are completed, I will step away from this project and not implement any of the further ideas I'd had early on - such as using a second API to provide "fiction" and "non-fiction" data for each item in shelfBooks to then be sorted onto "fiction" and "non-fiction" shelves. There are many other languages, technologies and concepts that I would like to spend my time learning, and I could easily spend a significant amount of time making only incremental gains on this project.
+- I took some time understanding the process of deploying the app so it can be accessed and used by any user. After some experimentation I deployed the front-end/client-side on Netlify and the back-end/server-side on Heroku, and updated the API URL in LibraryState.js so the front-end now accesses the live hosted back-end, which links to the live hosted database. The data (books added to the Shelf) now persists and can be manipulated.
+- The core functionality is complete. From here there are some additions to be made to enhance the user experience, and I have yet to write tests (which I will use to further understand that process, something I would like to become very proficient at), however I am very pleased with my progress on this project. Once the remaining core functionality and last few tweaks to the UI are completed, I will step away from this project and not implement any of the further ideas I'd had early on - such as using a second API to provide "fiction" and "non-fiction" data for each item in shelfBooks to then be sorted onto "fiction" and "non-fiction" shelves. There are many other languages, technologies and concepts that I would like to spend my time learning, and I could easily spend a significant amount of time making only incremental gains on this project.
