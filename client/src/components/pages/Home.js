@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <div>
         <h4 className="intro">
-          Search the Google Books API to add books to the shelf
+          Search the Google Books API Archive to add books to the shelf
         </h4>
         <div className="shelf-container">
           <div className="shelf">
