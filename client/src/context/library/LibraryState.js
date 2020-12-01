@@ -24,7 +24,9 @@ const LibraryState = (props) => {
 
   // Get all books in the shelfBooks array
   const getShelfBooks = async () => {
-    const res = await axios.get("http://localhost:5001/api/shelfBooks");
+    const res = await axios.get(
+      "https://mylibrary-express-server.herokuapp.com/api/shelfBooks"
+    );
 
     dispatch({ type: GET_SHELFBOOKS, payload: res.data });
   };
@@ -40,7 +42,7 @@ const LibraryState = (props) => {
     if (state.shelfBooks.length < 10) {
       try {
         const res = await axios.post(
-          "http://localhost:5001/api/shelfBooks",
+          "https://mylibrary-express-server.herokuapp.com/api/shelfBooks",
           deskBook,
           config
         );
@@ -55,7 +57,9 @@ const LibraryState = (props) => {
   // Delete book from a shelf
   const deleteBook = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/shelfBooks/${id}`);
+      await axios.delete(
+        `https://mylibrary-express-server.herokuapp.com/api/shelfBooks/${id}`
+      );
 
       dispatch({ type: DELETE_BOOK, payload: id });
     } catch (err) {
