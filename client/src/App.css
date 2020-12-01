@@ -30,6 +30,10 @@ body {
   margin: 0 10rem;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -297,7 +301,8 @@ a {
   margin: 1rem 0.5rem;
 }
 
-.search .search-title {
+.search .search-title,
+.desk .desk-title {
   display: flex;
   justify-content: center;
 }

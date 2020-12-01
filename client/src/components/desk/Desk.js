@@ -44,6 +44,7 @@ const Desk = () => {
         <button onClick={clearDeskBook} className="clear-desk">
           Clear
         </button>
+        <h2 className="desk-title">Desk</h2>
         <div>
           <a
             href={`https://books.google.co.uk/books?id=${id}`}
@@ -95,6 +96,10 @@ const Desk = () => {
   } else {
     return (
       <div className="desk">
+        <button onClick={clearDeskBook} className="clear-desk hidden">
+          Clear
+        </button>
+        <h2 className="desk-title">Desk</h2>
         <h4>
           To view book details, please select a title from the shelf or the
           search results
