@@ -57,6 +57,7 @@ p {
 button,
 .btn {
   font-family: "Domine", serif;
+  font-size: 0.8rem;
   background-color: var(--dark-brown);
   background-image: url(./assets/dark_wood_03_large.jpg);
   background-repeat: repeat;
@@ -116,12 +117,12 @@ a {
 .nav-links {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: row;
+  /* align-items: flex-start; */
+  /* flex-direction: row; */
 }
 
 .nav-links .nav-button {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   margin: 0.2rem 0.3rem;
   box-shadow: 0 0 5px black;
 }
@@ -319,4 +320,17 @@ a {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 2rem;
+}
+
+.about {
+  margin: 2rem 10rem;
+}
+
+.about p,
+.about button {
+  margin: 1rem 0;
+}
+
+.about .vector-link {
+  margin-top: 10rem;
 }
