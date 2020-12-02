@@ -268,12 +268,18 @@ a {
   padding: 0 0.8rem;
 }
 
+.clear-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* .desk .clear,
 .search .clear {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: row;
-}
+} */
 
 .search-form-container,
 .search-fields {

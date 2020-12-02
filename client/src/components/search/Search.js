@@ -20,9 +20,11 @@ const Search = () => {
 
   return (
     <div className="search">
-      <button onClick={clearSearch} className="clear">
-        Clear
-      </button>
+      <div className="clear-button-container">
+        <button onClick={clearSearch} className="clear">
+          Clear
+        </button>
+      </div>
       <h2 className="search-title">Archive</h2>
       <div className="search-fields">
         <button

@@ -41,9 +41,11 @@ const Desk = () => {
 
     return (
       <div className="desk">
-        <button onClick={clearDeskBook} className="clear-desk">
-          Clear
-        </button>
+        <div className="clear-button-container">
+          <button onClick={clearDeskBook} className="clear">
+            Clear
+          </button>
+        </div>
         <div>
           <a
             href={`https://books.google.co.uk/books?id=${id}`}
