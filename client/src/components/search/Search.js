@@ -14,7 +14,6 @@ const Search = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     libraryContext.searchBooks(searchFields, text);
-    setText("");
   };
 
   const onChange = (e) => setText(e.target.value);
@@ -66,16 +65,25 @@ const Search = () => {
           By Author
         </button>
       </div>
-      <form onSubmit={onSubmit} className="search-form">
-        <input
-          type="text"
-          name="text"
-          placeholder="Search for a book..."
-          value={text}
-          onChange={onChange}
-        />
-        <input type="submit" value="Submit" className="btn" />
-      </form>
+      <div className="search-form-container">
+        <form onSubmit={onSubmit} className="search-form">
+          <input
+            type="text"
+            name="text"
+            placeholder="Search for a book..."
+            value={text}
+            onChange={onChange}
+          />
+          <input type="submit" value="Submit" className="btn" />
+        </form>
+        <button
+          onClick={() => {
+            setText("");
+          }}
+        >
+          Clear text
+        </button>
+      </div>
       <div className="results-items">
         {searchResults !== null
           ? searchResults.map((searchResult) => (

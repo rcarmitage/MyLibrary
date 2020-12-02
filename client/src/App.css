@@ -287,13 +287,32 @@ a {
   flex-direction: row;
 }
 
-.search-fields,
-.search-form {
+/* .search-form-container {
+  background-color: red;
   display: flex;
   justify-content: center;
-  /* align-items: space-around; */
+} */
+
+.search-form-container,
+.search-fields {
+  display: flex;
+  justify-content: center;
   flex-direction: row;
   padding: 0.5rem 1rem;
+}
+
+.search-form-container {
+  align-items: center;
+  /* margin: 1rem; */
+}
+
+.search-form-container button {
+  height: 100%;
+  transform: translateY(5%);
+}
+
+.search-form {
+  margin: 0 0.5rem;
 }
 
 .search-field {
