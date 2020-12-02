@@ -9,6 +9,10 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Domine", serif;
   font-size: 1rem;
@@ -17,21 +21,15 @@ body {
   height: 100%;
   background-color: rgb(0, 0, 0, 0.8);
   background-image: url(./assets/library_background_01.jpg);
-  /* background: center center; */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* background-position: center; */
   background-blend-mode: soft-light;
   overflow-y: scroll;
 }
 
 .App {
   margin: 0 10rem;
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 .grid-2 {
@@ -54,14 +52,25 @@ p {
   font-size: 0.8rem;
 }
 
+/* background-image wood panel */
 button,
-.btn {
-  font-family: "Domine", serif;
-  font-size: 0.8rem;
+.btn,
+#navbar,
+.intro,
+.shelf-container,
+.book-info .details .book-title,
+.desk,
+.search-container {
   background-color: var(--dark-brown);
   background-image: url(./assets/dark_wood_03_large.jpg);
   background-repeat: repeat;
   background-size: 2000px 2000px;
+}
+
+button,
+.btn {
+  font-family: "Domine", serif;
+  font-size: 0.8rem;
   background-position-x: 10%;
   background-position-y: 10%;
   border-radius: 2px;
@@ -90,12 +99,8 @@ a {
 /* Navbar */
 #navbar {
   list-style: none;
-  background-color: var(--dark-brown);
-  background-image: url(./assets/dark_wood_03_large.jpg);
-  background-repeat: repeat;
-  background-size: 2000px 2000px;
-  /* background-position-x: 50%; */
-  /* background-position-y: 10%; */
+  background-position-x: 15%;
+  background-position-y: 10%;
   border: 1px solid rgba(181, 166, 66, 0.2);
   border-radius: 3px;
   box-shadow: 0 0 5px black;
@@ -132,10 +137,6 @@ a {
   justify-content: center;
   margin: 0 10rem 2rem 10rem;
   padding: 0.4rem 0;
-  background-color: var(--dark-brown);
-  background-image: url(./assets/dark_wood_03_large.jpg);
-  background-repeat: repeat;
-  background-size: 2000px 2000px;
   background-position-x: 20%;
   background-position-y: 10%;
   border-bottom: 1px solid rgba(181, 166, 66, 0.2);
@@ -147,10 +148,6 @@ a {
 }
 
 .shelf-container {
-  background-color: var(--dark-brown);
-  background-image: url(./assets/dark_wood_03_large.jpg);
-  background-repeat: repeat;
-  background-size: 2000px 2000px;
   background-position-x: 15%;
   background-position-y: 5%;
   border: 1px solid rgba(181, 166, 66, 0.2);
@@ -207,10 +204,6 @@ a {
 }
 
 .book-info .details .book-title {
-  background-color: var(--dark-brown);
-  background-image: url(./assets/dark_wood_03_large.jpg);
-  background-repeat: repeat;
-  background-size: 2000px 2000px;
   /* background-position: top center; */
   border: 1px solid rgba(181, 166, 66, 0.2);
   border-radius: 2px;
@@ -241,10 +234,6 @@ a {
 /* Desk, Search */
 .desk,
 .search-container {
-  background-color: var(--dark-brown);
-  background-image: url(./assets/dark_wood_03_large.jpg);
-  background-repeat: repeat;
-  background-size: 2000px 2000px;
   border: 1px solid rgba(181, 166, 66, 0.2);
   border-radius: 3px;
   box-shadow: 0 0 5px black;
@@ -254,12 +243,12 @@ a {
 
 .desk {
   background-position-x: 3%;
-  background-position-y: 0;
+  background-position-y: 15%;
 }
 
 .search-container {
   background-position-x: 17%;
-  background-position-y: 5%;
+  background-position-y: 20%;
 }
 
 .cover-image-desk {
@@ -288,12 +277,6 @@ a {
   flex-direction: row;
 }
 
-/* .search-form-container {
-  background-color: red;
-  display: flex;
-  justify-content: center;
-} */
-
 .search-form-container,
 .search-fields {
   display: flex;
@@ -316,13 +299,10 @@ a {
 }
 
 .search-field {
-  /* display: flex; */
-  /* align-content: space-around; */
   margin: 1rem 0.5rem;
 }
 
-.search .search-title,
-.desk .desk-title {
+.search .search-title {
   display: flex;
   justify-content: center;
 }

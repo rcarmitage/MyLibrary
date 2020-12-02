@@ -4,7 +4,7 @@ const About = () => (
   <div className="about">
     <h2>About</h2>
     <p>
-      A full-stack app for accessing the Google Books API, created by Rob
+      A full-stack app for accessing the Google Books API created by Rob
       Armitage. The user is able to search for books and view details, and add
       to and remove from the shelf.
     </p>
