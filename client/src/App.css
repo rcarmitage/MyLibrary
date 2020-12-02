@@ -122,7 +122,6 @@ a {
 }
 
 .nav-links .nav-button {
-  /* font-size: 1rem; */
   margin: 0.2rem 0.3rem;
   box-shadow: 0 0 5px black;
 }
@@ -131,7 +130,7 @@ a {
 .intro {
   display: flex;
   justify-content: center;
-  margin: 2rem 10rem 0 10rem;
+  margin: 0 10rem 2rem 10rem;
   padding: 0.4rem 0;
   background-color: var(--dark-brown);
   background-image: url(./assets/dark_wood_03_large.jpg);
@@ -139,11 +138,12 @@ a {
   background-size: 2000px 2000px;
   background-position-x: 20%;
   background-position-y: 10%;
-  border-top: 1px solid rgba(181, 166, 66, 0.2);
+  border-bottom: 1px solid rgba(181, 166, 66, 0.2);
   border-left: 1px solid rgba(181, 166, 66, 0.2);
   border-right: 1px solid rgba(181, 166, 66, 0.2);
-  border-radius: 3px 3px 0 0;
+  border-radius: 0 0 3px 3px;
   box-shadow: 0 0 5px black;
+  transform: translateY(3%);
 }
 
 .shelf-container {
@@ -157,6 +157,7 @@ a {
   border-radius: 3px;
   box-shadow: 0 0 5px black;
   padding: 0.5rem;
+  margin-top: 2rem;
 }
 
 .shelf {
@@ -298,12 +299,11 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
 }
 
 .search-form-container {
   align-items: center;
-  /* margin: 1rem; */
 }
 
 .search-form-container button {

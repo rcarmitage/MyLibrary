@@ -7,14 +7,14 @@ const Home = () => {
   return (
     <div>
       <div>
-        <h4 className="intro">
-          Search the Google Books API Archive to add books to the shelf
-        </h4>
         <div className="shelf-container">
           <div className="shelf">
             <ShelfBooks />
           </div>
         </div>
+        <h4 className="intro">
+          Search the Google Books API Archive to add books to the shelf
+        </h4>
         <div className="grid-2">
           <div>
             <Desk />
