@@ -31,21 +31,13 @@ Technologies used:
 
 To interact with the app on your local machine, clone the repo and run the following commands.
 
-_In server directory:_
-
-`npm install`
-
-`npm run server`
-
-The server will run and connect to the MongoDB Atlas database.
-
 _In client directory:_
 
 `npm install`
 
 `npm start`
 
-The app will run on port 3000.
+The app will run on port 3000, connected to the **Heroku** server and **MongoDB Atlas** database.
 
 ## App Details
 
