@@ -53,13 +53,13 @@ Status of the app and plans for further development as of 2nd December 2020:
 
 - The app is deployed and can be viewed and interacted with [here](https://mylibrary-google-books-api.netlify.app/) - the front-end is hosted on Netlify, the back-end on Heroku.
 - The Search component functionality is complete.
-  - I will make minor tweaks to the UI.
 - The Desk component is mostly complete.
   - To notify the user there is a limit of 10 books on the Shelf, I will create an alert and fade out the "Add to shelf" button when shelfBooks.length = 10.
   - I attempted to access a larger cover image to display on the Desk since the smallThumbnail image is low resolution, however not all Google Books API entries have a cover image larger than the smallThumbnail, and I'm considering leaving this as smallThumbnail to minimise potential issues with presentation.
-  - I will make minor tweaks to the UI.
+  - I will expand the addBook() function to refresh the data of the book just added to shelfBooks() so the data will contain the newly created \_id. Until then, I have set addBook() to clearDeskBook().
 - The Shelf component is mostly complete. The shelfBooks titles render as expected.
   - I will create a clearShelf() function and call it from a button which I will add to the top-right corner of the Shelf.
+  - I will extend the clickable area for each book to include the title card underneath.
   - I will make minor tweaks to the UI.
 - UI: Having completed most of the positioning and colours of the UI, I will add a loading icon and some CSS transitions to make the user experience more visually pleasing. I will also refactor App.css to remove any repeated code.
 - I will add unit and integration tests.
