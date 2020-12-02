@@ -67,6 +67,16 @@ button,
   background-size: 2000px 2000px;
 }
 
+/* border, box-shadow */
+#navbar,
+.shelf-container,
+.desk,
+.search-container {
+  border: 1px solid rgba(181, 166, 66, 0.2);
+  border-radius: 3px;
+  box-shadow: 0 0 5px black;
+}
+
 button,
 .btn {
   font-family: "Domine", serif;
@@ -76,7 +86,7 @@ button,
   border-radius: 2px;
   color: var(--brass);
   text-decoration: none;
-  border: 1px solid rgba(181, 166, 66, 0.4);
+  border: 1px solid rgba(181, 166, 66, 0.3);
   box-shadow: 0 0 5px black;
   cursor: pointer;
   outline: none;
@@ -84,14 +94,14 @@ button,
 
 button:hover,
 .btn:hover,
-.button-selected {
+.button-selected,
+.book-info:hover {
   border: 1px solid rgba(181, 166, 66, 0.7);
 }
 
 a {
   color: var(--brass);
   text-decoration: none;
-  /* border: var(--brass) 1px solid; */
   padding: 0.1rem 0.5rem;
   margin: 1rem;
 }
@@ -101,10 +111,6 @@ a {
   list-style: none;
   background-position-x: 15%;
   background-position-y: 10%;
-  border: 1px solid rgba(181, 166, 66, 0.2);
-  border-radius: 3px;
-  box-shadow: 0 0 5px black;
-  /* display: flex; */
   margin: 0 7rem;
 }
 
@@ -137,22 +143,19 @@ a {
   justify-content: center;
   margin: 0 10rem 2rem 10rem;
   padding: 0.4rem 0;
-  background-position-x: 20%;
-  background-position-y: 10%;
+  background-position-x: 5%;
+  background-position-y: 15%;
   border-bottom: 1px solid rgba(181, 166, 66, 0.2);
   border-left: 1px solid rgba(181, 166, 66, 0.2);
   border-right: 1px solid rgba(181, 166, 66, 0.2);
   border-radius: 0 0 3px 3px;
   box-shadow: 0 0 5px black;
-  transform: translateY(3%);
+  transform: translateY(3.6%);
 }
 
 .shelf-container {
   background-position-x: 15%;
   background-position-y: 5%;
-  border: 1px solid rgba(181, 166, 66, 0.2);
-  border-radius: 3px;
-  box-shadow: 0 0 5px black;
   padding: 0.5rem;
   margin-top: 2rem;
 }
@@ -178,16 +181,11 @@ a {
   position: relative;
 }
 
-.book-info:hover {
-  border: 1px solid rgba(181, 166, 66, 0.7);
-}
-
 .book-info h4 {
   font-style: italic;
 }
 
 .book-info img {
-  /* border: 2px solid var(--dark-color); */
   border-radius: 1px;
   width: 100%;
   height: 100%;
@@ -212,7 +210,7 @@ a {
   padding: 0.2rem 0 0.2rem 0.6rem;
   font-size: 0.7rem;
   white-space: nowrap;
-  width: 7.3rem;
+  /* width: 7.3rem; */
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -223,8 +221,6 @@ a {
   position: absolute;
   transform: translate(-100%, 0);
   box-shadow: none;
-  /* border-left: 1px solid rgba(181, 166, 66, 0.4); */
-  /* border-bottom: 1px solid rgba(181, 166, 66, 0.4); */
 }
 
 .book-info button:hover {
@@ -234,9 +230,6 @@ a {
 /* Desk, Search */
 .desk,
 .search-container {
-  border: 1px solid rgba(181, 166, 66, 0.2);
-  border-radius: 3px;
-  box-shadow: 0 0 5px black;
   padding: 1rem;
   margin: 1rem;
 }
@@ -262,10 +255,15 @@ a {
   width: 40%;
 }
 
-.deskbook-details {
+/* border, box-shadow - more shadow */
+.deskbook-details,
+.results-item {
   border: 1px solid rgba(181, 166, 66, 0.2);
   border-radius: 3px;
   box-shadow: 0 0 9px black;
+}
+
+.deskbook-details {
   margin: 0.5rem 0;
   padding: 0 0.8rem;
 }
@@ -291,10 +289,10 @@ a {
 
 .search-form-container button {
   height: 100%;
-  transform: translateY(5%);
 }
 
 .search-form {
+  font-size: 0.8rem;
   margin: 0 0.5rem;
 }
 
@@ -308,9 +306,6 @@ a {
 }
 
 .results-item {
-  border: 1px solid rgba(181, 166, 66, 0.2);
-  border-radius: 3px;
-  box-shadow: 0 0 9px black;
   margin: 0.5rem 0;
   padding: 0.1rem 0.5rem;
 }
