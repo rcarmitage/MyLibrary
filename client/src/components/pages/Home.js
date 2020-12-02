@@ -13,7 +13,16 @@ const Home = () => {
           </div>
         </div>
         <h4 className="intro">
-          Search the Google Books API Archive to add books to the shelf
+          Search the{" "}
+          <a
+            id="google-books-api-link"
+            href="https://books.google.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Books API
+          </a>{" "}
+          Archive below to add books to the shelf
         </h4>
         <div className="grid-2">
           <div>

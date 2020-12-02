@@ -101,9 +101,21 @@ button:hover,
 
 a {
   color: var(--brass);
+  font-size: 0.8rem;
   text-decoration: none;
   padding: 0.1rem 0.5rem;
   margin: 1rem;
+}
+
+#google-books-api-link {
+  padding: 0;
+  margin: 0 0.3rem;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+#google-books-api-link:hover {
+  text-decoration: underline;
 }
 
 /* Navbar */
@@ -255,6 +267,13 @@ a {
   width: 40%;
 }
 
+.deskbook-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 2rem 0.2rem 0;
+}
+
 /* border, box-shadow - more shadow */
 .deskbook-details,
 .results-item {
@@ -273,28 +292,13 @@ a {
   justify-content: flex-end;
 }
 
-/* .desk .clear,
-.search .clear {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: row;
-} */
-
 .search-form-container,
 .search-fields {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   padding: 0.2rem 1rem;
-}
-
-.search-form-container {
-  align-items: center;
-}
-
-.search-form-container button {
-  height: 100%;
 }
 
 .search-form {

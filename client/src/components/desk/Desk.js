@@ -46,7 +46,7 @@ const Desk = () => {
             Clear
           </button>
         </div>
-        <div>
+        <div className="deskbook-buttons-container">
           <a
             href={`https://books.google.co.uk/books?id=${id}`}
             target="_blank"
