@@ -16,7 +16,7 @@ A user should be able to…
 - View a book in more detail and click through to the Google Books entry
 - View a collection of up to 10 saved books on a shelf, able to add and delete
 
-Technologies used:
+Technologies and services used:
 
 - **React.js**
 - **Node.js**
