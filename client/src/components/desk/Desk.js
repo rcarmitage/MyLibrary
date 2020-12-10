@@ -60,13 +60,16 @@ const Desk = () => {
             <button onClick={onAdd}>Add to shelf</button>
           )}
         </div>
-        <div className="desk-alert">
-          {/* Alert: shows if shelfBooks.length > 9 */}
-          <p className="alert-text">The shelf is full!</p>
-          <p className="alert-text">
-            You can remove books if you'd like to add different ones
-          </p>
-        </div>
+        {shelfBooks.length > 9 ? (
+          <div className="desk-alert">
+            <p className="alert-text">The shelf is full!</p>
+            <p className="alert-text">
+              You can remove books if you'd like to add different ones
+            </p>
+          </div>
+        ) : (
+          ""
+        )}
         <div>
           <div className="cover-image-desk-container">
             {smallThumbnail === "No cover image available" ? (
