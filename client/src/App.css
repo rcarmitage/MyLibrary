@@ -249,6 +249,7 @@ a {
 .desk {
   background-position-x: 3%;
   background-position-y: 15%;
+  position: relative;
 }
 
 .desk .desk-alert {
@@ -258,7 +259,7 @@ a {
   margin-bottom: 1rem;
   padding: 0.1rem 1rem;
   font-style: italic;
-  width: 80%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -266,6 +267,7 @@ a {
 .desk .desk-alert .alert-text {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .cover-image-desk-container {
