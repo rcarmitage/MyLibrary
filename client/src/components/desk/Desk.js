@@ -30,6 +30,8 @@ const Desk = () => {
       (shelfBook) => shelfBook.id === deskBook.id
     );
 
+    let fullShelf = shelfBooks.length > 9;
+
     const onAdd = () => {
       addBook(deskBook);
       clearDeskBook();
@@ -60,7 +62,7 @@ const Desk = () => {
             <button onClick={onAdd}>Add to shelf</button>
           )}
         </div>
-        {shelfBooks.length > 9 ? (
+        {fullShelf && !isOnShelf ? (
           <div className="desk-alert">
             <p className="alert-text">The shelf is full!</p>
             <p className="alert-text">
