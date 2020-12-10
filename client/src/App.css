@@ -71,6 +71,7 @@ button,
 #navbar,
 .shelf-container,
 .desk,
+.desk .cover-image-desk-container,
 .search-container {
   border: 1px solid rgba(181, 166, 66, 0.2);
   border-radius: 3px;
@@ -250,9 +251,28 @@ a {
   background-position-y: 15%;
 }
 
-.search-container {
-  background-position-x: 17%;
-  background-position-y: 20%;
+.desk .desk-alert {
+  border: 1px solid rgba(181, 166, 66, 0.7);
+  border-radius: 3px;
+  box-shadow: 0 0 5px black;
+  margin-bottom: 1rem;
+  padding: 0.1rem 1rem;
+  font-style: italic;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.desk .desk-alert .alert-text {
+  display: flex;
+  justify-content: center;
+}
+
+.cover-image-desk-container {
+  margin: 0.5rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 
 .cover-image-desk {
@@ -263,7 +283,7 @@ a {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  /* width: 40%; */
 }
 
 .deskbook-buttons-container {
@@ -289,6 +309,11 @@ a {
 .clear-button-container {
   display: flex;
   justify-content: flex-end;
+}
+
+.search-container {
+  background-position-x: 17%;
+  background-position-y: 20%;
 }
 
 .search-form-container,

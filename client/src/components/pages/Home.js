@@ -22,7 +22,7 @@ const Home = () => {
           >
             Google Books API
           </a>{" "}
-          Archive below to add books to the shelf
+          Archive below to add up to 10 books to the shelf
         </h4>
         <div className="grid-2">
           <div>
