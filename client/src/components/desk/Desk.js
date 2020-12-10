@@ -58,6 +58,8 @@ const Desk = () => {
           </a>
           {isOnShelf ? (
             <button onClick={onDelete}>Remove from shelf</button>
+          ) : fullShelf ? (
+            <button className="deactivated">Cannot add to shelf</button>
           ) : (
             <button onClick={onAdd}>Add to shelf</button>
           )}
