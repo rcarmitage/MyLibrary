@@ -58,7 +58,7 @@ button,
 #navbar,
 .intro,
 .shelf-container,
-.book-info .details .book-title,
+.book-info .details,
 .desk,
 .search-container {
   background-color: var(--dark-brown);
@@ -96,7 +96,8 @@ button,
 button:hover,
 .btn:hover,
 .button-selected,
-.book-info:hover {
+.book-info:hover,
+.book-info .details:hover {
   border: 1px solid rgba(181, 166, 66, 0.7);
 }
 
@@ -175,7 +176,7 @@ a {
 .shelf {
   border: 1px solid rgba(181, 166, 66, 0.2);
   border-radius: 3px;
-  padding: 1rem;
+  padding: 1rem 1rem 3rem 1rem;
   background-color: var(--dark-green);
   display: grid;
   grid-template-rows: 20rem / auto auto;
@@ -205,24 +206,22 @@ a {
 }
 
 .book-info .details {
-  display: flex;
-  flex-direction: column;
-}
-
-.book-info .details p {
-  margin: 0;
-}
-
-.book-info .details .book-title {
-  /* background-position: top center; */
+  cursor: pointer;
   border: 1px solid rgba(181, 166, 66, 0.2);
   border-radius: 2px;
   box-shadow: 0 0 5px black;
   display: flex;
-  padding: 0.2rem 0 0.2rem 0.6rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 4rem;
+}
+
+.book-info .details .book-title {
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
   font-size: 0.7rem;
   white-space: nowrap;
-  /* width: 7.3rem; */
   overflow: hidden;
   text-overflow: ellipsis;
 }

@@ -17,7 +17,9 @@ const ShelfBooks = () => {
       {shelfBooks === null ? (
         <p>Your shelf is empty...</p>
       ) : (
-        shelfBooks.map((book) => <ShelfBookItem key={book._id} book={book} />)
+        shelfBooks.map((book) => (
+          <ShelfBookItem key={book._id} book={book} className="shelfbookitem" />
+        ))
       )}
     </Fragment>
   );

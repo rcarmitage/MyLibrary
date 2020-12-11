@@ -34,9 +34,8 @@ const ShelfBookItem = ({ book }) => {
         ></img>
       )}
       <button onClick={onDelete}>Remove</button>
-      <div className="details">
+      <div className="details" onClick={() => setDeskBook(book)}>
         <p className="book-title">{title}</p>
-        <div></div>
       </div>
     </div>
   );
