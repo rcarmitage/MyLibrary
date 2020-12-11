@@ -45,19 +45,18 @@ The following functionality is currently in the process of being implemented and
 
 - The user is able to use the Search component to access the Google Books API, with the search terms displaying up to 10 matches for _all fields_, _title_ or _author_. The result for each item returns the ID, title, author(s), date published, description and the URL to retrieve the cover image (as smallThumbnail) from the retrieved JSON object. The search result for each item displays the title, author(s)and date published.
 
-- The user is able to select one of these books by clicking the View Details button, which stores the above search data in state as deskBook. The Desk component renders the title, author(s), date published, description and cover image from deskBook. If the book is not already on the Shelf (i.e. an item in the shelfBooks array) an "Add to shelf" button is displayed. This calls the addBook() function which sends this data as an object to the shelfBooks array, stored in a MongoDB Atlas database. If the book is already on the Shelf, this button instead displays "Remove from shelf" and calls the deleteBook() function which removes it from the database. Clicking the "View this title on Google Books" button opens a new window and redirects to the Google Books entry for this ID.
+- The user is able to select one of these books by clicking the View Details button, which stores the above search data in state as deskBook. The Desk component renders the title, author(s), date published, description and cover image from deskBook. If the book is not already on the Shelf (i.e. an item in the shelfBooks array) and there is space to add a book (if the shelfBooks array has fewer than 10 items) an "Add to shelf" button is displayed. This calls the addBook() function which sends this data as an object to the shelfBooks array, stored in a MongoDB Atlas database. If the book is already on the Shelf, this button instead displays "Remove from shelf" and calls the deleteBook() function which removes it from the database. Clicking the "View this title on Google Books" button opens a new window and redirects to the Google Books entry for this ID.
 
 - On the Shelf component the user is able to view the titles stored in the shelfBooks array. The shelfBooks array can contain up to 10 items, which are displayed in two rows of 5 each showing the cover image and title. The user can click on the cover image to set as deskBook, which is then rendered on the Desk. The user can click the "Remove" button to delete the title from the shelfBooks array, and will be able to click the "Clear shelf" button (_WIP_) to delete all titles.
 
-Status of the app and plans for further development as of 2nd December 2020:
+Status of the app and plans for further development as of 11th December 2020:
 
 - The app is deployed and can be viewed and interacted with [here](https://mylibrary-google-books-api.netlify.app/) - the front-end is hosted on Netlify, the back-end on Heroku.
 - The Search component functionality is complete.
 - The Desk component is mostly complete.
-  - To notify the user there is a limit of 10 books on the Shelf, I will create an alert and fade out the "Add to shelf" button when shelfBooks.length = 10.
   - I attempted to access a larger cover image to display on the Desk since the smallThumbnail image is low resolution, however not all Google Books API entries have a cover image larger than the smallThumbnail, and I'm considering leaving this as smallThumbnail to minimise potential issues with presentation.
-  - I will expand the addBook() function to refresh the data of the book just added to shelfBooks() so the data will contain the newly created \_id. Until then, I have set addBook() to clearDeskBook().
-- The Shelf component is mostly complete. The shelfBooks titles render as expected.
+  - I will expand the addBook() function to refresh the data of the book just added to shelfBooks() so the data will contain the newly created \_id. Until then, I have set addBook() to call clearDeskBook() when executed.
+- The Shelf component is mostly complete. The shelfBooks titles render mostly as designed.
   - I will create a clearShelf() function and call it from a button which I will add to the top-right corner of the Shelf.
   - I will extend the clickable area for each book to include the title card underneath.
   - I will make minor tweaks to the UI.
