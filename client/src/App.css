@@ -32,6 +32,11 @@ body {
   margin: 0 10rem;
 }
 
+html {
+  --lh: 1.2rem;
+  line-height: var(--lh);
+}
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -221,9 +226,9 @@ a {
   cursor: pointer;
   padding: 0.2rem 0.5rem;
   font-size: 0.7rem;
-  white-space: nowrap;
+  --max-lines: 3;
+  max-height: calc(var(--lh) * var(--max-lines));
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .book-info button {
