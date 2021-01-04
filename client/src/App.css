@@ -183,10 +183,11 @@ a {
   border-radius: 3px;
   padding: 1rem 1rem 3rem 1rem;
   background-color: var(--dark-green);
-  display: grid;
-  grid-template-rows: 20rem / auto auto;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 2rem 1rem;
+  /* display: grid; */
+  /* grid-template-rows: 20rem / auto auto; */
+  /* grid-template-columns: repeat(5, 1fr); */
+  /* grid-gap: 2rem 1rem; */
+  display: flex;
 }
 
 .book-info {
@@ -197,6 +198,28 @@ a {
   max-width: 8rem;
   height: 11rem;
   position: relative;
+}
+
+/* 5 books per row */
+.shelfbookitem {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  width: 20%;
+}
+
+/* 3 books per row */
+@media screen and (max-width: 900px) {
+  .shelfbookitem {
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+  }
+
+  .shelf {
+    display: grid;
+    grid-template-rows: 20rem / auto auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .book-info h4 {
