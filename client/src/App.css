@@ -125,6 +125,39 @@ a {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 1400px) {
+  :root {
+    margin: 0 5rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    margin: 0 3rem;
+  }
+
+  /* body {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+  } */
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    margin: 0 1rem;
+    /* width: 100vw;
+    display: flex;
+    align-items: center; */
+  }
+
+  body {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+  }
+}
+
 /* Navbar */
 #navbar {
   list-style: none;
@@ -153,6 +186,50 @@ a {
 .nav-links .nav-button {
   margin: 0.2rem 0.3rem;
   box-shadow: 0 0 5px black;
+}
+
+@media screen and (max-width: 1400px) {
+  .nav-links .nav-button {
+    font-size: 1.2rem;
+    padding: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #title {
+    font-size: 1.5rem;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #navbar {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #title {
+    /* font-size: rem; */
+  }
+
+  #title h1 {
+    position: relative;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+  }
+
+  .nav-links .nav-button {
+    width: 40%;
+    /* font-size: 1.2rem;
+    padding: 0.2rem; */
+  }
 }
 
 /* Shelf */
@@ -226,30 +303,6 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 } */
-
-@media screen and (max-width: 1200px) {
-  :root {
-    margin: 0 10rem;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  :root {
-    margin: 0 5rem;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  :root {
-    margin: 0 1rem;
-  }
-
-  body {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-  }
-}
 
 .book-info h4 {
   font-style: italic;
