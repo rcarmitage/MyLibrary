@@ -24,7 +24,7 @@ const Home = () => {
           </a>{" "}
           Archive below to add up to 10 books to the shelf
         </h4>
-        <div className="grid-2">
+        <div className="desk-search-container">
           <div>
             <Desk />
           </div>

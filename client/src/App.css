@@ -28,9 +28,9 @@ body {
   overflow-y: scroll;
 }
 
-.App {
+/* .App {
   margin: 0 10rem;
-}
+} */
 
 html {
   --lh: 1.2rem;
@@ -183,11 +183,15 @@ a {
   border-radius: 3px;
   padding: 1rem 1rem 3rem 1rem;
   background-color: var(--dark-green);
-  /* display: grid; */
+  display: grid;
   /* grid-template-rows: 20rem / auto auto; */
   /* grid-template-columns: repeat(5, 1fr); */
-  /* grid-gap: 2rem 1rem; */
-  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 5fr));
+  grid-gap: 2rem 1rem;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-around; */
+  /* background-color: red; */
 }
 
 .book-info {
@@ -203,11 +207,12 @@ a {
 /* 5 books per row */
 .shelfbookitem {
   /* display: flex; */
-  /* justify-content: space-between; */
-  width: 20%;
+  /* justify-content: space-around; */
+
+  /* width: 20%; */
 }
 
-/* 3 books per row */
+/* 3 books per row
 @media screen and (max-width: 900px) {
   .shelfbookitem {
     display: flex;
@@ -219,6 +224,30 @@ a {
     display: grid;
     grid-template-rows: 20rem / auto auto;
     grid-template-columns: repeat(3, 1fr);
+  }
+} */
+
+@media screen and (max-width: 1200px) {
+  :root {
+    margin: 0 10rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    margin: 0 5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    margin: 0 1rem;
+  }
+
+  body {
+    width: 100vw;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -267,6 +296,24 @@ a {
 }
 
 /* Desk, Search */
+.desk-search-container {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .desk-search-container {
+    /* grid-template-columns: repeat(1fr); */
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+}
+
 .desk,
 .search-container {
   padding: 1rem;
