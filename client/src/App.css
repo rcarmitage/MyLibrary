@@ -418,13 +418,13 @@ a {
   grid-gap: 2rem;
 }
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
   .desk-search-container {
     grid-template-columns: repeat(1fr);
     display: flex;
     flex-direction: column;
   }
-}
+} */
 
 .desk,
 .search-container {
@@ -436,7 +436,7 @@ a {
   background-position-x: 3%;
   background-position-y: 15%;
   position: relative;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   text-align: center;
 }
@@ -492,7 +492,6 @@ a {
 .deskbook-buttons-container .deactivated:hover {
   border: 1px solid rgba(181, 166, 66, 0.3);
 }
-*/
 
 /* border, box-shadow - more shadow */
 .deskbook-details,
@@ -501,7 +500,8 @@ a {
   border-radius: 3px;
   box-shadow: 0 0 9px black;
 }
-*/ .deskbook-details {
+
+.deskbook-details {
   margin: 0.5rem 0;
   padding: 0 0.8rem;
 }
