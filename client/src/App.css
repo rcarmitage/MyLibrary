@@ -267,6 +267,10 @@ a {
     height: 65%;
   }
 
+  .book-info .details {
+    padding: 0 0.5rem;
+  }
+
   .book-info button {
     padding: 0.3rem;
     font-size: 0.8rem;
@@ -287,6 +291,12 @@ a {
     grid-template-columns: 1fr;
     /* grid-gap: 2rem; */
   }
+
+  .desk,
+  .search-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -306,7 +316,7 @@ a {
   /* buttons, links */
   button,
   .btn {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
   }
 
@@ -342,12 +352,14 @@ a {
 
   .book-info {
     margin: 1rem 1rem 2rem 1rem;
+    min-width: 70%;
     max-width: 80%;
     height: 65%;
   }
 
   .book-info .details {
     margin-bottom: 1rem;
+    padding: 0 0.5rem;
   }
 
   .intro {
@@ -365,14 +377,16 @@ a {
     grid-template-columns: 1fr;
     /* grid-gap: 2rem; */
   }
+
+  .desk,
+  .search-container {
+    padding: 1rem;
+    margin: 1.5rem;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  :root {
-    margin: 0 5rem;
-  }
-
   body {
     background-color: rgb(0, 0, 0, 0.8);
     background-image: url(./assets/library_background_01.jpg);
@@ -384,13 +398,13 @@ a {
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   /* buttons, links */
   button,
   .btn {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   /* Navbar */
@@ -420,14 +434,20 @@ a {
 
   .desk-search-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
+  }
+
+  .desk,
+  .search-container {
+    padding: 1rem;
+    margin: 2rem 1rem;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   :root {
-    margin: 0 10rem;
+    margin: 0 5rem;
   }
 
   /* Navbar */
@@ -464,20 +484,6 @@ a {
 }
 
 /* TODO 07/01/2021: refactor CSS below */
-
-/* @media screen and (max-width: 1000px) {
-  .desk-search-container {
-    grid-template-columns: repeat(1fr);
-    display: flex;
-    flex-direction: column;
-  }
-} */
-
-/* .desk,
-.search-container {
-  padding: 1rem;
-  margin: 1rem;
-} */
 
 /* .desk {
   background-position-x: 3%;
