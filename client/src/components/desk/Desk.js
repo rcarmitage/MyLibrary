@@ -114,8 +114,8 @@ const Desk = () => {
     return (
       <div className="desk">
         <h4>
-          To view book details, please select a title from the shelf or the
-          search results
+          To view book details, please select a title from the shelf or search
+          results
         </h4>
       </div>
     );
