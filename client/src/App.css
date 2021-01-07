@@ -276,6 +276,12 @@ a {
     margin: 0 1rem 1rem 1rem;
     transform: translateY(1.4%);
   }
+
+  /* Desk, Search */
+  .desk p,
+  .search p {
+    font-size: 1rem;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
