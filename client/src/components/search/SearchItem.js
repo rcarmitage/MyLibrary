@@ -29,7 +29,7 @@ const SearchItem = ({ searchResult }) => {
             : publishedDate.slice(0, 4)}
         </p>
       </div>
-      <div>
+      <div className="view-details-container">
         <button onClick={() => setDeskBook(searchResult)}>View Details</button>
       </div>
     </div>

@@ -53,6 +53,7 @@ const Desk = () => {
             href={`https://books.google.co.uk/books?id=${id}`}
             target="_blank"
             rel="noopener noreferrer"
+            className="external-link"
           >
             <button>View this title on Google Books</button>
           </a>

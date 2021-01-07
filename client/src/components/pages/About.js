@@ -6,7 +6,7 @@ const About = () => (
     <p>
       A full-stack app for accessing the Google Books API created by Rob
       Armitage. The user is able to search for books and view details, and add
-      to and remove from the shelf.
+      and remove from the shelf.
     </p>
     <p>Please see the GitHub README for details of the development process.</p>
     <div>

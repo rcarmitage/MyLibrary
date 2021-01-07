@@ -49,7 +49,7 @@ The following functionality is currently in the process of being implemented and
 
 - On the Shelf component the user is able to view the titles stored in the shelfBooks array. The shelfBooks array can contain up to 10 items, which are displayed in two rows of 5 each showing the cover image and title. The user can click on the cover image to set as deskBook, which is then rendered on the Desk. The user can click the "Remove" button to delete the title from the shelfBooks array, and will be able to click the "Clear shelf" button (_WIP_) to delete all titles.
 
-Status of the app and plans for further development as of 11th December 2020:
+Status of the app and plans for further development as of 7th January 2021:
 
 - The app is deployed and can be viewed and interacted with [here](https://mylibrary-google-books-api.netlify.app/) - the front-end is hosted on Netlify, the back-end on Heroku.
 - The Search component functionality is complete.
@@ -62,7 +62,7 @@ Status of the app and plans for further development as of 11th December 2020:
   - I will make minor tweaks to the UI.
 - UI: Having completed most of the positioning and colours of the UI, I will add a loading icon and some CSS transitions to make the user experience more visually pleasing. I will also refactor App.css to remove any repeated code.
 - I will add unit and integration tests.
-- I will work further on responsive design for smaller screens.
+- The UI is responsive, moving from wide to narrow layouts on differently sized screens.
 - Extension task: I plan to add a toggle for information boxes which will display as the user interacts with the various components, explaining the behind-the-scenes functionality.
 
 ## My learning
@@ -86,6 +86,7 @@ Therefore I began without a detailed plan of what I would be required to learn a
   - For a missing cover image (smallThumbnail, which would normally be a URL), the Shelf and Desk components check for the "No cover image available" string and render a NO COVER AVAILABLE image from src/assets when true.
 - Going through this convoluted process of beginning with a basic app idea and a single initial component on the front-end (Shelf), only to switch to implementing different components first (Search, then Desk), then implementing a robust back-end when considering future usability, has given me a deeper understanding of the clarity of thought needed at the beginning of a project. Additionally, I have become more adept at switching my focus when I've realised where my efforts would be more useful, and will take this into future projects.
 - I took some time understanding how to deploy the app so it can be used by others. After some experimentation I deployed the front-end/client-side on **Netlify** and the back-end/server-side on **Heroku**, and updated the API URL in LibraryState.js so the front-end now accesses the live hosted back-end, which links to the live hosted database. The data (books added to the Shelf) now persists and can be manipulated.
+- Regarding the responsive UI, I designed the app with a medium-sized laptop/desktop screen in mind and later had to reconfigure almost all of the CSS to fit other screen sizes. I removed all CSS components then added them back in one at a time on the smallest screen size, working up to larger sizes once the app functioned as expected.
 - The core functionality is complete. From here there are some additions to be made to enhance the user experience, and I have yet to write tests (which I will use to further understand that process, something I would like to become very proficient at), however I am very pleased with my progress on this project. Once the remaining core functionality and last few tweaks to the UI are completed, I will step away from this project and not implement any of the further ideas I'd had early on - such as using a second API to provide "fiction" and "non-fiction" data for each item in shelfBooks to then be sorted onto "fiction" and "non-fiction" shelves. There are many other languages, technologies and concepts that I would like to spend my time learning, and I could easily spend a significant amount of time making only incremental gains on this project.
   - Features not planned for development:
     - Two shelves, one for fiction and one for non-fiction. A new step would be added when setting a book as deskBook: access the New York Times API to check the fiction/non-fiction status and insert that as a key:value pair. When adding the book to the shelf it would automatically go to the appropriate shelf.
