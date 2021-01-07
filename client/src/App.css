@@ -179,6 +179,8 @@ a {
   position: absolute;
   transform: translate(-100%, 0);
   box-shadow: none;
+  padding: 0.3rem;
+  font-size: 0.8rem;
 }
 
 .book-info button:hover {
@@ -385,11 +387,6 @@ a {
 
   .book-info .details {
     padding: 0 0.5rem;
-  }
-
-  .book-info button {
-    padding: 0.3rem;
-    font-size: 0.8rem;
   }
 
   .intro {
