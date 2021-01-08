@@ -17,7 +17,6 @@
 
 body {
   font-family: "Domine", serif;
-  /* font-size: 1rem; */
   line-height: 1.6;
   color: var(--brass);
   width: 100%;
@@ -117,14 +116,11 @@ a {
 
 .nav-links {
   display: flex;
-  /* justify-content: flex-end; */
   position: absolute;
-  /* width: 100%; */
 }
 
 .nav-links .nav-button {
   font-size: 1.2rem;
-  /* margin: 0.2rem 0.3rem; */
   box-shadow: 0 0 5px black;
 }
 
@@ -281,6 +277,7 @@ a {
   box-shadow: 0 0 9px black;
 }
 
+/* Desk, Search */
 .deskbook-details {
   margin: 0.5rem 0;
   padding: 0 0.8rem;
@@ -306,7 +303,7 @@ a {
 }
 
 .search-form {
-  /* font-size: 0.8rem; */
+  font-size: 1rem;
   margin: 0 0.5rem;
 }
 
@@ -361,6 +358,7 @@ a {
 
   .nav-links {
     justify-content: space-around;
+    padding: 0 0.6rem;
     width: 100%;
   }
 
@@ -395,11 +393,6 @@ a {
   }
 
   /* Desk, Search */
-  /* .desk p,
-  .search p {
-    font-size: 1rem;
-  } */
-
   .desk-search-container {
     grid-template-columns: 1fr;
     /* grid-gap: 2rem; */
@@ -482,7 +475,7 @@ a {
 
   .nav-links .nav-button {
     margin: 0.2rem 0.3rem 0.2rem 0;
-    /* width: 45%; */
+    padding: 0.3rem 0.8rem;
     box-shadow: 0 0 5px black;
   }
 
@@ -591,12 +584,6 @@ a {
     margin: 0 3rem 1rem 3rem;
     transform: translateY(3%);
   }
-
-  /* Desk, Search */
-  /* .desk p,
-  .search p {
-    font-size: 1rem;
-  } */
 
   .desk-search-container {
     grid-template-columns: repeat(2, 1fr);
