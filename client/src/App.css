@@ -270,7 +270,6 @@ a {
   box-shadow: 0 0 9px black;
 }
 
-/* Desk, Search */
 .deskbook-details {
   margin: 0.5rem 0;
   padding: 0 0.8rem;
@@ -279,6 +278,7 @@ a {
 .search-container {
   background-position-x: 17%;
   background-position-y: 20%;
+  height: fit-content;
 }
 
 .search .search-title {
