@@ -137,8 +137,6 @@ a {
   padding: 1.5rem 0.5rem;
   background-color: var(--dark-green);
   display: grid;
-  /* grid-gap: 0.5rem; */
-  /* justify-content: center; */
 }
 
 .book-info {
@@ -146,7 +144,6 @@ a {
   background-color: var(--dark-brown);
   border-radius: 2px;
   justify-self: center;
-  /* margin-top: 5rem; */
 }
 
 .book-info .details {
@@ -158,14 +155,10 @@ a {
   justify-content: center;
   text-align: center;
   align-items: center;
-  /* height: 4rem; */
-  /* padding: 0.5rem; */
 }
 
 .book-info .details .book-title {
   cursor: pointer;
-  /* padding: 0.2rem; */
-  /* font-size: 0.7rem; */
   --max-lines: 3;
   max-height: calc(var(--lh) * var(--max-lines));
   overflow: hidden;
@@ -293,7 +286,6 @@ a {
   justify-content: center;
 }
 
-.search-form-container,
 .search-fields {
   display: flex;
   justify-content: center;
@@ -302,9 +294,24 @@ a {
   padding: 0.2rem 1rem;
 }
 
+.search-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0;
+}
+
 .search-form {
-  font-size: 1rem;
   margin: 0 0.5rem;
+}
+
+.search-form input {
+  height: 2rem;
+  background-color: #fbf7f5;
+}
+
+.search-form .btn {
+  height: 2rem;
 }
 
 .search-field {
@@ -395,7 +402,6 @@ a {
   /* Desk, Search */
   .desk-search-container {
     grid-template-columns: 1fr;
-    /* grid-gap: 2rem; */
   }
 
   .desk,
@@ -506,14 +512,8 @@ a {
   }
 
   /* Desk, Search */
-  /* .desk p,
-  .search p {
-    font-size: 1rem;
-  } */
-
   .desk-search-container {
     grid-template-columns: 1fr;
-    /* grid-gap: 2rem; */
   }
 
   .desk,
