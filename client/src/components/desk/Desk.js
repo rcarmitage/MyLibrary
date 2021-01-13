@@ -42,7 +42,7 @@ const Desk = () => {
     };
 
     return (
-      <div className="desk">
+      <div className="desk active">
         <div className="clear-button-container">
           <button onClick={clearDeskBook} className="clear">
             Clear

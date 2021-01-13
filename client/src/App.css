@@ -210,6 +210,12 @@ a {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  height: 10rem;
+  transition: 0.5s;
+}
+
+.desk.active {
+  height: 95%;
 }
 
 .clear-button-container {
@@ -308,6 +314,7 @@ a {
 .search-form input {
   height: 2rem;
   background-color: #fbf7f5;
+  font-family: "Domine", serif;
 }
 
 .search-form .btn {
