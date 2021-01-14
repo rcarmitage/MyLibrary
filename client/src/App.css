@@ -215,7 +215,13 @@ a {
 }
 
 .desk.active {
-  height: 95%;
+  height: 50%;
+}
+
+.desk.active .deskbook-buttons-container,
+.desk.active .cover-image-desk-container,
+.desk.active .deskbook-details {
+  visibility: hidden;
 }
 
 .clear-button-container {
@@ -367,9 +373,6 @@ a {
   }
 
   /* Navbar */
-  #navbar {
-  }
-
   .nav-links {
     justify-content: space-around;
     padding: 0 0.6rem;
