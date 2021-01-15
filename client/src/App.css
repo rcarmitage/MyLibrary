@@ -214,14 +214,21 @@ a {
   transition: 0.5s;
 }
 
+.desk.transition,
 .desk.active {
-  height: 50%;
+  height: 90%;
+}
+
+.desk.transition .deskbook-buttons-container,
+.desk.transition .cover-image-desk-container,
+.desk.transition .deskbook-details {
+  display: none;
 }
 
 .desk.active .deskbook-buttons-container,
 .desk.active .cover-image-desk-container,
 .desk.active .deskbook-details {
-  visibility: hidden;
+  display: default;
 }
 
 .clear-button-container {

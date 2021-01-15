@@ -18,9 +18,12 @@ const LibraryState = (props) => {
     shelfBooks: [],
     deskBook: null,
     searchResults: [],
+    deskClassState: "desk",
   };
 
   const [state, dispatch] = useReducer(libraryReducer, initialState);
+
+  const [deskClass, setDeskClass] = useState("desk transition");
 
   // Get all books in the shelfBooks array
   const getShelfBooks = async () => {
@@ -70,6 +73,10 @@ const LibraryState = (props) => {
   // Set book to be displayed in viewing area
   const setDeskBook = (book) => {
     dispatch({ type: SET_DESKBOOK, payload: book });
+    setTimeout(() => {
+      deskClassState({ deskClass });
+      setDeskClass("desk active");
+    }, 2000);
   };
 
   // Clear book displayed in viewing area
@@ -117,6 +124,7 @@ const LibraryState = (props) => {
         shelfBooks: state.shelfBooks,
         deskBook: state.deskBook,
         searchResults: state.searchResults,
+        deskClassState: state.deskClassState,
         getShelfBooks,
         setDeskBook,
         addBook,

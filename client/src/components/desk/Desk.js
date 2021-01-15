@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import noCoverImage from "../../assets/no_cover_image.jpg";
 import LibraryContext from "../../context/library/libraryContext";
@@ -8,6 +8,7 @@ const Desk = () => {
   const {
     shelfBooks,
     deskBook,
+    deskClassState,
     clearDeskBook,
     addBook,
     deleteBook,
@@ -42,7 +43,7 @@ const Desk = () => {
     };
 
     return (
-      <div className="desk active">
+      <div className={deskClassState}>
         <div className="clear-button-container">
           <button onClick={clearDeskBook} className="clear">
             Clear
