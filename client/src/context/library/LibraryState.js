@@ -23,8 +23,6 @@ const LibraryState = (props) => {
 
   const [state, dispatch] = useReducer(libraryReducer, initialState);
 
-  const [deskClass, setDeskClass] = useState("desk transition");
-
   // Get all books in the shelfBooks array
   const getShelfBooks = async () => {
     const res = await axios.get(

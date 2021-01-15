@@ -9,6 +9,8 @@ const SearchItem = ({ searchResult }) => {
     volumeInfo: { title, authors, publishedDate },
   } = searchResult;
 
+  const [deskClassUpdate, setDeskClassUpdate] = useState("desk ");
+
   return (
     <div className="results-item grid-search-item">
       <div>
