@@ -71,10 +71,10 @@ const LibraryState = (props) => {
   // Set book to be displayed in viewing area
   const setDeskBook = (book) => {
     dispatch({ type: SET_DESKBOOK, payload: book });
-    setTimeout(() => {
-      deskClassState({ deskClass });
-      setDeskClass("desk active");
-    }, 2000);
+    // setTimeout(() => {
+    //   deskClassState({ deskClass });
+    //   setDeskClass("desk active");
+    // }, 2000);
   };
 
   // Clear book displayed in viewing area

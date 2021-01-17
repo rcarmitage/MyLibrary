@@ -212,23 +212,44 @@ a {
   text-align: center;
   height: 10rem;
   transition: 0.5s;
+  opacity: 1;
 }
 
 .desk.transition,
 .desk.active {
-  height: 90%;
+  height: 95%;
 }
 
-.desk.transition .deskbook-buttons-container,
+/* .desk.transition .deskbook-buttons-container,
 .desk.transition .cover-image-desk-container,
 .desk.transition .deskbook-details {
   display: none;
+} */
+
+.deskbook-details {
+  /* opacity: 0; */
+}
+
+.desk.desk.transition .deskbook-details {
+  opacity: 0;
+}
+
+.desk.active .deskbook-details {
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.desk .deskbook-buttons-container,
+.desk .cover-image-desk-container,
+.desk .deskbook-details {
+  /* opacity: 0; */
 }
 
 .desk.active .deskbook-buttons-container,
 .desk.active .cover-image-desk-container,
 .desk.active .deskbook-details {
-  display: default;
+  /* display: default; */
+  /* opacity: 1; */
 }
 
 .clear-button-container {

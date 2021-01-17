@@ -8,13 +8,15 @@ const Desk = () => {
   const {
     shelfBooks,
     deskBook,
-    deskClassState,
+    // deskClassState,
     clearDeskBook,
     addBook,
     deleteBook,
   } = libraryContext;
 
-  if (deskBook !== null) {
+  const [showDeskBook, setShowDeskBook] = useState("false");
+
+  if (deskBook !== null && showDeskBook) {
     const {
       _id,
       id,
@@ -43,7 +45,7 @@ const Desk = () => {
     };
 
     return (
-      <div className={deskClassState}>
+      <div className="desk active">
         <div className="clear-button-container">
           <button onClick={clearDeskBook} className="clear">
             Clear
@@ -112,6 +114,18 @@ const Desk = () => {
         </div>
       </div>
     );
+  } else if (deskBook !== null && !showDeskBook) {
+    // const transitionDesk = () => {
+    //   setShowDeskbook("true");
+    // };
+
+    setTimeout(() => {
+      console.log("Before:"(showDeskBook));
+      setShowDeskBook("true");
+      console.log("After:"(showDeskBook));
+    }, 2000);
+
+    return <div className="desk transition"></div>;
   } else {
     return (
       <div className="desk">
