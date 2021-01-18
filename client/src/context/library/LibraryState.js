@@ -10,6 +10,7 @@ import {
   CLEAR_DESKBOOK,
   SEARCH_BOOKS,
   CLEAR_SEARCH,
+  SET_LOADING,
   BOOK_ERROR,
 } from "../types";
 
@@ -18,6 +19,7 @@ const LibraryState = (props) => {
     shelfBooks: [],
     deskBook: null,
     searchResults: [],
+    loading: false,
     deskClassState: "desk",
   };
 
@@ -25,6 +27,8 @@ const LibraryState = (props) => {
 
   // Get all books in the shelfBooks array
   const getShelfBooks = async () => {
+    setLoading();
+
     const res = await axios.get(
       "https://mylibrary-express-server.herokuapp.com/api/shelfBooks"
     );
@@ -70,6 +74,8 @@ const LibraryState = (props) => {
 
   // Set book to be displayed in viewing area
   const setDeskBook = (book) => {
+    setLoading();
+
     dispatch({ type: SET_DESKBOOK, payload: book });
     // setTimeout(() => {
     //   deskClassState({ deskClass });
@@ -84,6 +90,8 @@ const LibraryState = (props) => {
 
   // Search Google Books API
   const searchBooks = async (searchFields, text) => {
+    setLoading();
+
     const res = await axios.get(
       `https://www.googleapis.com/books/v1/volumes?q=${searchFields}${text}&maxResults=10&fields=items(id,volumeInfo(title,authors,publishedDate,description,imageLinks/smallThumbnail))`
     );
@@ -116,6 +124,9 @@ const LibraryState = (props) => {
     dispatch({ type: CLEAR_SEARCH });
   };
 
+  // Set loading
+  const setLoading = () => dispatch({ type: SET_LOADING });
+
   return (
     <LibraryContext.Provider
       value={{
@@ -123,6 +134,7 @@ const LibraryState = (props) => {
         deskBook: state.deskBook,
         searchResults: state.searchResults,
         deskClassState: state.deskClassState,
+        loading: state.loading,
         getShelfBooks,
         setDeskBook,
         addBook,

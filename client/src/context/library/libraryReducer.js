@@ -6,6 +6,7 @@ import {
   CLEAR_DESKBOOK,
   SEARCH_BOOKS,
   CLEAR_SEARCH,
+  SET_LOADING,
   BOOK_ERROR,
 } from "../types";
 
@@ -15,6 +16,7 @@ export default (state, action) => {
       return {
         ...state,
         shelfBooks: action.payload,
+        loading: false,
       };
     case ADD_BOOK:
       return {
@@ -32,6 +34,7 @@ export default (state, action) => {
       return {
         ...state,
         deskBook: action.payload,
+        loading: false,
       };
     case CLEAR_DESKBOOK:
       return {
@@ -42,11 +45,17 @@ export default (state, action) => {
       return {
         ...state,
         searchResults: action.payload,
+        loading: false,
       };
     case CLEAR_SEARCH:
       return {
         ...state,
         searchResults: null,
+      };
+    case SET_LOADING:
+      return {
+        ...state,
+        loading: true,
       };
     case BOOK_ERROR:
       return {

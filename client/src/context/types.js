@@ -5,4 +5,5 @@ export const SET_DESKBOOK = "SET_DESKBOOK";
 export const CLEAR_DESKBOOK = "CLEAR_DESKBOOK";
 export const SEARCH_BOOKS = "SEARCH_BOOKS";
 export const CLEAR_SEARCH = "CLEAR_SEARC";
+export const SET_LOADING = "SET_LOADING";
 export const BOOK_ERROR = "BOOK_ERROR";
